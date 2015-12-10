@@ -1,0 +1,122 @@
+<div id="message" ng-hide="showDetails">
+    <div class="header">
+        <h3>
+            <a class="icon circle-icon trigger-message-close" ng-click="showDetails = true">
+                <i class="material-icons">keyboard_arrow_right</i> 
+            </a>
+            Customer Ref: <span> 9960 ({{showDetails}})</span>Created By: <span> Ravindra Fauzdar</span>
+        </h3>
+        <h1 class="page-title">(EN-I-0024)  {{selectedId.sr_title}} 
+            </h1><span class="edit-span">
+                <a href="#" editable-select="assignee" e-ng-options="s.user_id as s.fullname for s in projectMembers" onaftersave="updateSrElement(selectedId._id, assignee, 'assignee' )">
+                {{ showAssignee() }}
+                </a>
+                </span>
+        <h3 class="ptop_5">Type: <span> {{selectedId.sr_type}}</span>
+            <span>
+                <rating ng-model="selectedId.priority" max="max" readonly="isReadonly" on-hover="passValue(value)" ng-click="updatePriority(selectedId._id)" titles="['one','two','three','four','five']"></rating>
+            </span>
+        </h3>
+        <div class="status_align">
+            <h3 class="green">Status:
+                <span>
+                    <a href="#" editable-select="srStatus" e-ng-options="s for s in statuses" onaftersave="updateSrElement(selectedId._id, srStatus, 'status' )">
+                        {{ showStatus() }}
+                    </a>
+                </span>
+            </h3>
+        </div>
+
+            <span class="percent_stle"><a href="" ng-click="showProgressBar()"> {{selectedId.progress}} %</a> </span>
+            <div class="progress-box cssSlideUp" ng-show="progressbar">
+                <div class="percentage-cur">
+                </div>
+                <div class="progress-bar progress-bar-slider">
+                    <input class="progress-slider" ng-init="selectedRange=0" ng-click="updateProgressBar(selectedId.progress,selectedId._id)" type="range" min="0" max="100" ng-model="selectedId.progress">
+                    <div class="inner" ng-style="{width:selectedId.progress + '%' || '0%'}">
+                    </div>
+                </div>
+            </div>
+        <div id="message-nano-wrapper" class="nano">
+            <div class="nano-content">
+                <div class="nano-align">
+                    <p>{{selectedId.sr_description}}</p>
+                    <div class="m-top comment clearfix">
+                        <h3> Comments</h3>
+                        <div class="pull-left col-cs-sm"><span><img id="profile-img" class="comment-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" /></span></div>
+                        <div class="pull-left col-cs-lg m-bottom">
+                            <div class="form-group">
+                                <textarea class="form-control" rows="2" id="comment" ng-model="comment"></textarea>
+                                <button ng-click="addComment(comment,selectedId._id)" type="button" class="btn btn-primary btn-xs m-top">Add Comment</button>
+                            </div>
+                               
+                        </div>
+
+                        <div class="line-divider clear" ng-repeat="comment in commentList|orderBy:'sr_create_date':true">
+                            <div class="pull-left col-cs-sm">
+                                <span>
+                                    <img id="profile-img" class="comment-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" /> 
+                                </span>
+                            </div>
+                            <div class="pull-left col-cs-lg">
+                                <h4>{{comment.username}}
+                                    <span class="time-st">{{comment.sr_create_date| date: 'yyyy-MM-dd HH:mm'}}</span>
+                                </h4>
+                                <p class="cmnt-txt">
+                                    <a editable-textarea="comment.comment" e-rows="7" e-cols="40" onaftersave="updateSrComment(comment.comment, comment._id )" e-form="textBtnForm">
+                                        {{ comment.comment || 'no description' }}
+                                    </a>
+                                </p>
+                                <a href="" title="Edit" ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible"><i class="material-icons priority-icon">mode_edit</i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a role="button" target="_blank" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Work Log<span class="caret"></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                <a class="collapsed" target="_blank" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Planning Information<span class="caret"></span>
+                            </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" target="_blank" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                       Change List<span class="caret"></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

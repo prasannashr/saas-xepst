@@ -1,0 +1,358 @@
+<style type="text/css">
+    .Table
+    {
+        display: table;
+    }
+    .Title
+    {
+        display: table-caption;
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+    }
+    .Heading
+    {
+        display: table-row;
+        font-weight: bold;
+
+    }
+    .Row
+    {
+        display: table-row;
+    }
+    .Cell
+    {
+        display: table-cell;
+        padding-right: 35px;
+    }
+</style>
+<div>
+    <h3 class="head_z">{{"GENERAL" | translate}}
+        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('GENERAL', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+            <i class="material-icons edit_label_size">mode_edit</i>
+        </a>
+    </h3>
+    <div class="wrap-padding general_bg clearfix" >
+        <div class="clearfix pad_tp_btm">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label for="firstname"> {{"EDIT_LANGUAGE_IN_POPUP" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('EDIT_LANGUAGE_IN_POPUP', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </label>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="form-group">
+                    <switch name="onOff" ng-model="languageOptionOnOff" on="ON" off="OFF" class="wide" ng-change="changeLanguageEditOption"></switch>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix pad_tp_btm">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label for="firstname"> {{"MAX_PRIORITY" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('MAX_PRIORITY', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </label>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="form-group">
+                    <a class="rcorners" href="#" editable-select="identity.maxPriority" e-ng-options="s for s in maxPriorityOptions" onaftersave="updateMaxPriority(identity.maxPriority)">
+                        {{ showMaxPriorityList() }}
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix pad_tp_btm">
+
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label for="firstname"> {{"DEFINE_PRIORITY" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('DEFINE_PRIORITY', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </label>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="Table" class="form-group">
+                   
+                    <div class="Heading">
+                        <div class="Cell">
+                            Priority 
+                        </div>
+                        <div class="Cell">
+                           Meaning
+                        </div>
+                    </div>
+                    <div class="Row" ng-repeat="priority in srPriority | limitTo:maxPriority">
+                        <div class="Cell">
+                            <p><rating ng-model="priority.value" max="maxPriority" readonly="isReadonly=true" titles="priorityTitle"></rating></p>
+                        </div>
+                        <div class="Cell">
+                            <p>
+                                <a href="#" editable-text="priority.meaning" onaftersave="updatePriorityMeaning(priority._id,priority.meaning)">
+                                   {{ priority.meaning || 'empty' }}
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>        
+        <div class="clearfix pad_tp_btm">
+
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label for="firstname"> {{"RESOLUTION_TYPE" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('RESOLUTION_TYPE', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </label>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="form-group">
+                    <switch name="onOff" ng-model="resolutionType" on="ON" off="OFF" class="wide" ng-change="changeResolutionType"></switch>
+                </div>
+            </div>
+        </div>        
+        <div class="clearfix pad_tp_btm">
+
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label for="firstname"> {{"RESOLUTION" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('RESOLUTION', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </label>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-7" ng-init="getResolutionType(identity.customerId)">
+                <div class="form-group">
+                    <table class="table margin_btm_0">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input class="form-control" ng-model="newResolutionType.name" placeholder="Add New Resolution  Type">
+                                    <span ng-show="resolution_error" style="color:red">{{resolution_error}}</span>
+                                </th>
+                                <th>
+                                    <button class="btn btn-primary" ng-click="addResolutionType(newResolutionType,identity.customerId)">Add</button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="t_body_brdr">
+                            <tr ng-repeat="data in resolutionTypes">
+                                <td><a href='#' title="Edit" editable-text="data.name" onaftersave="updateResolutionType(data._id,data.name)">{{data.name}}</a></td>
+                                <td>
+                                    <span class="glyphicon glyphicon-remove" ng-click="deleteResolutionType(data._id,$index)"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix pad_tp_btm">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label for="firstname"> {{"MAX_FILE_ATTACHMENT" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('MAX_FILE_ATTACHMENT', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </label>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="form-group">
+                    <a class="rcorners" href="#" editable-select="identity.maxAttachment" e-ng-options="s for s in maxAttachmentOptions" onaftersave="updateMaxAttachment(identity.maxAttachment)">
+                        {{ showMaxAttachmentList() }}
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix pad_tp_btm">
+
+            <div class="col-md-5" ng-init="getSrTypeAndStatus(identity.customerId)">
+                <div class="form-group">
+                    <label for="firstname"> {{"SR_TYPES" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('SR_TYPES', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </label>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="form-group">
+                    <table class="table margin_btm_0">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input class="form-control" ng-model="newsrtype.name" placeholder="Add New Sr Type">
+                                     <span ng-show="Srtype_error" style="color:red">{{Srtype_error}}</span>
+                                </th>
+                                <th>
+                                    <button class="btn btn-primary" ng-click="addSRType(newsrtype,identity.customerId)">Add</button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="t_body_brdr">
+                            <tr ng-repeat="data in srType">
+                                <td><a href='#' title="Edit" editable-text="data.name" onaftersave="updateSrType(data._id,data.name)">{{data.name}}</a></td>
+                                <td>
+                                    <span class="glyphicon glyphicon-remove" ng-click="deleteSrType(data._id,$index)"></span></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="clearfix pad_tp_btm">
+
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label for="firstname"> {{"SR_STATUS" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('SR_STATUS', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </label>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="form-group">
+                    <form>
+                            <table class="table table-bordered margin_btm_0">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Status
+                                        </th>                                    
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" ng-true-value="true" ng-change="updateSrStatus(srStatus[0]._id,srStatus[0].value)" ng-model="srStatus[0].value" name="checkboxG6" id="checkboxG6" class="css-checkbox"><label for="checkboxG6" class="css-label">{{srStatus[0].name}}</label> 
+                                        </td>                                   
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        <input type="checkbox" ng-true-value="true" checked=checked disabled name="checkboxG5" id="checkboxG5" class="css-checkbox">
+                                        <label for="checkboxG5" class="css-label">{{srStatus[1].name}}</label>
+                                        </td>                                    
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        <input type="checkbox" ng-true-value="true" checked=checked disabled name="checkboxG4" id="checkboxG4" class="css-checkbox">
+                                        <label for="checkboxG4" class="css-label">{{srStatus[2].name}}</label>
+                                        </td>                                   
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" ng-true-value="true" ng-change="updateSrStatus(srStatus[3]._id,srStatus[3].value)" ng-model="srStatus[3].value" name="checkboxG3" id="checkboxG3" class="css-checkbox">
+                                        <label for="checkboxG3" class="css-label">{{srStatus[3].name}}</label> 
+                                        </td>                                    
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" ng-true-value="true" checked=checked disabled name="checkboxG2" id="checkboxG2" class="css-checkbox">
+                                            <label for="checkboxG2" class="css-label">{{srStatus[4].name}}</label>
+                                        </td>                                    
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" ng-true-value="true" checked=checked disabled name="checkboxG1" id="checkboxG1" class="css-checkbox">
+                                            <label for="checkboxG1" class="css-label">{{srStatus[5].name}}</label>                  
+                                        </td>                                    
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" ng-true-value="true" ng-change="updateSrStatus(srStatus[6]._id,srStatus[6].value)" ng-model="srStatus[6].value" name="checkboxG0" id="checkboxG0" class="css-checkbox">
+                                        <label for="checkboxG0" class="css-label">{{srStatus[6].name}}</label>
+                                        </td>                                    
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" ng-true-value="true" checked=checked disabled name="checkboxG00" id="checkboxG00" class="css-checkbox">
+                                            <label for="checkboxG00" class="css-label">{{srStatus[7].name}}</label>
+                                        </td>                                    
+                                    </tr>
+                                </tbody>
+                            </table>                                 
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        -->
+        <div class="clearfix pad_tp_btm">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label for="firstname"> {{"SR_STATUS" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('SR_STATUS', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </label>
+                    <br>                    
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="form-group">
+                    <form>
+                        <table class="table table-bordered margin_btm_0">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Status
+                                    </th>  
+                                    <th>
+                                        Code
+                                    </th> 
+                                    <th>
+                                        Value
+                                    </th>
+                                                                     
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="status in srStatus" >
+                                    <td>
+                                        <input type="checkbox" ng-change="checkSrStatusUsed(status)" ng-model="status.value" value="{{status._id}}" >
+                                        
+                                    </td> 
+                                    <td>
+                                        <label ng-init="code = status.code">
+                                            {{status.code | removeUnderscoreThenUppercase}}                                             
+                                        </label> 
+                                    </td> 
+                                    <td>
+                                        <label >                                           
+                                            {{status.code | translate}} 
+                                        </label>
+                                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails(status.code , identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                                            <i class="material-icons edit_label_size">mode_edit</i>
+                                        </a>
+                                        
+                                    </td>                                                                     
+                                </tr>                       
+                            </tbody>
+                        </table>                                 
+                    </form>
+                </div>
+            </div>           
+        </div>    
+    </div>
+</div>

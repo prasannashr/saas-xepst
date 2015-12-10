@@ -1,0 +1,49 @@
+<div class="language_tab clearfix">
+    <h3 class="head_z">{{"LANGUAGE" | translate}}<a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('LANGUAGE', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && currentUser.currentUser.languageOption">
+                       <i class="material-icons edit_label_size">mode_edit</i>
+                    </a></h3>
+    <div class="lang_head clearfix">
+        <div class="col-wd-sm pull-left p-left">{{"CODE" | translate}}
+            <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('CODE', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && currentUser.currentUser.languageOption">
+               <i class="material-icons edit_label_size">mode_edit</i>
+            </a>
+        </div>
+        <div class="p-left pull-left">{{"DESCRIPTION" | translate}}
+            <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('DESCRIPTION', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && currentUser.currentUser.languageOption">
+               <i class="material-icons edit_label_size">mode_edit</i>
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-10 row">
+        <div class="col-xs-4 pad_0">
+            <!-- required for floating -->
+            <!-- Nav tabs -->
+            <div style="overflow-y: auto; height: 450px;">
+                <ul class="nav tabs-left">
+                    <li ng-repeat="data in labelList | orderBy:'code'" ng-click="getSelectedLanguageCodes(data.code,$index)" ng-class="{active: $index == selected}"><a href="" data-toggle="tab">{{data.code}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-8 ">
+            <!-- Tab panes -->
+            <div class="tab-content pad_0">
+                <div class="tab-pane active clearfix form-horizontal" id="home">
+                    <div class="wrap-padding form-bg pad_0">
+                        <div class="form-group m-top m-left_0" ng-repeat="label in languageLabelData">
+                            <label for="exampleInputName2" class="col-sm-3 p-left_5">{{ label.country | uppercase}} : </label>
+                            <div class="col-sm-9">
+                                <a href="#" editable-text="label.value" onaftersave="updateLabelDescription(label.value, label.labelId, label._id,label.code , label.country)">{{ label.value || 'empty' }}</a>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="pull-right">
+                            <button type="button" class="btn btn-primary btn-sm">Save</button>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>

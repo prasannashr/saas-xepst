@@ -1,0 +1,244 @@
+<div class="action-bar">
+    <h2><a ui-sref="project({ projectId: projectDetail._id })">{{projectDetail.project_title}}</a></h2>
+    <div ng-include src="'app/templates/search.html'"></div>
+    <div class="create_sr"><a href="" ui-sref="createsr" title="Create SR"><i class="material-icons nav-font">assignment</i></a></div>
+</div>
+<div id="Sr_ID_nw" style="display: block;">
+    <div class="header" ng-init="getSrType(identity.currentUser.customerId)">
+        <h3>New Service Request</h3>
+        <div id="message-sr-wrapper" class="nano has-scrollbar">
+            <div class="nano-content" ng-init="getSrStatus(identity.currentUser.customerId)">
+                <div class="nano-align">
+                    <div class="p_btm_50">
+                        <div class="wrap-padding sr-form-bg ">
+                            <form name="form" enctype="multipart/form-data" >
+                                <div class="Sr_nw_bg clearfix">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="srTitle">{{"SR_TITLE" | translate}}
+                                                 <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('SR_TITLE', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                                                    <i class="material-icons edit_label_size">mode_edit</i>
+                                                </a>
+                                            </label>
+                                            <br>
+                                            <input type="text" class="form-control" name="srTitle" placeholder="" ng-maxlength="200" ng-model="newTask.sr_title" required tabindex="1">
+                                            <span style="color:red" ng-show="submitted && form.srTitle.$error.required">Required field!</span>
+                                            <span style="color:red" ng-show="submitted && form.srTitle.$error.maxlength">Title shouldn't be greater than 200 words!</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="customerReference"> {{"CUSTOMER_REFERENCE" | translate}}
+                                                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('CUSTOMER_REFERENCE', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                                                    <i class="material-icons edit_label_size">mode_edit</i>
+                                                </a>
+                                            </label>
+                                            <br>
+                                            <input type="text" class="form-control" ng-model="newTask.Customer_Reference" name="customerReference" placeholder="" tabindex="2">
+                                            <!-- <span style="color:red" ng-show="submitted && form.customerReference.$error.required">Required field!</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="priority">{{"SR_PRIORITY" | translate}}
+                                                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('SR_PRIORITY', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                                                    <i class="material-icons edit_label_size">mode_edit</i>
+                                                </a>
+                                            </label>
+                                            <div class="star_padding">
+                                                <rating ng-model="newTask.priority" name="priority" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['Not Prioritised','Low','Medium','High','Urgent']"  tabindex="3" required></rating>
+                                                <span style="color:red" ng-show="submitted && form.priority.$error.required">Required field!</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="assignee"> {{"ASSIGNEE" | translate}}
+                                                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('ASSIGNEE', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                                                    <i class="material-icons edit_label_size">mode_edit</i>
+                                                </a>
+                                            </label>
+                                            <br>
+                                            <select ng-model="newTask.assignee"  ng-options="option.user_id as option.fullname for option in projectMembers" name="assignee" class="form-control" required tabindex="4">                                               
+                                            </select>
+                                            <span style="color:red" ng-show="submitted && form.assignee.$error.required">Required field!</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="srType">{{"SR_TYPE" | translate}}
+                                                 <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('SR_TYPE', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                                                    <i class="material-icons edit_label_size">mode_edit</i>
+                                                </a>
+                                            </label>
+                                            <br>
+                                            <select class="form-control" ng-model="newTask.sr_type" name="srType" required tabindex="5">                                                
+                                                <option ng-repeat="srType in srTypes">{{srType}}</option>
+                                            </select>
+                                            <span style="color:red" ng-show="submitted && form.srType.$error.required">Required field!</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="srStatus">{{"SR_STATUS" | translate}}
+                                                 <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('SR_TYPE', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                                                    <i class="material-icons edit_label_size">mode_edit</i>
+                                                </a>
+                                            </label>
+                                            <br>
+                                            <select class="form-control" ng-model="newTask.sr_status" name="srStatus" required tabindex="6">                                                
+                                                <option ng-repeat="status in srStatuses" value="{{status.setting.sr_status.order}}">{{status.setting.sr_status.code | translate}}</option>
+                                            </select>
+                                            <span style="color:red" ng-show="submitted && form.srStatus.$error.required">Required field!</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="description">{{"DESCRIPTION" | translate}}
+                                                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('DESCRIPTION', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                                                    <i class="material-icons edit_label_size">mode_edit</i>
+                                                </a>
+                                            </label>
+                                            <br>
+                                            <textarea class="form-control" id="message-text" ng-model="newTask.sr_description" name="description"  tabindex="7" required></textarea>
+                                            <span style="color:red" ng-show="submitted && form.description.$error.required">Required field!</span>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                                <div class="Sr_nw_bg clearfix">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputName2">{{"ESTIMATED_TIME" | translate}}
+                                                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('ESTIMATED_TIME', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                                                    <i class="material-icons edit_label_size">mode_edit</i>
+                                                </a>
+                                            </label>
+                                            <br>
+                                            <input type="number" name="estimatedtime" class="form-control" id="exampleInputName2" placeholder="" ng-model="newTask.estimated_time" tabindex="8" required>
+                                            <span style="color:red" ng-show="submitted && form.estimatedtime.$error.required">Required field!</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputName2">{{"DUE" | translate}}
+                                                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('DUE', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                                                    <i class="material-icons edit_label_size">mode_edit</i>
+                                                </a>
+                                            </label>
+                                            <br>
+                                            <p class="input-group">
+                                                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="newTask.due" is-open="due.opened" ng-disabled="true" datepicker-options="dateOptions" close-text="Close" name="due" ng-model="newTask.due" placeholder="" required>
+                                                <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-default" ng-click="openDueDatePicker($event)" tabindex="9"><i class="glyphicon glyphicon-calendar"></i></button>
+                                                </span>
+                                            </p>
+                                            <span style="color:red" ng-show="submitted && form.due.$error.required">Required field!</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputName2">{{"PLANNED_START" | translate}}
+                                                 <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('PLANNED_START', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                                                        <i class="material-icons edit_label_size">mode_edit</i>
+                                                    </a>
+                                            </label>
+                                            <br>
+                                            <p class="input-group">
+                                                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="newTask.planning_start" is-open="planningStart.opened" ng-disabled="true" datepicker-options="dateOptions" close-text="Close">
+                                                <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-default" ng-click="openPlanningStart($event)" tabindex="10"><i class="glyphicon glyphicon-calendar"></i></button>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="ready_to_test"> {{"READY_TO_TEST" | translate}}
+                                                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('READY_TO_TEST', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                                                    <i class="material-icons edit_label_size">mode_edit</i>
+                                                </a>
+                                            </label>
+                                            <br>
+                                            <p class="input-group">
+                                                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="newTask.ready_to_test" is-open="readyToTest.opened" date-disabled="disabled(date,mode)" min-date="newTask.planning_start" max-date="maxDate" ng-disabled="true" datepicker-options="dateOptions"  close-text="Close">
+                                                <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-default" ng-click="openReadyToTest($event)" tabindex="11"><i class="glyphicon glyphicon-calendar"></i></button>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Sr_nw_bg clearfix">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="checkbox" ng-model="newTask.billable" aria-label="..." tabindex="12">
+                                        <label for="billable" class="m-right_20"> {{"BILLABLE" | translate}}
+                                            <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('BILLABLE', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                                                <i class="material-icons edit_label_size">mode_edit</i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="Sr_nw_bg clearfix">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="attachment" class="m-right_20"> {{"ATTACHMENT" | translate}}
+                                                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('ATTACHMENT', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                                                    <i class="material-icons edit_label_size">mode_edit</i>
+                                                </a>
+                                            </label>
+                                            <br>               
+                                            <input id="fileSelect" type="file" ngf-select ng-model="attachment.file" name="file" ngf-max-size="5MB" validfile ng-click="invalidFile=false">
+                                            <i style="color:red" ng-show="form.file.$error.maxSize">File too large {{attachment.file.size / 1000000|number:1}}MB: max 5MB</i> <br />
+                                            <button ng-click="attachment={}; invalidFile=false" ng-show="attachment.file" class="remove_btn btn-danger btn-sm">Remove</button>
+                                            <span style="color:red" ng-show="invalidFile"> File type error</span>
+                                            <!-- {{attachment.file.type}} -->
+                                            <span class="progress" ng-show="attachment.file.progress >= 0">
+                                                <div style="width:{{attachment.file.progress}}%" ng-bind="attachment.file.progress + '%'"></div>
+                                            </span>
+                                            <span ng-show="attachment.file.result">Upload Successful</span>
+                                            <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="attachemnt_description"> {{"DESCRIPTION" | translate}}
+                                                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('DESCRIPTION', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                                                    <i class="material-icons edit_label_size">mode_edit</i>
+                                                </a>
+                                            </label>
+                                            <br>
+                                            <textarea class="form-control" ng-model="attachment.description" id="message-text" tabindex="14" ng-disabled="!attachment.file"></textarea>
+                                        </div>
+                                        <div class="add_more pull-left">
+                                            <a href="" ng-click="addMore(attachment)" ng-hide="form.file.$error.maxSize || addMoreHide || invalidFile">{{"ADD_MORE" | translate}}<i class="material-icons v-align">add_box</i>
+                                            </a>
+                                            <span ng-show="addMoreHide">File limit reached</span>
+                                            <a href="" data-template-url="editlang.html" ng-click="getLabelDetails('ADD_MORE', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                                                <i class="material-icons edit_label_size">mode_edit</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li ng-repeat="attachment in newTask.attachments" class="attach_style">
+                                        {{attachment.file.name}}<a href='' ng-click="removeAttachment($index)" class="pull-right">X</a>
+                                    </li>
+                                </ul>
+                                <div class="pull-right ptop_5">
+                                    <button type="button" class="btn btn-primary btn-sm" ng-disabled="isDisabled || invalidFile || form.file.$error.maxSize" ng-click="createSr(newTask,projectDetail._id)" tabindex="15">{{"CREATE" | translate}}</button>
+                                    <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('CREATE', identity.currentUser.customerId)" placement="bottom"
+                                     data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                                        <i class="material-icons edit_label_size">mode_edit</i>
+                                    </a>                                    
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>

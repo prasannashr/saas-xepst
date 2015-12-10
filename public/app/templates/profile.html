@@ -1,0 +1,100 @@
+<div>
+    <h3 class="head_z">{{"MY_PROFILE" | translate}}<a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('MY_PROFILE', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                         <i class="material-icons edit_label_size">mode_edit</i>
+                    </a></h4>
+    <div class="wrap-padding form-bg clearfix">
+     <form name="form1">
+         <div class="error_align">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="firstname"> {{"FIRST_NAME" | translate}}<a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('FIRST_NAME', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                         <i class="material-icons edit_label_size">mode_edit</i>
+                    </a></label>
+                <br>
+                <input type="text" class="form-control" placeholder="First Name" name="firstname" ng-model="loginUser.firstName" required tabindex="1">
+                 <span style="color:red" ng-show="submitted && form1.firstname.$error.required">Required field</span>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="lastname"> {{"LAST_NAME" | translate}}<a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('LAST_NAME', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                         <i class="material-icons edit_label_size">mode_edit</i>
+                    </a></label>
+                <br>
+                <input type="text" class="form-control" name="lastname" placeholder="Last Name" ng-model="loginUser.lastName" required tabindex="2">
+                 <span style="color:red" ng-show="submitted && form1.lastname.$error.required">Required field</span>
+            </div>
+        </div>
+         </div>
+         <div class="error_align">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="email"> {{"EMAIL" | translate}}<a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('EMAIL', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                         <i class="material-icons edit_label_size">mode_edit</i>
+                    </a></label>
+                <br>
+                <input type="email" class="form-control"  ng-pattern="/^\S+@\S+\.\S+$/" placeholder="Email" name="email" ng-model="loginUser.email" required tabindex="3">
+                 <span style="color:red" ng-show="submitted && form1.email.$error.required">Required field</span>
+                 <span  style="color:red" ng-show="submitted && form1.email.$error.pattern">Invalid email!!</span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="designation"> {{"DESIGNATION" | translate}}<a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('DESIGNATION', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                         <i class="material-icons edit_label_size">mode_edit</i>
+                    </a></label>
+                <br>
+                <input type="text" class="form-control" placeholder="Designation" name="designation" ng-model="loginUser.designation" required tabindex="4">
+                 <span style="color:red" ng-show="submitted && form1.designation.$error.required">Required field</span>
+            </div>
+        </div>
+         </div>
+         <div class="error_align">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="address"> {{"ADDRESS" | translate}}<a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('DESIGNATION', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                         <i class="material-icons edit_label_size">mode_edit</i>
+                    </a></label>
+                <br>
+                <input type="text" class="form-control" placeholder="Address" name="address" ng-model="loginUser.address" tabindex="5">
+        
+            </div>
+        </div>
+        <div class="col-md-6" ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin')">
+            <div class="form-group" ng-init="loginUser.companyName=identity.companyName" >
+                <label for="companyName"> {{"COMPANY_NAME" | translate}}<a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('DESIGNATION', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                         <i class="material-icons edit_label_size">mode_edit</i>
+                    </a></label>
+                <br>
+                <input type="text" class="form-control" placeholder="Company Name" name="companyName" ng-model="loginUser.companyName" required tabindex="6">
+                <span style="color:red" ng-show="submitted && form1.companyName.$error.required">Required field</span>
+        
+            </div>
+        </div>
+         </div>
+        
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="industry"> {{"PROFILE_PIC" | translate}}<a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('PROFILE_PIC', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                    <i class="material-icons edit_label_size">mode_edit</i>
+                </a></label>
+                <br>
+                <input type="file" ngf-select ng-model="loginUser.profilePic" name="profilePic" ngf-max-size="1MB" validimage ng-click="invalidImage=false" accept="image/jpeg" />
+                <p ng-show="form1.profilePic.$error.maxSize" style="color:red">File too large {{loginUser.profilePic.size / 1000000|number:1}}MB: max 5MB</p>
+                <p ng-show="invalidImage" style="color:red">Wrong image type. Supported image type: jpeg</p>
+                <img ng-src="{{loginUser.proPic}}" class="m-top" align="left">
+            </div>
+        </div>
+        <div class="col-md-12">
+            
+            <div class="pull-right ptop_5">                
+                <button type="button" class="btn btn-primary btn-sm" ng-click="updateProfile(loginUser)" tabindex="7" ng-disabled="form1.profilePic.$error.maxSize || invalidImage">{{"UPDATE" | translate}}</button>
+                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('UPDATE', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                     <i class="material-icons edit_label_size">mode_edit</i>
+                </a>
+            </div>
+        </div>
+     </form>
+    </div>
+</div>

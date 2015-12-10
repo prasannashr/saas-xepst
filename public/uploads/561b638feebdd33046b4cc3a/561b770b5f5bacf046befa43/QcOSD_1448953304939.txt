@@ -1,0 +1,1758 @@
+00:46:07.170 <03296> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+00:46:07.186 <03296> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+00:46:07.217 <03296> Resource DLL Loaded. File .\Res\FnF50009.dll 
+00:46:07.217 <03296> START: Check registries 
+00:46:07.217 <03296> END: Check registries 
+00:46:07.217 <03296> ////////// TpFnF5 start. 79591 
+00:46:07.217 <03296> IsRadioLockedByBIOS: Fail to open driver - 2 
+00:46:07.217 <03296> Model  ID 0 
+00:46:07.217 <03296> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+00:46:07.217 <03296> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+00:46:07.217 <03296> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+00:46:07.217 <03296> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+00:46:07.217 <03296> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+00:46:07.217 <03296> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+00:46:07.217 <03296> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+00:46:07.217 <03296> ////////// TpFnF5 Exit.... 
+00:46:07.217 <03296> Releasing mutex... 
+00:58:40.903 <04620> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+00:58:40.950 <04620> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+00:58:41.028 <04620> Resource DLL Loaded. File .\Res\FnF50009.dll 
+00:58:41.028 <04620> START: Check registries 
+00:58:41.028 <04620> END: Check registries 
+00:58:41.028 <04620> ////////// TpFnF5 start. 833404 
+00:58:41.028 <04620> IsRadioLockedByBIOS: Fail to open driver - 2 
+00:58:41.028 <04620> Model  ID 0 
+00:58:41.028 <04620> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+00:58:41.028 <04620> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+00:58:41.028 <04620> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+00:58:41.028 <04620> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+00:58:41.028 <04620> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+00:58:41.028 <04620> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+00:58:41.028 <04620> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+00:58:41.028 <04620> ////////// TpFnF5 Exit.... 
+00:58:41.043 <04620> Releasing mutex... 
+04:26:16.036 <05512> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+04:26:16.192 <05512> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+04:26:16.192 <05512> Resource DLL Loaded. File .\Res\FnF50009.dll 
+04:26:16.192 <05512> START: Check registries 
+04:26:16.192 <05512> END: Check registries 
+04:26:16.192 <05512> ////////// TpFnF5 start. 944523 
+04:26:16.192 <05512> IsRadioLockedByBIOS: Fail to open driver - 2 
+04:26:16.192 <05512> Model  ID 0 
+04:26:16.192 <05512> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+04:26:16.192 <05512> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+04:26:16.192 <05512> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+04:26:16.192 <05512> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+04:26:16.192 <05512> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+04:26:16.192 <05512> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+04:26:16.207 <05512> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+04:26:16.207 <05512> ////////// TpFnF5 Exit.... 
+04:26:16.207 <05512> Releasing mutex... 
+10:23:34.314 <04944> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:23:34.314 <04944> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+10:23:34.314 <04944> Resource DLL Loaded. File .\Res\FnF50009.dll 
+10:23:34.314 <04944> START: Check registries 
+10:23:34.314 <04944> END: Check registries 
+10:23:34.314 <04944> ////////// TpFnF5 start. 70652 
+10:23:34.314 <04944> IsRadioLockedByBIOS: Fail to open driver - 2 
+10:23:34.314 <04944> Model  ID 0 
+10:23:34.314 <04944> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:23:34.314 <04944> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+10:23:34.314 <04944> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:23:34.314 <04944> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+10:23:34.314 <04944> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:23:34.314 <04944> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+10:23:34.314 <04944> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+10:23:34.330 <04944> ////////// TpFnF5 Exit.... 
+10:23:34.330 <04944> Releasing mutex... 
+07:55:44.550 <06932> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+07:55:44.566 <06932> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+07:55:44.566 <06932> Resource DLL Loaded. File .\Res\FnF50009.dll 
+07:55:44.581 <06932> START: Check registries 
+07:55:44.581 <06932> END: Check registries 
+07:55:44.581 <06932> ////////// TpFnF5 start. 68921 
+07:55:44.581 <06932> IsRadioLockedByBIOS: Fail to open driver - 2 
+07:55:44.581 <06932> Model  ID 0 
+07:55:44.581 <06932> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+07:55:44.581 <06932> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+07:55:44.581 <06932> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+07:55:44.581 <06932> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+07:55:44.581 <06932> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+07:55:44.581 <06932> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+07:55:44.581 <06932> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+07:55:44.581 <06932> ////////// TpFnF5 Exit.... 
+07:55:44.581 <06932> Releasing mutex... 
+09:45:44.639 <06668> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:45:44.810 <06668> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+09:45:44.810 <06668> Resource DLL Loaded. File .\Res\FnF50009.dll 
+09:45:44.810 <06668> START: Check registries 
+09:45:44.810 <06668> END: Check registries 
+09:45:44.810 <06668> ////////// TpFnF5 start. 234141 
+09:45:44.810 <06668> IsRadioLockedByBIOS: Fail to open driver - 2 
+09:45:44.810 <06668> Model  ID 0 
+09:45:44.810 <06668> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:45:44.810 <06668> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+09:45:44.810 <06668> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:45:44.810 <06668> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+09:45:44.810 <06668> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:45:44.810 <06668> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+09:45:44.810 <06668> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+09:45:44.810 <06668> ////////// TpFnF5 Exit.... 
+09:45:44.841 <06668> Releasing mutex... 
+09:53:47.578 <07092> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:53:47.984 <07092> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+09:53:49.372 <07092> Resource DLL Loaded. File .\Res\FnF50009.dll 
+09:53:49.372 <07092> START: Check registries 
+09:53:49.388 <07092> END: Check registries 
+09:53:49.388 <07092> ////////// TpFnF5 start. 203721 
+09:53:49.388 <07092> IsRadioLockedByBIOS: Fail to open driver - 2 
+09:53:49.388 <07092> Model  ID 0 
+09:53:49.388 <07092> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:53:49.388 <07092> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+09:53:49.388 <07092> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:53:49.388 <07092> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+09:53:49.388 <07092> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:53:49.388 <07092> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+09:53:49.388 <07092> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+09:53:49.388 <07092> ////////// TpFnF5 Exit.... 
+09:53:49.622 <07092> Releasing mutex... 
+09:51:14.842 <05712> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:51:14.842 <05712> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+09:51:14.842 <05712> Resource DLL Loaded. File .\Res\FnF50009.dll 
+09:51:14.857 <05712> START: Check registries 
+09:51:14.857 <05712> END: Check registries 
+09:51:14.857 <05712> ////////// TpFnF5 start. 63196 
+09:51:14.857 <05712> IsRadioLockedByBIOS: Fail to open driver - 2 
+09:51:14.857 <05712> Model  ID 0 
+09:51:14.857 <05712> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:51:14.857 <05712> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+09:51:14.857 <05712> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:51:14.857 <05712> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+09:51:14.857 <05712> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:51:14.857 <05712> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+09:51:14.857 <05712> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+09:51:14.857 <05712> ////////// TpFnF5 Exit.... 
+09:51:14.857 <05712> Releasing mutex... 
+23:32:32.503 <05664> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+23:32:32.535 <05664> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+23:32:32.535 <05664> Resource DLL Loaded. File .\Res\FnF50009.dll 
+23:32:32.535 <05664> START: Check registries 
+23:32:32.535 <05664> END: Check registries 
+23:32:32.535 <05664> ////////// TpFnF5 start. 76877 
+23:32:32.535 <05664> IsRadioLockedByBIOS: Fail to open driver - 2 
+23:32:32.535 <05664> Model  ID 0 
+23:32:32.535 <05664> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+23:32:32.535 <05664> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+23:32:32.535 <05664> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+23:32:32.535 <05664> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+23:32:32.535 <05664> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+23:32:32.535 <05664> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+23:32:32.535 <05664> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+23:32:32.535 <05664> ////////// TpFnF5 Exit.... 
+23:32:32.535 <05664> Releasing mutex... 
+12:52:08.359 <10680> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+12:52:08.376 <10680> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+12:52:08.409 <10680> Resource DLL Loaded. File .\Res\FnF50009.dll 
+12:52:08.410 <10680> START: Check registries 
+12:52:08.410 <10680> END: Check registries 
+12:52:08.411 <10680> ////////// TpFnF5 start. 652859644 
+12:52:08.411 <10680> IsRadioLockedByBIOS: Fail to open driver - 2 
+12:52:08.418 <10680> Model  ID 0 
+12:52:08.418 <10680> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+12:52:08.419 <10680> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+12:52:08.419 <10680> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+12:52:08.420 <10680> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+12:52:08.420 <10680> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+12:52:08.420 <10680> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+12:52:08.421 <10680> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+12:52:08.421 <10680> Showing QcRadCtlDlg. 
+12:52:11.200 <10680> CQcMkCtlDlg::OnCancel: Exit 
+12:52:11.206 <10680> ////////// Exit TpFnF5. bye... 
+12:52:11.207 <10680> Releasing mutex... 
+08:51:50.432 <15476> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:51:50.433 <15476> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+08:51:50.434 <15476> Resource DLL Loaded. File .\Res\FnF50009.dll 
+08:51:50.434 <15476> START: Check registries 
+08:51:50.434 <15476> END: Check registries 
+08:51:50.434 <15476> ////////// TpFnF5 start. 811241672 
+08:51:50.434 <15476> IsRadioLockedByBIOS: Fail to open driver - 2 
+08:51:50.435 <15476> Model  ID 0 
+08:51:50.435 <15476> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:51:50.435 <15476> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+08:51:50.435 <15476> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:51:50.435 <15476> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+08:51:50.436 <15476> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:51:50.436 <15476> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+08:51:50.436 <15476> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+08:51:50.436 <15476> Showing QcRadCtlDlg. 
+08:51:58.134 <15476> CQcMkCtlDlg::OnMasterRadioTurnOn 
+08:51:59.483 <15476> CQcMkCtlDlg::OnMasterRadioTurnOff 
+08:52:05.370 <15476> CQcMkCtlDlg::OnCancel: Exit 
+08:52:05.416 <15476> ////////// Exit TpFnF5. bye... 
+08:52:05.425 <15476> Releasing mutex... 
+08:52:39.523 <10936> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:52:39.523 <10936> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+08:52:39.524 <10936> Resource DLL Loaded. File .\Res\FnF50009.dll 
+08:52:39.525 <10936> START: Check registries 
+08:52:39.525 <10936> END: Check registries 
+08:52:39.525 <10936> ////////// TpFnF5 start. 811290765 
+08:52:39.525 <10936> IsRadioLockedByBIOS: Fail to open driver - 2 
+08:52:39.526 <10936> Model  ID 0 
+08:52:39.526 <10936> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:52:39.526 <10936> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+08:52:39.526 <10936> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:52:39.526 <10936> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+08:52:39.526 <10936> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:52:39.527 <10936> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+08:52:39.527 <10936> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+08:52:39.527 <10936> Showing QcRadCtlDlg. 
+08:52:42.727 <06348> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:52:42.727 <06348> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+08:52:42.728 <06348> Resource DLL Loaded. File .\Res\FnF50009.dll 
+08:52:42.728 <06348> START: Check registries 
+08:52:42.729 <06348> END: Check registries 
+08:52:42.729 <06348> ////////// TpFnF5 start. 811293963 
+08:52:42.729 <06348> IsRadioLockedByBIOS: Fail to open driver - 2 
+08:52:42.729 <06348> TpFnF5 : Terminate because other TpFnF5 process exist. 
+08:52:42.729 <06348> Releasing mutex... 
+08:52:48.252 <10936> CQcMkCtlDlg::OnCancel: Exit 
+08:52:48.266 <10936> ////////// Exit TpFnF5. bye... 
+08:52:48.267 <10936> Releasing mutex... 
+09:00:41.866 <11388> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:00:41.867 <11388> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+09:00:41.869 <11388> Resource DLL Loaded. File .\Res\FnF50009.dll 
+09:00:41.870 <11388> START: Check registries 
+09:00:41.870 <11388> END: Check registries 
+09:00:41.871 <11388> ////////// TpFnF5 start. 811773105 
+09:00:41.871 <11388> IsRadioLockedByBIOS: Fail to open driver - 2 
+09:00:41.872 <11388> Model  ID 0 
+09:00:41.872 <11388> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:00:41.873 <11388> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+09:00:41.873 <11388> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:00:41.873 <11388> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+09:00:41.874 <11388> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:00:41.874 <11388> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+09:00:41.874 <11388> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+09:00:41.875 <11388> Showing QcRadCtlDlg. 
+09:00:44.136 <11388> CQcMkCtlDlg::OnMasterRadioTurnOn 
+09:00:57.599 <11388> CQcMkCtlDlg::OnCancel: Exit 
+09:00:57.630 <11388> ////////// Exit TpFnF5. bye... 
+09:00:57.630 <11388> Releasing mutex... 
+09:43:08.855 <08740> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:43:08.872 <08740> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+09:43:08.894 <08740> Resource DLL Loaded. File .\Res\FnF50009.dll 
+09:43:08.895 <08740> START: Check registries 
+09:43:08.896 <08740> END: Check registries 
+09:43:08.897 <08740> ////////// TpFnF5 start. 1073525170 
+09:43:08.897 <08740> IsRadioLockedByBIOS: Fail to open driver - 2 
+09:43:08.898 <08740> Model  ID 0 
+09:43:08.898 <08740> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:43:08.899 <08740> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+09:43:08.899 <08740> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:43:08.900 <08740> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+09:43:08.900 <08740> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:43:08.901 <08740> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+09:43:08.901 <08740> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+09:43:08.902 <08740> Showing QcRadCtlDlg. 
+09:43:12.083 <08740> CQcMkCtlDlg::OnMasterRadioTurnOff 
+09:43:15.542 <08740> CQcMkCtlDlg::OnCancel: Exit 
+09:43:15.550 <08740> ////////// Exit TpFnF5. bye... 
+09:43:15.550 <08740> Releasing mutex... 
+08:41:18.625 <16916> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:41:18.626 <16916> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+08:41:18.628 <16916> Resource DLL Loaded. File .\Res\FnF50009.dll 
+08:41:18.629 <16916> START: Check registries 
+08:41:18.629 <16916> END: Check registries 
+08:41:18.630 <16916> ////////// TpFnF5 start. 1415414902 
+08:41:18.630 <16916> IsRadioLockedByBIOS: Fail to open driver - 2 
+08:41:18.631 <16916> Model  ID 0 
+08:41:18.631 <16916> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:41:18.632 <16916> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+08:41:18.632 <16916> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:41:18.632 <16916> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+08:41:18.633 <16916> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:41:18.633 <16916> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+08:41:18.633 <16916> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+08:41:18.634 <16916> Showing QcRadCtlDlg. 
+08:41:24.907 <16916> CQcMkCtlDlg::OnMasterRadioTurnOff 
+08:41:37.300 <16916> CQcMkCtlDlg::OnMasterRadioTurnOn 
+08:41:40.726 <16916> CQcMkCtlDlg::OnCancel: Exit 
+08:41:40.734 <16916> ////////// Exit TpFnF5. bye... 
+08:41:40.735 <16916> Releasing mutex... 
+20:29:01.132 <07980> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:29:01.133 <07980> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+20:29:01.134 <07980> Resource DLL Loaded. File .\Res\FnF50009.dll 
+20:29:01.134 <07980> START: Check registries 
+20:29:01.134 <07980> END: Check registries 
+20:29:01.134 <07980> ////////// TpFnF5 start. 1630677405 
+20:29:01.135 <07980> IsRadioLockedByBIOS: Fail to open driver - 2 
+20:29:01.135 <07980> Model  ID 0 
+20:29:01.135 <07980> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:29:01.135 <07980> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+20:29:01.136 <07980> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:29:01.136 <07980> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+20:29:01.136 <07980> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:29:01.136 <07980> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+20:29:01.136 <07980> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+20:29:01.137 <07980> Showing QcRadCtlDlg. 
+20:29:02.605 <07980> CQcMkCtlDlg::OnMasterRadioTurnOn 
+20:29:03.678 <07980> CQcMkCtlDlg::OnMasterRadioTurnOff 
+20:29:14.117 <07980> CQcMkCtlDlg::OnCancel: Exit 
+20:29:14.142 <07980> ////////// Exit TpFnF5. bye... 
+20:29:14.152 <07980> Releasing mutex... 
+20:30:00.756 <13660> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:30:00.757 <13660> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+20:30:00.758 <13660> Resource DLL Loaded. File .\Res\FnF50009.dll 
+20:30:00.759 <13660> START: Check registries 
+20:30:00.759 <13660> END: Check registries 
+20:30:00.759 <13660> ////////// TpFnF5 start. 1630737044 
+20:30:00.760 <13660> IsRadioLockedByBIOS: Fail to open driver - 2 
+20:30:00.760 <13660> Model  ID 0 
+20:30:00.760 <13660> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:30:00.761 <13660> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+20:30:00.761 <13660> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:30:00.761 <13660> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+20:30:00.762 <13660> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:30:00.762 <13660> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+20:30:00.762 <13660> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+20:30:00.763 <13660> Showing QcRadCtlDlg. 
+20:30:02.452 <13660> CQcMkCtlDlg::OnMasterRadioTurnOff 
+20:30:03.527 <13660> CQcMkCtlDlg::OnMasterRadioTurnOn 
+20:30:17.677 <13660> CQcMkCtlDlg::OnCancel: Exit 
+20:30:17.681 <13660> ////////// Exit TpFnF5. bye... 
+20:30:17.682 <13660> Releasing mutex... 
+09:39:26.504 <18112> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:39:26.505 <18112> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+09:39:26.507 <18112> Resource DLL Loaded. File .\Res\FnF50009.dll 
+09:39:26.508 <18112> START: Check registries 
+09:39:26.509 <18112> END: Check registries 
+09:39:26.509 <18112> ////////// TpFnF5 start. 1764509805 
+09:39:26.510 <18112> IsRadioLockedByBIOS: Fail to open driver - 2 
+09:39:26.510 <18112> Model  ID 0 
+09:39:26.511 <18112> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:39:26.511 <18112> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+09:39:26.511 <18112> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:39:26.512 <18112> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+09:39:26.512 <18112> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:39:26.513 <18112> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+09:39:26.513 <18112> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+09:39:26.514 <18112> Showing QcRadCtlDlg. 
+09:39:28.370 <18112> CQcMkCtlDlg::OnMasterRadioTurnOff 
+09:39:30.127 <18112> CQcMkCtlDlg::OnCancel: Exit 
+09:39:30.132 <18112> ////////// Exit TpFnF5. bye... 
+09:39:30.133 <18112> Releasing mutex... 
+07:54:15.221 <08024> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+07:54:15.221 <08024> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+07:54:15.234 <08024> Resource DLL Loaded. File .\Res\FnF50009.dll 
+07:54:15.234 <08024> START: Check registries 
+07:54:15.235 <08024> END: Check registries 
+07:54:15.235 <08024> ////////// TpFnF5 start. 1844598534 
+07:54:15.235 <08024> IsRadioLockedByBIOS: Fail to open driver - 2 
+07:54:15.236 <08024> Model  ID 0 
+07:54:15.236 <08024> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+07:54:15.236 <08024> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+07:54:15.236 <08024> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+07:54:15.237 <08024> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+07:54:15.237 <08024> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+07:54:15.237 <08024> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+07:54:15.237 <08024> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+07:54:15.238 <08024> Showing QcRadCtlDlg. 
+07:54:16.621 <08024> CQcMkCtlDlg::OnMasterRadioTurnOn 
+07:54:20.719 <08024> CQcMkCtlDlg::OnCancel: Exit 
+07:54:20.729 <08024> ////////// Exit TpFnF5. bye... 
+07:54:20.730 <08024> Releasing mutex... 
+10:13:49.345 <18740> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:13:49.345 <18740> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+10:13:49.347 <18740> Resource DLL Loaded. File .\Res\FnF50009.dll 
+10:13:49.347 <18740> START: Check registries 
+10:13:49.347 <18740> END: Check registries 
+10:13:49.348 <18740> ////////// TpFnF5 start. 1852972652 
+10:13:49.348 <18740> IsRadioLockedByBIOS: Fail to open driver - 2 
+10:13:49.348 <18740> Model  ID 0 
+10:13:49.348 <18740> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:13:49.349 <18740> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+10:13:49.349 <18740> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:13:49.349 <18740> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+10:13:49.349 <18740> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:13:49.350 <18740> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+10:13:49.350 <18740> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+10:13:49.350 <18740> Showing QcRadCtlDlg. 
+10:13:50.785 <18740> CQcMkCtlDlg::OnMasterRadioTurnOff 
+10:13:52.159 <18740> CQcMkCtlDlg::OnCancel: Exit 
+10:13:52.170 <18740> ////////// Exit TpFnF5. bye... 
+10:13:52.172 <18740> Releasing mutex... 
+21:47:37.769 <17516> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+21:47:37.769 <17516> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+21:47:37.771 <17516> Resource DLL Loaded. File .\Res\FnF50009.dll 
+21:47:37.771 <17516> START: Check registries 
+21:47:37.771 <17516> END: Check registries 
+21:47:37.771 <17516> ////////// TpFnF5 start. 2067401065 
+21:47:37.772 <17516> IsRadioLockedByBIOS: Fail to open driver - 2 
+21:47:37.772 <17516> Model  ID 0 
+21:47:37.772 <17516> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+21:47:37.772 <17516> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+21:47:37.772 <17516> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+21:47:37.772 <17516> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+21:47:37.773 <17516> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+21:47:37.773 <17516> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+21:47:37.773 <17516> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+21:47:37.773 <17516> Showing QcRadCtlDlg. 
+21:47:39.574 <17516> CQcMkCtlDlg::OnMasterRadioTurnOn 
+21:47:45.013 <17516> CQcMkCtlDlg::OnCancel: Exit 
+21:47:45.017 <17516> ////////// Exit TpFnF5. bye... 
+21:47:45.017 <17516> Releasing mutex... 
+10:38:59.730 <05984> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:38:59.746 <05984> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+10:38:59.777 <05984> Resource DLL Loaded. File .\Res\FnF50009.dll 
+10:38:59.777 <05984> START: Check registries 
+10:38:59.777 <05984> END: Check registries 
+10:38:59.777 <05984> ////////// TpFnF5 start. 58734 
+10:38:59.777 <05984> IsRadioLockedByBIOS: Fail to open driver - 2 
+10:38:59.777 <05984> Model  ID 0 
+10:38:59.777 <05984> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:38:59.777 <05984> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+10:38:59.777 <05984> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:38:59.777 <05984> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+10:38:59.777 <05984> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:38:59.777 <05984> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+10:38:59.777 <05984> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+10:38:59.777 <05984> ////////// TpFnF5 Exit.... 
+10:38:59.777 <05984> Releasing mutex... 
+14:05:21.581 <04164> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:05:21.612 <04164> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+14:05:21.627 <04164> Resource DLL Loaded. File .\Res\FnF50009.dll 
+14:05:21.627 <04164> START: Check registries 
+14:05:21.627 <04164> END: Check registries 
+14:05:21.627 <04164> ////////// TpFnF5 start. 42962 
+14:05:21.627 <04164> IsRadioLockedByBIOS: Fail to open driver - 2 
+14:05:21.627 <04164> Model  ID 0 
+14:05:21.627 <04164> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:05:21.627 <04164> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+14:05:21.627 <04164> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:05:21.627 <04164> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+14:05:21.627 <04164> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:05:21.627 <04164> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+14:05:21.627 <04164> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+14:05:21.627 <04164> ////////// TpFnF5 Exit.... 
+14:05:21.627 <04164> Releasing mutex... 
+14:03:12.175 <15344> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:03:12.186 <15344> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+14:03:12.199 <15344> Resource DLL Loaded. File .\Res\FnF50009.dll 
+14:03:12.199 <15344> START: Check registries 
+14:03:12.200 <15344> END: Check registries 
+14:03:12.201 <15344> ////////// TpFnF5 start. 259113542 
+14:03:12.202 <15344> IsRadioLockedByBIOS: Fail to open driver - 2 
+14:03:12.202 <15344> Model  ID 0 
+14:03:12.203 <15344> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:03:12.204 <15344> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+14:03:12.204 <15344> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:03:12.205 <15344> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+14:03:12.205 <15344> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:03:12.206 <15344> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+14:03:12.206 <15344> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+14:03:12.209 <15344> ////////// TpFnF5 Exit.... 
+14:03:12.238 <15344> Releasing mutex... 
+19:59:37.105 <05004> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+19:59:37.105 <05004> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+19:59:37.105 <05004> Resource DLL Loaded. File .\Res\FnF50009.dll 
+19:59:37.105 <05004> START: Check registries 
+19:59:37.105 <05004> END: Check registries 
+19:59:37.105 <05004> ////////// TpFnF5 start. 64069 
+19:59:37.105 <05004> IsRadioLockedByBIOS: Fail to open driver - 2 
+19:59:37.105 <05004> Model  ID 0 
+19:59:37.105 <05004> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+19:59:37.105 <05004> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+19:59:37.105 <05004> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+19:59:37.105 <05004> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+19:59:37.105 <05004> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+19:59:37.105 <05004> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+19:59:37.105 <05004> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+19:59:37.105 <05004> ////////// TpFnF5 Exit.... 
+19:59:37.105 <05004> Releasing mutex... 
+20:22:11.486 <05156> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:22:11.564 <05156> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+20:22:11.564 <05156> Resource DLL Loaded. File .\Res\FnF50009.dll 
+20:22:11.564 <05156> START: Check registries 
+20:22:11.564 <05156> END: Check registries 
+20:22:11.564 <05156> ////////// TpFnF5 start. 29530 
+20:22:11.564 <05156> IsRadioLockedByBIOS: Fail to open driver - 2 
+20:22:11.564 <05156> Model  ID 0 
+20:22:11.564 <05156> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:22:11.564 <05156> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+20:22:11.564 <05156> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:22:11.564 <05156> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+20:22:11.564 <05156> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:22:11.564 <05156> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+20:22:11.564 <05156> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+20:22:11.580 <05156> ////////// TpFnF5 Exit.... 
+20:22:11.580 <05156> Releasing mutex... 
+17:05:55.477 <05248> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:05:55.477 <05248> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+17:05:55.492 <05248> Resource DLL Loaded. File .\Res\FnF50009.dll 
+17:05:55.492 <05248> START: Check registries 
+17:05:55.492 <05248> END: Check registries 
+17:05:55.492 <05248> ////////// TpFnF5 start. 23446 
+17:05:55.492 <05248> IsRadioLockedByBIOS: Fail to open driver - 2 
+17:05:55.492 <05248> Model  ID 0 
+17:05:55.492 <05248> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:05:55.492 <05248> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+17:05:55.492 <05248> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:05:55.492 <05248> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+17:05:55.492 <05248> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:05:55.492 <05248> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+17:05:55.492 <05248> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+17:05:55.492 <05248> ////////// TpFnF5 Exit.... 
+17:05:55.492 <05248> Releasing mutex... 
+09:38:00.398 <08516> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:38:00.413 <08516> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+09:38:00.439 <08516> Resource DLL Loaded. File .\Res\FnF50009.dll 
+09:38:00.439 <08516> START: Check registries 
+09:38:00.440 <08516> END: Check registries 
+09:38:00.440 <08516> ////////// TpFnF5 start. 59548405 
+09:38:00.440 <08516> IsRadioLockedByBIOS: Fail to open driver - 2 
+09:38:00.446 <08516> Model  ID 0 
+09:38:00.447 <08516> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:38:00.447 <08516> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+09:38:00.447 <08516> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:38:00.447 <08516> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+09:38:00.447 <08516> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:38:00.447 <08516> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+09:38:00.448 <08516> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+09:38:00.448 <08516> Showing QcRadCtlDlg. 
+09:38:02.719 <08516> CQcMkCtlDlg::OnMasterRadioTurnOff 
+09:38:05.132 <08516> CQcMkCtlDlg::OnCancel: Exit 
+09:38:05.133 <08516> ////////// Exit TpFnF5. bye... 
+09:38:05.134 <08516> Releasing mutex... 
+19:48:58.650 <12140> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+19:48:58.651 <12140> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+19:48:58.652 <12140> Resource DLL Loaded. File .\Res\FnF50009.dll 
+19:48:58.652 <12140> START: Check registries 
+19:48:58.652 <12140> END: Check registries 
+19:48:58.652 <12140> ////////// TpFnF5 start. 96206612 
+19:48:58.652 <12140> IsRadioLockedByBIOS: Fail to open driver - 2 
+19:48:58.653 <12140> Model  ID 0 
+19:48:58.653 <12140> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+19:48:58.653 <12140> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+19:48:58.653 <12140> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+19:48:58.653 <12140> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+19:48:58.654 <12140> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+19:48:58.654 <12140> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+19:48:58.654 <12140> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+19:48:58.654 <12140> Showing QcRadCtlDlg. 
+19:49:00.194 <12140> CQcMkCtlDlg::OnMasterRadioTurnOn 
+19:49:18.058 <12140> CQcMkCtlDlg::OnCancel: Exit 
+19:49:18.060 <12140> ////////// Exit TpFnF5. bye... 
+19:49:18.069 <12140> Releasing mutex... 
+19:49:25.589 <11672> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+19:49:25.590 <11672> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+19:49:25.591 <11672> Resource DLL Loaded. File .\Res\FnF50009.dll 
+19:49:25.591 <11672> START: Check registries 
+19:49:25.592 <11672> END: Check registries 
+19:49:25.592 <11672> ////////// TpFnF5 start. 96233553 
+19:49:25.592 <11672> IsRadioLockedByBIOS: Fail to open driver - 2 
+19:49:25.592 <11672> Model  ID 0 
+19:49:25.592 <11672> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+19:49:25.593 <11672> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+19:49:25.593 <11672> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+19:49:25.593 <11672> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+19:49:25.593 <11672> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+19:49:25.593 <11672> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+19:49:25.593 <11672> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+19:49:25.594 <11672> Showing QcRadCtlDlg. 
+19:49:27.712 <11672> CQcMkCtlDlg::OnMasterRadioTurnOn 
+19:49:33.377 <11672> CQcMkCtlDlg::OnCancel: Exit 
+19:49:33.379 <11672> ////////// Exit TpFnF5. bye... 
+19:49:33.379 <11672> Releasing mutex... 
+16:25:52.958 <03168> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:25:52.959 <03168> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+16:25:52.962 <03168> Resource DLL Loaded. File .\Res\FnF50009.dll 
+16:25:52.963 <03168> START: Check registries 
+16:25:52.963 <03168> END: Check registries 
+16:25:52.964 <03168> ////////// TpFnF5 start. 170420921 
+16:25:52.965 <03168> IsRadioLockedByBIOS: Fail to open driver - 2 
+16:25:52.966 <03168> Model  ID 0 
+16:25:52.966 <03168> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:25:52.967 <03168> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+16:25:52.967 <03168> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:25:52.968 <03168> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+16:25:52.969 <03168> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:25:52.969 <03168> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+16:25:52.970 <03168> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+16:25:52.971 <03168> Showing QcRadCtlDlg. 
+16:25:56.773 <03168> CQcMkCtlDlg::OnMasterRadioTurnOff 
+16:25:58.842 <03168> CQcMkCtlDlg::OnCancel: Exit 
+16:25:58.876 <03168> ////////// Exit TpFnF5. bye... 
+16:25:58.877 <03168> Releasing mutex... 
+16:13:00.289 <14224> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:13:00.299 <14224> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+16:13:00.319 <14224> Resource DLL Loaded. File .\Res\FnF50009.dll 
+16:13:00.320 <14224> START: Check registries 
+16:13:00.321 <14224> END: Check registries 
+16:13:00.321 <14224> ////////// TpFnF5 start. 256048278 
+16:13:00.322 <14224> IsRadioLockedByBIOS: Fail to open driver - 2 
+16:13:00.322 <14224> Model  ID 0 
+16:13:00.323 <14224> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:13:00.323 <14224> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+16:13:00.323 <14224> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:13:00.324 <14224> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+16:13:00.324 <14224> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:13:00.325 <14224> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+16:13:00.325 <14224> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+16:13:00.326 <14224> Showing QcRadCtlDlg. 
+16:13:02.377 <14224> CQcMkCtlDlg::OnMasterRadioTurnOff 
+16:13:04.741 <14224> CQcMkCtlDlg::OnCancel: Exit 
+16:13:04.746 <14224> ////////// Exit TpFnF5. bye... 
+16:13:04.747 <14224> Releasing mutex... 
+16:45:49.518 <05648> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:45:49.596 <05648> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+16:45:49.627 <05648> Resource DLL Loaded. File .\Res\FnF50009.dll 
+16:45:49.627 <05648> START: Check registries 
+16:45:49.627 <05648> END: Check registries 
+16:45:49.627 <05648> ////////// TpFnF5 start. 54974 
+16:45:49.627 <05648> IsRadioLockedByBIOS: Fail to open driver - 2 
+16:45:49.627 <05648> Model  ID 0 
+16:45:49.627 <05648> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:45:49.627 <05648> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+16:45:49.627 <05648> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:45:49.627 <05648> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+16:45:49.627 <05648> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:45:49.627 <05648> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+16:45:49.627 <05648> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+16:45:49.627 <05648> ////////// TpFnF5 Exit.... 
+16:45:49.627 <05648> Releasing mutex... 
+20:15:38.241 <07640> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:15:38.241 <07640> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+20:15:38.242 <07640> Resource DLL Loaded. File .\Res\FnF50009.dll 
+20:15:38.242 <07640> START: Check registries 
+20:15:38.243 <07640> END: Check registries 
+20:15:38.243 <07640> ////////// TpFnF5 start. 12649590 
+20:15:38.243 <07640> IsRadioLockedByBIOS: Fail to open driver - 2 
+20:15:38.243 <07640> Model  ID 0 
+20:15:38.244 <07640> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:15:38.244 <07640> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+20:15:38.244 <07640> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:15:38.244 <07640> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+20:15:38.244 <07640> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:15:38.244 <07640> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+20:15:38.244 <07640> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+20:15:38.245 <07640> Showing QcRadCtlDlg. 
+20:15:40.074 <07640> CQcMkCtlDlg::OnMasterRadioTurnOn 
+20:15:42.852 <07640> CQcMkCtlDlg::OnCancel: Exit 
+20:15:42.853 <07640> ////////// Exit TpFnF5. bye... 
+20:15:42.872 <07640> Releasing mutex... 
+11:44:21.339 <02380> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:44:21.340 <02380> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+11:44:21.343 <02380> Resource DLL Loaded. File .\Res\FnF50009.dll 
+11:44:21.344 <02380> START: Check registries 
+11:44:21.344 <02380> END: Check registries 
+11:44:21.345 <02380> ////////// TpFnF5 start. 68372679 
+11:44:21.345 <02380> IsRadioLockedByBIOS: Fail to open driver - 2 
+11:44:21.346 <02380> Model  ID 0 
+11:44:21.346 <02380> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:44:21.347 <02380> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+11:44:21.347 <02380> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:44:21.347 <02380> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+11:44:21.348 <02380> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:44:21.348 <02380> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+11:44:21.349 <02380> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+11:44:21.350 <02380> Showing QcRadCtlDlg. 
+11:44:22.880 <02380> CQcMkCtlDlg::OnMasterRadioTurnOff 
+11:44:26.075 <02380> CQcMkCtlDlg::OnCancel: Exit 
+11:44:26.078 <02380> ////////// Exit TpFnF5. bye... 
+11:44:26.079 <02380> Releasing mutex... 
+20:30:33.267 <02908> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:30:33.267 <02908> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+20:30:33.269 <02908> Resource DLL Loaded. File .\Res\FnF50009.dll 
+20:30:33.270 <02908> START: Check registries 
+20:30:33.270 <02908> END: Check registries 
+20:30:33.270 <02908> ////////// TpFnF5 start. 99944614 
+20:30:33.271 <02908> IsRadioLockedByBIOS: Fail to open driver - 2 
+20:30:33.271 <02908> Model  ID 0 
+20:30:33.272 <02908> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:30:33.272 <02908> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+20:30:33.272 <02908> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:30:33.273 <02908> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+20:30:33.273 <02908> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+20:30:33.273 <02908> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+20:30:33.274 <02908> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+20:30:33.274 <02908> Showing QcRadCtlDlg. 
+20:30:35.843 <02908> CQcMkCtlDlg::OnMasterRadioTurnOff 
+20:30:36.719 <02908> CQcMkCtlDlg::OnMasterRadioTurnOn 
+20:30:40.020 <02908> CQcMkCtlDlg::OnCancel: Exit 
+20:30:40.072 <02908> ////////// Exit TpFnF5. bye... 
+20:30:40.072 <02908> Releasing mutex... 
+09:45:43.015 <06384> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:45:43.015 <06384> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+09:45:43.017 <06384> Resource DLL Loaded. File .\Res\FnF50009.dll 
+09:45:43.017 <06384> START: Check registries 
+09:45:43.017 <06384> END: Check registries 
+09:45:43.018 <06384> ////////// TpFnF5 start. 406854351 
+09:45:43.018 <06384> IsRadioLockedByBIOS: Fail to open driver - 2 
+09:45:43.018 <06384> Model  ID 0 
+09:45:43.018 <06384> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:45:43.019 <06384> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+09:45:43.019 <06384> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:45:43.019 <06384> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+09:45:43.019 <06384> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:45:43.019 <06384> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+09:45:43.020 <06384> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+09:45:43.020 <06384> Showing QcRadCtlDlg. 
+09:45:45.560 <06384> CQcMkCtlDlg::OnMasterRadioTurnOff 
+09:45:47.612 <06384> CQcMkCtlDlg::OnCancel: Exit 
+09:45:47.644 <06384> ////////// Exit TpFnF5. bye... 
+09:45:47.644 <06384> Releasing mutex... 
+16:11:11.072 <14308> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:11:11.073 <14308> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+16:11:11.075 <14308> Resource DLL Loaded. File .\Res\FnF50009.dll 
+16:11:11.076 <14308> START: Check registries 
+16:11:11.077 <14308> END: Check registries 
+16:11:11.077 <14308> ////////// TpFnF5 start. 429982420 
+16:11:11.078 <14308> IsRadioLockedByBIOS: Fail to open driver - 2 
+16:11:11.078 <14308> Model  ID 0 
+16:11:11.079 <14308> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:11:11.079 <14308> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+16:11:11.079 <14308> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:11:11.080 <14308> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+16:11:11.080 <14308> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:11:11.081 <14308> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+16:11:11.081 <14308> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+16:11:11.082 <14308> Showing QcRadCtlDlg. 
+16:11:13.161 <14308> CQcMkCtlDlg::OnMasterRadioTurnOn 
+16:11:19.415 <14308> CQcMkCtlDlg::OnCancel: Exit 
+16:11:19.423 <14308> ////////// Exit TpFnF5. bye... 
+16:11:19.424 <14308> Releasing mutex... 
+10:23:08.098 <01084> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:23:08.098 <01084> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+10:23:08.100 <01084> Resource DLL Loaded. File .\Res\FnF50009.dll 
+10:23:08.100 <01084> START: Check registries 
+10:23:08.100 <01084> END: Check registries 
+10:23:08.101 <01084> ////////// TpFnF5 start. 1013910448 
+10:23:08.101 <01084> IsRadioLockedByBIOS: Fail to open driver - 2 
+10:23:08.101 <01084> Model  ID 0 
+10:23:08.101 <01084> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:23:08.101 <01084> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+10:23:08.101 <01084> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:23:08.102 <01084> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+10:23:08.102 <01084> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:23:08.102 <01084> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+10:23:08.102 <01084> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+10:23:08.103 <01084> Showing QcRadCtlDlg. 
+10:23:12.550 <01084> CQcMkCtlDlg::OnCancel: Exit 
+10:23:12.556 <01084> ////////// Exit TpFnF5. bye... 
+10:23:12.557 <01084> Releasing mutex... 
+09:51:33.668 <19020> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:51:33.669 <19020> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+09:51:33.670 <19020> Resource DLL Loaded. File .\Res\FnF50009.dll 
+09:51:33.671 <19020> START: Check registries 
+09:51:33.671 <19020> END: Check registries 
+09:51:33.671 <19020> ////////// TpFnF5 start. 1184816018 
+09:51:33.672 <19020> IsRadioLockedByBIOS: Fail to open driver - 2 
+09:51:33.672 <19020> Model  ID 0 
+09:51:33.672 <19020> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:51:33.672 <19020> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+09:51:33.673 <19020> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:51:33.673 <19020> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+09:51:33.673 <19020> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:51:33.673 <19020> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+09:51:33.674 <19020> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+09:51:33.674 <19020> Showing QcRadCtlDlg. 
+09:51:35.470 <19020> CQcMkCtlDlg::OnMasterRadioTurnOff 
+09:51:39.435 <19020> CQcMkCtlDlg::OnCancel: Exit 
+09:51:39.438 <19020> ////////// Exit TpFnF5. bye... 
+09:51:39.438 <19020> Releasing mutex... 
+14:06:17.590 <21236> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:06:17.600 <21236> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+14:06:17.627 <21236> Resource DLL Loaded. File .\Res\FnF50009.dll 
+14:06:17.628 <21236> START: Check registries 
+14:06:17.628 <21236> END: Check registries 
+14:06:17.628 <21236> ////////// TpFnF5 start. 1718507793 
+14:06:17.628 <21236> IsRadioLockedByBIOS: Fail to open driver - 2 
+14:06:17.629 <21236> Model  ID 0 
+14:06:17.629 <21236> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:06:17.630 <21236> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+14:06:17.630 <21236> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:06:17.630 <21236> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+14:06:17.630 <21236> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:06:17.630 <21236> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+14:06:17.630 <21236> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+14:06:17.631 <21236> Showing QcRadCtlDlg. 
+14:06:19.883 <21236> CQcMkCtlDlg::OnMasterRadioTurnOff 
+14:06:21.489 <21236> CQcMkCtlDlg::OnMasterRadioTurnOn 
+14:06:25.871 <21236> CQcMkCtlDlg::OnCancel: Exit 
+14:06:25.875 <21236> ////////// Exit TpFnF5. bye... 
+14:06:25.875 <21236> Releasing mutex... 
+08:34:16.600 <19220> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:34:16.622 <19220> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+08:34:16.635 <19220> Resource DLL Loaded. File .\Res\FnF50009.dll 
+08:34:16.635 <19220> START: Check registries 
+08:34:16.636 <19220> END: Check registries 
+08:34:16.636 <19220> ////////// TpFnF5 start. 1784986808 
+08:34:16.637 <19220> IsRadioLockedByBIOS: Fail to open driver - 2 
+08:34:16.638 <19220> Model  ID 0 
+08:34:16.638 <19220> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:34:16.639 <19220> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+08:34:16.639 <19220> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:34:16.640 <19220> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+08:34:16.640 <19220> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:34:16.640 <19220> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+08:34:16.641 <19220> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+08:34:16.642 <19220> Showing QcRadCtlDlg. 
+08:34:18.518 <19220> CQcMkCtlDlg::OnMasterRadioTurnOff 
+08:34:21.363 <19220> CQcMkCtlDlg::OnCancel: Exit 
+08:34:21.368 <19220> ////////// Exit TpFnF5. bye... 
+08:34:21.369 <19220> Releasing mutex... 
+08:35:33.646 <19820> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:35:33.646 <19820> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+08:35:33.648 <19820> Resource DLL Loaded. File .\Res\FnF50009.dll 
+08:35:33.648 <19820> START: Check registries 
+08:35:33.648 <19820> END: Check registries 
+08:35:33.649 <19820> ////////// TpFnF5 start. 1785063810 
+08:35:33.649 <19820> IsRadioLockedByBIOS: Fail to open driver - 2 
+08:35:33.649 <19820> Model  ID 0 
+08:35:33.649 <19820> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:35:33.650 <19820> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+08:35:33.650 <19820> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:35:33.650 <19820> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+08:35:33.650 <19820> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:35:33.650 <19820> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+08:35:33.650 <19820> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+08:35:33.651 <19820> Showing QcRadCtlDlg. 
+08:35:35.156 <19820> CQcMkCtlDlg::OnMasterRadioTurnOn 
+08:35:51.920 <19820> CQcMkCtlDlg::OnMasterRadioTurnOn 
+08:35:59.331 <19820> CQcMkCtlDlg::OnCancel: Exit 
+08:35:59.338 <19820> ////////// Exit TpFnF5. bye... 
+08:35:59.338 <19820> Releasing mutex... 
+08:36:15.804 <15160> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:36:15.805 <15160> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+08:36:15.806 <15160> Resource DLL Loaded. File .\Res\FnF50009.dll 
+08:36:15.806 <15160> START: Check registries 
+08:36:15.806 <15160> END: Check registries 
+08:36:15.806 <15160> ////////// TpFnF5 start. 1785105977 
+08:36:15.807 <15160> IsRadioLockedByBIOS: Fail to open driver - 2 
+08:36:15.807 <15160> Model  ID 0 
+08:36:15.807 <15160> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:36:15.807 <15160> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+08:36:15.807 <15160> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:36:15.808 <15160> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+08:36:15.808 <15160> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:36:15.808 <15160> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+08:36:15.808 <15160> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+08:36:15.809 <15160> Showing QcRadCtlDlg. 
+08:36:18.608 <15160> CQcMkCtlDlg::OnMasterRadioTurnOn 
+08:36:48.611 <15160> CQcMkCtlDlg::OnCancel: Exit 
+08:36:48.621 <15160> ////////// Exit TpFnF5. bye... 
+08:36:48.621 <15160> Releasing mutex... 
+08:39:49.367 <21048> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:39:49.367 <21048> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+08:39:49.369 <21048> Resource DLL Loaded. File .\Res\FnF50009.dll 
+08:39:49.369 <21048> START: Check registries 
+08:39:49.369 <21048> END: Check registries 
+08:39:49.369 <21048> ////////// TpFnF5 start. 1785319543 
+08:39:49.369 <21048> IsRadioLockedByBIOS: Fail to open driver - 2 
+08:39:49.370 <21048> Model  ID 0 
+08:39:49.370 <21048> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:39:49.370 <21048> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+08:39:49.370 <21048> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:39:49.370 <21048> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+08:39:49.371 <21048> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:39:49.371 <21048> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+08:39:49.371 <21048> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+08:39:49.371 <21048> Showing QcRadCtlDlg. 
+08:39:50.636 <21048> CQcMkCtlDlg::OnMasterRadioTurnOff 
+08:39:52.210 <21048> CQcMkCtlDlg::OnMasterRadioTurnOn 
+08:40:00.280 <21048> CQcMkCtlDlg::OnBtRadioCtrl 
+08:40:15.719 <21048> CQcMkCtlDlg::OnCancel: Exit 
+08:40:15.726 <21048> ////////// Exit TpFnF5. bye... 
+08:40:15.726 <21048> Releasing mutex... 
+09:06:29.310 <02544> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:06:29.310 <02544> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+09:06:29.311 <02544> Resource DLL Loaded. File .\Res\FnF50009.dll 
+09:06:29.311 <02544> START: Check registries 
+09:06:29.311 <02544> END: Check registries 
+09:06:29.312 <02544> ////////// TpFnF5 start. 1786919473 
+09:06:29.312 <02544> IsRadioLockedByBIOS: Fail to open driver - 2 
+09:06:29.312 <02544> Model  ID 0 
+09:06:29.312 <02544> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:06:29.313 <02544> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+09:06:29.313 <02544> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:06:29.313 <02544> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+09:06:29.313 <02544> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:06:29.313 <02544> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+09:06:29.313 <02544> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+09:06:29.314 <02544> Showing QcRadCtlDlg. 
+09:06:31.163 <02544> CQcMkCtlDlg::OnMasterRadioTurnOn 
+09:06:34.169 <02544> CQcMkCtlDlg::OnMasterRadioTurnOff 
+09:06:38.097 <02544> CQcMkCtlDlg::OnMasterRadioTurnOn 
+09:06:50.332 <02544> CQcMkCtlDlg::OnCancel: Exit 
+09:06:50.337 <02544> ////////// Exit TpFnF5. bye... 
+09:06:50.338 <02544> Releasing mutex... 
+09:10:59.759 <18392> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:10:59.759 <18392> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+09:10:59.761 <18392> Resource DLL Loaded. File .\Res\FnF50009.dll 
+09:10:59.761 <18392> START: Check registries 
+09:10:59.761 <18392> END: Check registries 
+09:10:59.761 <18392> ////////// TpFnF5 start. 1787189932 
+09:10:59.762 <18392> IsRadioLockedByBIOS: Fail to open driver - 2 
+09:10:59.762 <18392> Model  ID 0 
+09:10:59.762 <18392> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:10:59.762 <18392> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+09:10:59.762 <18392> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:10:59.763 <18392> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+09:10:59.763 <18392> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:10:59.763 <18392> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+09:10:59.763 <18392> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+09:10:59.764 <18392> Showing QcRadCtlDlg. 
+09:11:01.887 <18392> CQcMkCtlDlg::OnMasterRadioTurnOff 
+09:11:05.451 <18392> CQcMkCtlDlg::OnCancel: Exit 
+09:11:05.457 <18392> ////////// Exit TpFnF5. bye... 
+09:11:05.458 <18392> Releasing mutex... 
+09:41:53.008 <01116> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:41:53.071 <01116> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+09:41:53.071 <01116> Resource DLL Loaded. File .\Res\FnF50009.dll 
+09:41:53.071 <01116> START: Check registries 
+09:41:53.071 <01116> END: Check registries 
+09:41:53.071 <01116> ////////// TpFnF5 start. 31028 
+09:41:53.071 <01116> IsRadioLockedByBIOS: Fail to open driver - 2 
+09:41:53.071 <01116> Model  ID 0 
+09:41:53.071 <01116> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:41:53.071 <01116> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+09:41:53.071 <01116> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:41:53.071 <01116> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+09:41:53.071 <01116> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:41:53.071 <01116> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+09:41:53.071 <01116> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+09:41:53.071 <01116> ////////// TpFnF5 Exit.... 
+09:41:53.071 <01116> Releasing mutex... 
+19:45:06.747 <09488> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+19:45:06.759 <09488> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+19:45:06.761 <09488> Resource DLL Loaded. File .\Res\FnF50009.dll 
+19:45:06.762 <09488> START: Check registries 
+19:45:06.762 <09488> END: Check registries 
+19:45:06.763 <09488> ////////// TpFnF5 start. 122624726 
+19:45:06.763 <09488> IsRadioLockedByBIOS: Fail to open driver - 2 
+19:45:06.764 <09488> Model  ID 0 
+19:45:06.764 <09488> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+19:45:06.765 <09488> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+19:45:06.765 <09488> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+19:45:06.765 <09488> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+19:45:06.766 <09488> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+19:45:06.766 <09488> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+19:45:06.766 <09488> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+19:45:06.767 <09488> Showing QcRadCtlDlg. 
+19:45:08.780 <09488> CQcMkCtlDlg::OnMasterRadioTurnOn 
+19:45:26.251 <09488> CQcMkCtlDlg::OnCancel: Exit 
+19:45:26.257 <09488> ////////// Exit TpFnF5. bye... 
+19:45:26.258 <09488> Releasing mutex... 
+09:06:26.031 <12404> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:06:26.032 <12404> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+09:06:26.034 <12404> Resource DLL Loaded. File .\Res\FnF50009.dll 
+09:06:26.035 <12404> START: Check registries 
+09:06:26.035 <12404> END: Check registries 
+09:06:26.036 <12404> ////////// TpFnF5 start. 170704000 
+09:06:26.036 <12404> IsRadioLockedByBIOS: Fail to open driver - 2 
+09:06:26.037 <12404> Model  ID 0 
+09:06:26.037 <12404> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:06:26.037 <12404> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+09:06:26.038 <12404> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:06:26.038 <12404> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+09:06:26.039 <12404> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:06:26.039 <12404> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+09:06:26.039 <12404> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+09:06:26.040 <12404> Showing QcRadCtlDlg. 
+09:06:27.142 <12404> CQcMkCtlDlg::OnMasterRadioTurnOff 
+09:06:29.107 <12404> CQcMkCtlDlg::OnCancel: Exit 
+09:06:29.121 <12404> ////////// Exit TpFnF5. bye... 
+09:06:29.121 <12404> Releasing mutex... 
+16:29:06.334 <11672> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:29:06.334 <11672> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+16:29:06.336 <11672> Resource DLL Loaded. File .\Res\FnF50009.dll 
+16:29:06.336 <11672> START: Check registries 
+16:29:06.336 <11672> END: Check registries 
+16:29:06.337 <11672> ////////// TpFnF5 start. 197264293 
+16:29:06.337 <11672> IsRadioLockedByBIOS: Fail to open driver - 2 
+16:29:06.337 <11672> Model  ID 0 
+16:29:06.338 <11672> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:29:06.338 <11672> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+16:29:06.338 <11672> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:29:06.338 <11672> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+16:29:06.339 <11672> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:29:06.339 <11672> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+16:29:06.339 <11672> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+16:29:06.340 <11672> Showing QcRadCtlDlg. 
+16:29:08.511 <11672> CQcMkCtlDlg::OnMasterRadioTurnOn 
+16:29:16.388 <11672> CQcMkCtlDlg::OnCancel: Exit 
+16:29:16.395 <11672> ////////// Exit TpFnF5. bye... 
+16:29:16.396 <11672> Releasing mutex... 
+16:29:48.460 <08288> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:29:48.461 <08288> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+16:29:48.463 <08288> Resource DLL Loaded. File .\Res\FnF50009.dll 
+16:29:48.463 <08288> START: Check registries 
+16:29:48.464 <08288> END: Check registries 
+16:29:48.464 <08288> ////////// TpFnF5 start. 197306429 
+16:29:48.464 <08288> IsRadioLockedByBIOS: Fail to open driver - 2 
+16:29:48.465 <08288> Model  ID 0 
+16:29:48.465 <08288> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:29:48.465 <08288> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+16:29:48.466 <08288> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:29:48.466 <08288> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+16:29:48.466 <08288> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:29:48.467 <08288> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+16:29:48.467 <08288> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+16:29:48.468 <08288> Showing QcRadCtlDlg. 
+16:29:49.968 <08288> CQcMkCtlDlg::OnMasterRadioTurnOff 
+16:30:01.027 <08288> CQcMkCtlDlg::OnCancel: Exit 
+16:30:01.031 <08288> ////////// Exit TpFnF5. bye... 
+16:30:01.031 <08288> Releasing mutex... 
+21:30:25.114 <16216> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+21:30:25.134 <16216> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+21:30:25.145 <16216> Resource DLL Loaded. File .\Res\FnF50009.dll 
+21:30:25.146 <16216> START: Check registries 
+21:30:25.146 <16216> END: Check registries 
+21:30:25.147 <16216> ////////// TpFnF5 start. 474543107 
+21:30:25.147 <16216> IsRadioLockedByBIOS: Fail to open driver - 2 
+21:30:25.148 <16216> Model  ID 0 
+21:30:25.148 <16216> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+21:30:25.149 <16216> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+21:30:25.149 <16216> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+21:30:25.150 <16216> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+21:30:25.150 <16216> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+21:30:25.151 <16216> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+21:30:25.151 <16216> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+21:30:25.152 <16216> Showing QcRadCtlDlg. 
+21:30:27.328 <16216> CQcMkCtlDlg::OnMasterRadioTurnOn 
+21:30:31.372 <16216> CQcMkCtlDlg::OnCancel: Exit 
+21:30:31.395 <16216> ////////// Exit TpFnF5. bye... 
+21:30:31.395 <16216> Releasing mutex... 
+12:49:28.143 <06044> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+12:49:28.237 <06044> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+12:49:28.237 <06044> Resource DLL Loaded. File .\Res\FnF50009.dll 
+12:49:28.237 <06044> START: Check registries 
+12:49:28.237 <06044> END: Check registries 
+12:49:28.237 <06044> ////////// TpFnF5 start. 36192 
+12:49:28.237 <06044> IsRadioLockedByBIOS: Fail to open driver - 2 
+12:49:28.237 <06044> Model  ID 0 
+12:49:28.237 <06044> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+12:49:28.237 <06044> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+12:49:28.237 <06044> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+12:49:28.237 <06044> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+12:49:28.237 <06044> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+12:49:28.237 <06044> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+12:49:28.237 <06044> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+12:49:28.237 <06044> ////////// TpFnF5 Exit.... 
+12:49:28.237 <06044> Releasing mutex... 
+10:26:04.243 <10060> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:26:04.257 <10060> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+10:26:04.258 <10060> Resource DLL Loaded. File .\Res\FnF50009.dll 
+10:26:04.259 <10060> START: Check registries 
+10:26:04.259 <10060> END: Check registries 
+10:26:04.259 <10060> ////////// TpFnF5 start. 250632220 
+10:26:04.259 <10060> IsRadioLockedByBIOS: Fail to open driver - 2 
+10:26:04.260 <10060> Model  ID 0 
+10:26:04.260 <10060> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:26:04.260 <10060> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+10:26:04.260 <10060> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:26:04.260 <10060> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+10:26:04.261 <10060> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:26:04.261 <10060> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+10:26:04.261 <10060> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+10:26:04.261 <10060> Showing QcRadCtlDlg. 
+10:26:06.330 <10060> CQcMkCtlDlg::OnMasterRadioTurnOff 
+10:26:10.965 <10060> CQcMkCtlDlg::OnCancel: Exit 
+10:26:10.970 <10060> ////////// Exit TpFnF5. bye... 
+10:26:10.971 <10060> Releasing mutex... 
+11:52:22.845 <14900> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:52:22.845 <14900> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+11:52:22.846 <14900> Resource DLL Loaded. File .\Res\FnF50009.dll 
+11:52:22.847 <14900> START: Check registries 
+11:52:22.847 <14900> END: Check registries 
+11:52:22.847 <14900> ////////// TpFnF5 start. 774210809 
+11:52:22.847 <14900> IsRadioLockedByBIOS: Fail to open driver - 2 
+11:52:22.848 <14900> Model  ID 0 
+11:52:22.848 <14900> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:52:22.848 <14900> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+11:52:22.848 <14900> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:52:22.849 <14900> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+11:52:22.849 <14900> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:52:22.849 <14900> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+11:52:22.849 <14900> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+11:52:22.850 <14900> Showing QcRadCtlDlg. 
+11:52:24.644 <14900> CQcMkCtlDlg::OnMasterRadioTurnOn 
+11:52:33.374 <14900> CQcMkCtlDlg::OnCancel: Exit 
+11:52:33.376 <14900> ////////// Exit TpFnF5. bye... 
+11:52:33.389 <14900> Releasing mutex... 
+12:38:30.984 <05384> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+12:38:31.000 <05384> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+12:38:31.452 <05384> Resource DLL Loaded. File .\Res\FnF50009.dll 
+12:38:31.468 <05384> START: Check registries 
+12:38:31.468 <05384> END: Check registries 
+12:38:31.468 <05384> ////////// TpFnF5 start. 61433 
+12:38:31.468 <05384> IsRadioLockedByBIOS: Fail to open driver - 2 
+12:38:31.468 <05384> Model  ID 0 
+12:38:31.468 <05384> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+12:38:31.468 <05384> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+12:38:31.468 <05384> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+12:38:31.468 <05384> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+12:38:31.468 <05384> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+12:38:31.468 <05384> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+12:38:31.468 <05384> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+12:38:31.468 <05384> ////////// TpFnF5 Exit.... 
+12:38:31.468 <05384> Releasing mutex... 
+13:04:18.245 <03980> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+13:04:18.260 <03980> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+13:04:18.260 <03980> Resource DLL Loaded. File .\Res\FnF50009.dll 
+13:04:18.260 <03980> START: Check registries 
+13:04:18.260 <03980> END: Check registries 
+13:04:18.260 <03980> ////////// TpFnF5 start. 1608214 
+13:04:18.260 <03980> IsRadioLockedByBIOS: Fail to open driver - 2 
+13:04:18.260 <03980> Model  ID 0 
+13:04:18.260 <03980> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+13:04:18.260 <03980> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+13:04:18.260 <03980> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+13:04:18.260 <03980> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+13:04:18.260 <03980> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+13:04:18.260 <03980> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+13:04:18.260 <03980> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+13:04:18.260 <03980> Showing QcRadCtlDlg. 
+13:04:20.494 <03980> CQcMkCtlDlg::OnMasterRadioTurnOff 
+13:04:22.960 <03980> CQcMkCtlDlg::OnCancel: Exit 
+13:04:22.962 <03980> ////////// Exit TpFnF5. bye... 
+13:04:22.962 <03980> Releasing mutex... 
+12:24:14.274 <01004> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+12:24:14.292 <01004> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+12:24:14.312 <01004> Resource DLL Loaded. File .\Res\FnF50009.dll 
+12:24:14.313 <01004> START: Check registries 
+12:24:14.314 <01004> END: Check registries 
+12:24:14.314 <01004> ////////// TpFnF5 start. 85604269 
+12:24:14.315 <01004> IsRadioLockedByBIOS: Fail to open driver - 2 
+12:24:14.316 <01004> Model  ID 0 
+12:24:14.316 <01004> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+12:24:14.317 <01004> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+12:24:14.317 <01004> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+12:24:14.318 <01004> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+12:24:14.318 <01004> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+12:24:14.318 <01004> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+12:24:14.319 <01004> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+12:24:14.320 <01004> Showing QcRadCtlDlg. 
+12:24:16.607 <01004> CQcMkCtlDlg::OnMasterRadioTurnOn 
+12:24:19.766 <01004> CQcMkCtlDlg::OnCancel: Exit 
+12:24:19.782 <01004> ////////// Exit TpFnF5. bye... 
+12:24:19.783 <01004> Releasing mutex... 
+14:57:02.689 <03132> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:57:02.767 <03132> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+14:57:02.814 <03132> Resource DLL Loaded. File .\Res\FnF50009.dll 
+14:57:02.814 <03132> START: Check registries 
+14:57:02.814 <03132> END: Check registries 
+14:57:02.829 <03132> ////////// TpFnF5 start. 312158 
+14:57:02.829 <03132> IsRadioLockedByBIOS: Fail to open driver - 2 
+14:57:02.845 <03132> Model  ID 0 
+14:57:02.845 <03132> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:57:02.845 <03132> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+14:57:02.845 <03132> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:57:02.845 <03132> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+14:57:02.845 <03132> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:57:02.845 <03132> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+14:57:02.845 <03132> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+14:57:02.845 <03132> ////////// TpFnF5 Exit.... 
+14:57:02.923 <03132> Releasing mutex... 
+10:23:46.218 <03932> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:23:46.243 <03932> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+10:23:46.244 <03932> Resource DLL Loaded. File .\Res\FnF50009.dll 
+10:23:46.244 <03932> START: Check registries 
+10:23:46.245 <03932> END: Check registries 
+10:23:46.245 <03932> ////////// TpFnF5 start. 70315578 
+10:23:46.245 <03932> IsRadioLockedByBIOS: Fail to open driver - 2 
+10:23:46.245 <03932> Model  ID 0 
+10:23:46.245 <03932> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:23:46.246 <03932> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+10:23:46.246 <03932> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:23:46.246 <03932> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+10:23:46.246 <03932> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:23:46.246 <03932> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+10:23:46.246 <03932> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+10:23:46.247 <03932> Showing QcRadCtlDlg. 
+10:23:47.798 <03932> CQcMkCtlDlg::OnMasterRadioTurnOff 
+10:23:50.163 <03932> CQcMkCtlDlg::OnCancel: Exit 
+10:23:50.172 <03932> ////////// Exit TpFnF5. bye... 
+10:23:50.188 <03932> Releasing mutex... 
+11:56:34.281 <09860> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:56:34.281 <09860> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+11:56:34.282 <09860> Resource DLL Loaded. File .\Res\FnF50009.dll 
+11:56:34.283 <09860> START: Check registries 
+11:56:34.283 <09860> END: Check registries 
+11:56:34.283 <09860> ////////// TpFnF5 start. 75883613 
+11:56:34.283 <09860> IsRadioLockedByBIOS: Fail to open driver - 2 
+11:56:34.284 <09860> Model  ID 0 
+11:56:34.284 <09860> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:56:34.284 <09860> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+11:56:34.284 <09860> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:56:34.284 <09860> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+11:56:34.284 <09860> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:56:34.285 <09860> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+11:56:34.285 <09860> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+11:56:34.285 <09860> Showing QcRadCtlDlg. 
+11:56:36.830 <09860> CQcMkCtlDlg::OnMasterRadioTurnOn 
+11:56:41.437 <09860> CQcMkCtlDlg::OnCancel: Exit 
+11:56:41.453 <09860> ////////// Exit TpFnF5. bye... 
+11:56:41.454 <09860> Releasing mutex... 
+14:30:29.764 <05460> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:30:29.765 <05460> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+14:30:29.766 <05460> Resource DLL Loaded. File .\Res\FnF50009.dll 
+14:30:29.784 <05460> START: Check registries 
+14:30:29.784 <05460> END: Check registries 
+14:30:29.784 <05460> ////////// TpFnF5 start. 344352753 
+14:30:29.784 <05460> IsRadioLockedByBIOS: Fail to open driver - 2 
+14:30:29.785 <05460> Model  ID 0 
+14:30:29.785 <05460> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:30:29.785 <05460> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+14:30:29.785 <05460> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:30:29.786 <05460> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+14:30:29.786 <05460> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:30:29.786 <05460> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+14:30:29.786 <05460> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+14:30:29.787 <05460> Showing QcRadCtlDlg. 
+14:30:31.124 <05460> CQcMkCtlDlg::OnMasterRadioTurnOff 
+14:30:33.400 <05460> CQcMkCtlDlg::OnCancel: Exit 
+14:30:33.405 <05460> ////////// Exit TpFnF5. bye... 
+14:30:33.405 <05460> Releasing mutex... 
+16:43:08.103 <10304> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:43:08.103 <10304> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+16:43:08.105 <10304> Resource DLL Loaded. File .\Res\FnF50009.dll 
+16:43:08.106 <10304> START: Check registries 
+16:43:08.106 <10304> END: Check registries 
+16:43:08.106 <10304> ////////// TpFnF5 start. 352311082 
+16:43:08.107 <10304> IsRadioLockedByBIOS: Fail to open driver - 2 
+16:43:08.107 <10304> Model  ID 0 
+16:43:08.107 <10304> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:43:08.108 <10304> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+16:43:08.108 <10304> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:43:08.108 <10304> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+16:43:08.109 <10304> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:43:08.109 <10304> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+16:43:08.109 <10304> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+16:43:08.110 <10304> Showing QcRadCtlDlg. 
+16:43:10.737 <10304> CQcMkCtlDlg::OnMasterRadioTurnOn 
+16:43:16.999 <10304> CQcMkCtlDlg::OnCancel: Exit 
+16:43:17.006 <10304> ////////// Exit TpFnF5. bye... 
+16:43:17.006 <10304> Releasing mutex... 
+17:47:45.254 <12244> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:47:45.255 <12244> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+17:47:45.256 <12244> Resource DLL Loaded. File .\Res\FnF50009.dll 
+17:47:45.256 <12244> START: Check registries 
+17:47:45.257 <12244> END: Check registries 
+17:47:45.257 <12244> ////////// TpFnF5 start. 356188222 
+17:47:45.257 <12244> IsRadioLockedByBIOS: Fail to open driver - 2 
+17:47:45.257 <12244> Model  ID 0 
+17:47:45.257 <12244> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:47:45.257 <12244> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+17:47:45.258 <12244> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:47:45.258 <12244> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+17:47:45.258 <12244> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:47:45.258 <12244> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+17:47:45.258 <12244> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+17:47:45.259 <12244> Showing QcRadCtlDlg. 
+17:47:46.672 <12244> CQcMkCtlDlg::OnMasterRadioTurnOff 
+17:47:48.524 <12244> CQcMkCtlDlg::OnCancel: Exit 
+17:47:48.528 <12244> ////////// Exit TpFnF5. bye... 
+17:47:48.529 <12244> Releasing mutex... 
+08:37:24.142 <10448> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:37:24.142 <10448> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+08:37:24.143 <10448> Resource DLL Loaded. File .\Res\FnF50009.dll 
+08:37:24.144 <10448> START: Check registries 
+08:37:24.144 <10448> END: Check registries 
+08:37:24.144 <10448> ////////// TpFnF5 start. 409567115 
+08:37:24.144 <10448> IsRadioLockedByBIOS: Fail to open driver - 2 
+08:37:24.145 <10448> Model  ID 0 
+08:37:24.145 <10448> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:37:24.145 <10448> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+08:37:24.145 <10448> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:37:24.145 <10448> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+08:37:24.145 <10448> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:37:24.146 <10448> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+08:37:24.146 <10448> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+08:37:24.146 <10448> Showing QcRadCtlDlg. 
+08:37:26.184 <10448> CQcMkCtlDlg::OnMasterRadioTurnOff 
+08:37:27.758 <10448> CQcMkCtlDlg::OnCancel: Exit 
+08:37:27.761 <10448> ////////// Exit TpFnF5. bye... 
+08:37:27.761 <10448> Releasing mutex... 
+11:51:23.081 <09780> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:51:23.081 <09780> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+11:51:23.083 <09780> Resource DLL Loaded. File .\Res\FnF50009.dll 
+11:51:23.084 <09780> START: Check registries 
+11:51:23.084 <09780> END: Check registries 
+11:51:23.084 <09780> ////////// TpFnF5 start. 421206053 
+11:51:23.085 <09780> IsRadioLockedByBIOS: Fail to open driver - 2 
+11:51:23.085 <09780> Model  ID 0 
+11:51:23.086 <09780> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:51:23.086 <09780> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+11:51:23.087 <09780> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:51:23.087 <09780> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+11:51:23.087 <09780> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:51:23.088 <09780> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+11:51:23.088 <09780> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+11:51:23.089 <09780> Showing QcRadCtlDlg. 
+11:51:24.297 <09780> CQcMkCtlDlg::OnMasterRadioTurnOn 
+11:51:30.071 <09780> CQcMkCtlDlg::OnCancel: Exit 
+11:51:30.077 <09780> ////////// Exit TpFnF5. bye... 
+11:51:30.078 <09780> Releasing mutex... 
+14:51:49.638 <12380> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:51:49.639 <12380> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+14:51:49.640 <12380> Resource DLL Loaded. File .\Res\FnF50009.dll 
+14:51:49.640 <12380> START: Check registries 
+14:51:49.641 <12380> END: Check registries 
+14:51:49.641 <12380> ////////// TpFnF5 start. 432032616 
+14:51:49.641 <12380> IsRadioLockedByBIOS: Fail to open driver - 2 
+14:51:49.641 <12380> Model  ID 0 
+14:51:49.642 <12380> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:51:49.642 <12380> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+14:51:49.642 <12380> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:51:49.642 <12380> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+14:51:49.642 <12380> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:51:49.642 <12380> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+14:51:49.643 <12380> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+14:51:49.643 <12380> Showing QcRadCtlDlg. 
+14:51:50.593 <12380> CQcMkCtlDlg::OnMasterRadioTurnOff 
+14:51:52.446 <12380> CQcMkCtlDlg::OnCancel: Exit 
+14:51:52.452 <12380> ////////// Exit TpFnF5. bye... 
+14:51:52.453 <12380> Releasing mutex... 
+17:53:11.659 <11076> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:53:11.660 <11076> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+17:53:11.662 <11076> Resource DLL Loaded. File .\Res\FnF50009.dll 
+17:53:11.663 <11076> START: Check registries 
+17:53:11.664 <11076> END: Check registries 
+17:53:11.664 <11076> ////////// TpFnF5 start. 442914637 
+17:53:11.665 <11076> IsRadioLockedByBIOS: Fail to open driver - 2 
+17:53:11.665 <11076> Model  ID 0 
+17:53:11.666 <11076> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:53:11.666 <11076> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+17:53:11.667 <11076> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:53:11.667 <11076> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+17:53:11.668 <11076> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:53:11.668 <11076> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+17:53:11.669 <11076> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+17:53:11.670 <11076> Showing QcRadCtlDlg. 
+17:53:13.091 <11076> CQcMkCtlDlg::OnMasterRadioTurnOn 
+17:53:17.042 <11076> CQcMkCtlDlg::OnCancel: Exit 
+17:53:17.049 <11076> ////////// Exit TpFnF5. bye... 
+17:53:17.050 <11076> Releasing mutex... 
+08:46:55.953 <03996> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:46:55.953 <03996> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+08:46:55.953 <03996> Resource DLL Loaded. File .\Res\FnF50009.dll 
+08:46:55.953 <03996> START: Check registries 
+08:46:55.953 <03996> END: Check registries 
+08:46:55.953 <03996> ////////// TpFnF5 start. 138918 
+08:46:55.953 <03996> IsRadioLockedByBIOS: Fail to open driver - 2 
+08:46:55.953 <03996> Model  ID 0 
+08:46:55.953 <03996> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:46:55.953 <03996> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+08:46:55.953 <03996> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:46:55.953 <03996> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+08:46:55.953 <03996> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:46:55.953 <03996> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+08:46:55.953 <03996> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+08:46:55.953 <03996> ////////// TpFnF5 Exit.... 
+08:46:55.953 <03996> Releasing mutex... 
+17:46:15.553 <09732> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:46:15.554 <09732> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+17:46:15.558 <09732> Resource DLL Loaded. File .\Res\FnF50009.dll 
+17:46:15.561 <09732> START: Check registries 
+17:46:15.563 <09732> END: Check registries 
+17:46:15.566 <09732> ////////// TpFnF5 start. 32506879 
+17:46:15.569 <09732> IsRadioLockedByBIOS: Fail to open driver - 2 
+17:46:15.571 <09732> Model  ID 0 
+17:46:15.574 <09732> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:46:15.577 <09732> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+17:46:15.580 <09732> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:46:15.583 <09732> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+17:46:15.584 <09732> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:46:15.584 <09732> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+17:46:15.585 <09732> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+17:46:15.586 <09732> Showing QcRadCtlDlg. 
+17:46:16.838 <09732> CQcMkCtlDlg::OnMasterRadioTurnOff 
+17:46:18.787 <09732> CQcMkCtlDlg::OnCancel: Exit 
+17:46:18.798 <09732> ////////// Exit TpFnF5. bye... 
+17:46:18.803 <09732> Releasing mutex... 
+17:55:42.832 <06192> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:55:42.833 <06192> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+17:55:42.837 <06192> Resource DLL Loaded. File .\Res\FnF50009.dll 
+17:55:42.839 <06192> START: Check registries 
+17:55:42.842 <06192> END: Check registries 
+17:55:42.844 <06192> ////////// TpFnF5 start. 33074146 
+17:55:42.846 <06192> IsRadioLockedByBIOS: Fail to open driver - 2 
+17:55:42.849 <06192> Model  ID 0 
+17:55:42.851 <06192> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:55:42.853 <06192> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+17:55:42.854 <06192> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:55:42.855 <06192> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+17:55:42.855 <06192> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:55:42.856 <06192> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+17:55:42.856 <06192> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+17:55:42.857 <06192> Showing QcRadCtlDlg. 
+17:55:45.640 <06192> CQcMkCtlDlg::OnMasterRadioTurnOn 
+17:55:48.623 <06192> CQcMkCtlDlg::OnCancel: Exit 
+17:55:48.629 <06192> ////////// Exit TpFnF5. bye... 
+17:55:48.634 <06192> Releasing mutex... 
+17:59:03.807 <11072> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:59:03.808 <11072> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+17:59:03.811 <11072> Resource DLL Loaded. File .\Res\FnF50009.dll 
+17:59:03.813 <11072> START: Check registries 
+17:59:03.815 <11072> END: Check registries 
+17:59:03.817 <11072> ////////// TpFnF5 start. 33275122 
+17:59:03.819 <11072> IsRadioLockedByBIOS: Fail to open driver - 2 
+17:59:03.821 <11072> Model  ID 0 
+17:59:03.824 <11072> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:59:03.826 <11072> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+17:59:03.826 <11072> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:59:03.826 <11072> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+17:59:03.827 <11072> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:59:03.827 <11072> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+17:59:03.828 <11072> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+17:59:03.828 <11072> Showing QcRadCtlDlg. 
+17:59:05.362 <11072> CQcMkCtlDlg::OnMasterRadioTurnOff 
+17:59:08.148 <11072> CQcMkCtlDlg::OnCancel: Exit 
+17:59:08.158 <11072> ////////// Exit TpFnF5. bye... 
+17:59:08.166 <11072> Releasing mutex... 
+11:57:29.981 <10744> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:57:29.982 <10744> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+11:57:29.989 <10744> Resource DLL Loaded. File .\Res\FnF50009.dll 
+11:57:29.994 <10744> START: Check registries 
+11:57:29.999 <10744> END: Check registries 
+11:57:30.004 <10744> ////////// TpFnF5 start. 97981310 
+11:57:30.007 <10744> IsRadioLockedByBIOS: Fail to open driver - 2 
+11:57:30.011 <10744> Model  ID 0 
+11:57:30.015 <10744> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:57:30.018 <10744> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+11:57:30.020 <10744> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:57:30.023 <10744> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+11:57:30.024 <10744> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+11:57:30.024 <10744> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+11:57:30.025 <10744> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+11:57:30.026 <10744> Showing QcRadCtlDlg. 
+11:57:32.524 <10744> CQcMkCtlDlg::OnMasterRadioTurnOn 
+11:57:37.114 <10744> CQcMkCtlDlg::OnCancel: Exit 
+11:57:37.121 <10744> ////////// Exit TpFnF5. bye... 
+11:57:37.126 <10744> Releasing mutex... 
+16:12:25.266 <04596> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:12:25.267 <04596> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+16:12:25.272 <04596> Resource DLL Loaded. File .\Res\FnF50009.dll 
+16:12:25.275 <04596> START: Check registries 
+16:12:25.278 <04596> END: Check registries 
+16:12:25.281 <04596> ////////// TpFnF5 start. 113276584 
+16:12:25.284 <04596> IsRadioLockedByBIOS: Fail to open driver - 2 
+16:12:25.287 <04596> Model  ID 0 
+16:12:25.290 <04596> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:12:25.293 <04596> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+16:12:25.295 <04596> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:12:25.298 <04596> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+16:12:25.298 <04596> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:12:25.299 <04596> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+16:12:25.299 <04596> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+16:12:25.300 <04596> Showing QcRadCtlDlg. 
+16:12:26.535 <04596> CQcMkCtlDlg::OnMasterRadioTurnOff 
+16:12:28.122 <04596> CQcMkCtlDlg::OnCancel: Exit 
+16:12:28.132 <04596> ////////// Exit TpFnF5. bye... 
+16:12:28.138 <04596> Releasing mutex... 
+16:50:59.149 <11128> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:50:59.151 <11128> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+16:50:59.159 <11128> Resource DLL Loaded. File .\Res\FnF50009.dll 
+16:50:59.165 <11128> START: Check registries 
+16:50:59.171 <11128> END: Check registries 
+16:50:59.176 <11128> ////////// TpFnF5 start. 115590485 
+16:50:59.182 <11128> IsRadioLockedByBIOS: Fail to open driver - 2 
+16:50:59.188 <11128> Model  ID 0 
+16:50:59.194 <11128> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:50:59.199 <11128> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+16:50:59.205 <11128> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:50:59.206 <11128> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+16:50:59.207 <11128> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:50:59.208 <11128> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+16:50:59.208 <11128> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+16:50:59.210 <11128> Showing QcRadCtlDlg. 
+16:51:03.873 <11128> CQcMkCtlDlg::OnMasterRadioTurnOff 
+16:51:04.737 <11128> CQcMkCtlDlg::OnMasterRadioTurnOff 
+16:51:07.275 <11128> CQcMkCtlDlg::OnMasterRadioTurnOn 
+16:51:10.658 <11128> CQcMkCtlDlg::OnCancel: Exit 
+16:51:10.672 <11128> ////////// Exit TpFnF5. bye... 
+16:51:10.679 <11128> Releasing mutex... 
+17:00:38.679 <06344> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:00:38.680 <06344> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+17:00:38.684 <06344> Resource DLL Loaded. File .\Res\FnF50009.dll 
+17:00:38.687 <06344> START: Check registries 
+17:00:38.690 <06344> END: Check registries 
+17:00:38.692 <06344> ////////// TpFnF5 start. 116169997 
+17:00:38.695 <06344> IsRadioLockedByBIOS: Fail to open driver - 2 
+17:00:38.697 <06344> Model  ID 0 
+17:00:38.700 <06344> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:00:38.703 <06344> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+17:00:38.704 <06344> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:00:38.704 <06344> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+17:00:38.705 <06344> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:00:38.705 <06344> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+17:00:38.705 <06344> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+17:00:38.706 <06344> Showing QcRadCtlDlg. 
+17:00:40.242 <06344> CQcMkCtlDlg::OnMasterRadioTurnOff 
+17:00:42.805 <06344> CQcMkCtlDlg::OnCancel: Exit 
+17:00:42.811 <06344> ////////// Exit TpFnF5. bye... 
+17:00:42.815 <06344> Releasing mutex... 
+17:02:01.473 <05640> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:02:01.477 <05640> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+17:02:01.482 <05640> Resource DLL Loaded. File .\Res\FnF50009.dll 
+17:02:01.485 <05640> START: Check registries 
+17:02:01.489 <05640> END: Check registries 
+17:02:01.493 <05640> ////////// TpFnF5 start. 116252803 
+17:02:01.496 <05640> IsRadioLockedByBIOS: Fail to open driver - 2 
+17:02:01.501 <05640> Model  ID 0 
+17:02:01.504 <05640> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:02:01.508 <05640> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+17:02:01.508 <05640> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:02:01.509 <05640> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+17:02:01.509 <05640> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:02:01.510 <05640> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+17:02:01.510 <05640> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+17:02:01.511 <05640> Showing QcRadCtlDlg. 
+17:02:05.030 <05640> CQcMkCtlDlg::OnMasterRadioTurnOn 
+17:02:07.950 <05640> CQcMkCtlDlg::OnCancel: Exit 
+17:02:07.971 <05640> ////////// Exit TpFnF5. bye... 
+17:02:07.976 <05640> Releasing mutex... 
+17:02:36.875 <09708> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:02:36.881 <09708> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+17:02:36.888 <09708> Resource DLL Loaded. File .\Res\FnF50009.dll 
+17:02:36.894 <09708> START: Check registries 
+17:02:36.899 <09708> END: Check registries 
+17:02:36.904 <09708> ////////// TpFnF5 start. 116288215 
+17:02:36.908 <09708> IsRadioLockedByBIOS: Fail to open driver - 2 
+17:02:36.911 <09708> Model  ID 0 
+17:02:36.915 <09708> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:02:36.918 <09708> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+17:02:36.919 <09708> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:02:36.919 <09708> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+17:02:36.920 <09708> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:02:36.920 <09708> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+17:02:36.921 <09708> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+17:02:36.922 <09708> Showing QcRadCtlDlg. 
+17:02:38.191 <09708> CQcMkCtlDlg::OnMasterRadioTurnOff 
+17:02:41.269 <09708> CQcMkCtlDlg::OnCancel: Exit 
+17:02:41.292 <09708> ////////// Exit TpFnF5. bye... 
+17:02:41.298 <09708> Releasing mutex... 
+14:36:56.152 <07240> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:36:56.167 <07240> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+14:36:56.167 <07240> Resource DLL Loaded. File .\Res\FnF50009.dll 
+14:36:56.167 <07240> START: Check registries 
+14:36:56.167 <07240> END: Check registries 
+14:36:56.167 <07240> ////////// TpFnF5 start. 113131 
+14:36:56.167 <07240> IsRadioLockedByBIOS: Fail to open driver - 2 
+14:36:56.167 <07240> Model  ID 0 
+14:36:56.183 <07240> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:36:56.183 <07240> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+14:36:56.183 <07240> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:36:56.183 <07240> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+14:36:56.183 <07240> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+14:36:56.183 <07240> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+14:36:56.183 <07240> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+14:36:56.183 <07240> ////////// TpFnF5 Exit.... 
+14:36:56.199 <07240> Releasing mutex... 
+16:03:35.470 <02148> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:03:35.486 <02148> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+16:03:35.486 <02148> Resource DLL Loaded. File .\Res\FnF50009.dll 
+16:03:35.486 <02148> START: Check registries 
+16:03:35.486 <02148> END: Check registries 
+16:03:35.486 <02148> ////////// TpFnF5 start. 77828 
+16:03:35.486 <02148> IsRadioLockedByBIOS: Fail to open driver - 2 
+16:03:35.486 <02148> Model  ID 0 
+16:03:35.486 <02148> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:03:35.486 <02148> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+16:03:35.486 <02148> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:03:35.486 <02148> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+16:03:35.486 <02148> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:03:35.486 <02148> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+16:03:35.486 <02148> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+16:03:35.486 <02148> ////////// TpFnF5 Exit.... 
+16:03:35.486 <02148> Releasing mutex... 
+16:20:46.053 <04432> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:20:46.053 <04432> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+16:20:46.053 <04432> Resource DLL Loaded. File .\Res\FnF50009.dll 
+16:20:46.053 <04432> START: Check registries 
+16:20:46.053 <04432> END: Check registries 
+16:20:46.053 <04432> ////////// TpFnF5 start. 1108387 
+16:20:46.053 <04432> IsRadioLockedByBIOS: Fail to open driver - 2 
+16:20:46.053 <04432> Model  ID 0 
+16:20:46.053 <04432> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:20:46.053 <04432> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+16:20:46.053 <04432> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:20:46.053 <04432> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+16:20:46.053 <04432> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:20:46.053 <04432> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+16:20:46.069 <04432> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+16:20:46.069 <04432> ////////// TpFnF5 Exit.... 
+16:20:46.069 <04432> Releasing mutex... 
+21:35:51.031 <12752> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+21:35:51.031 <12752> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+21:35:51.034 <12752> Resource DLL Loaded. File .\Res\FnF50009.dll 
+21:35:51.036 <12752> START: Check registries 
+21:35:51.038 <12752> END: Check registries 
+21:35:51.040 <12752> ////////// TpFnF5 start. 106413367 
+21:35:51.040 <12752> IsRadioLockedByBIOS: Fail to open driver - 2 
+21:35:51.040 <12752> Model  ID 0 
+21:35:51.041 <12752> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+21:35:51.041 <12752> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+21:35:51.041 <12752> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+21:35:51.042 <12752> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+21:35:51.042 <12752> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+21:35:51.042 <12752> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+21:35:51.043 <12752> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+21:35:51.043 <12752> Showing QcRadCtlDlg. 
+21:35:53.109 <12752> CQcMkCtlDlg::OnMasterRadioTurnOn 
+21:35:57.018 <12752> CQcMkCtlDlg::OnCancel: Exit 
+21:35:57.022 <12752> ////////// Exit TpFnF5. bye... 
+21:35:57.024 <12752> Releasing mutex... 
+10:02:57.013 <12488> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:02:57.041 <12488> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+10:02:57.053 <12488> Resource DLL Loaded. File .\Res\FnF50009.dll 
+10:02:57.055 <12488> START: Check registries 
+10:02:57.059 <12488> END: Check registries 
+10:02:57.061 <12488> ////////// TpFnF5 start. 151239396 
+10:02:57.061 <12488> IsRadioLockedByBIOS: Fail to open driver - 2 
+10:02:57.061 <12488> Model  ID 0 
+10:02:57.062 <12488> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:02:57.062 <12488> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+10:02:57.062 <12488> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:02:57.062 <12488> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+10:02:57.063 <12488> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:02:57.063 <12488> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+10:02:57.063 <12488> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+10:02:57.064 <12488> Showing QcRadCtlDlg. 
+10:02:58.321 <12488> CQcMkCtlDlg::OnMasterRadioTurnOff 
+10:03:00.061 <12488> CQcMkCtlDlg::OnCancel: Exit 
+10:03:00.069 <12488> ////////// Exit TpFnF5. bye... 
+10:03:00.072 <12488> Releasing mutex... 
+10:21:22.237 <04432> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:21:22.250 <04432> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+10:21:22.252 <04432> Resource DLL Loaded. File .\Res\FnF50009.dll 
+10:21:22.252 <04432> START: Check registries 
+10:21:22.253 <04432> END: Check registries 
+10:21:22.253 <04432> ////////// TpFnF5 start. 411548499 
+10:21:22.253 <04432> IsRadioLockedByBIOS: Fail to open driver - 2 
+10:21:22.254 <04432> Model  ID 0 
+10:21:22.254 <04432> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:21:22.255 <04432> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+10:21:22.255 <04432> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:21:22.255 <04432> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+10:21:22.256 <04432> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:21:22.256 <04432> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+10:21:22.256 <04432> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+10:21:22.257 <04432> Showing QcRadCtlDlg. 
+10:21:24.471 <04432> CQcMkCtlDlg::OnMasterRadioTurnOff 
+10:21:32.401 <04432> CQcMkCtlDlg::OnCancel: Exit 
+10:21:32.404 <04432> ////////// Exit TpFnF5. bye... 
+10:21:32.406 <04432> Releasing mutex... 
+08:38:56.840 <03608> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:38:56.861 <03608> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+08:38:56.867 <03608> Resource DLL Loaded. File .\Res\FnF50009.dll 
+08:38:56.870 <03608> START: Check registries 
+08:38:56.874 <03608> END: Check registries 
+08:38:56.877 <03608> ////////// TpFnF5 start. 751003133 
+08:38:56.878 <03608> IsRadioLockedByBIOS: Fail to open driver - 2 
+08:38:56.879 <03608> Model  ID 0 
+08:38:56.880 <03608> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:38:56.880 <03608> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+08:38:56.881 <03608> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:38:56.882 <03608> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+08:38:56.882 <03608> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:38:56.882 <03608> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+08:38:56.883 <03608> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+08:38:56.883 <03608> Showing QcRadCtlDlg. 
+08:38:58.258 <03608> CQcMkCtlDlg::OnMasterRadioTurnOff 
+08:39:01.519 <03608> CQcMkCtlDlg::OnCancel: Exit 
+08:39:01.528 <03608> ////////// Exit TpFnF5. bye... 
+08:39:01.533 <03608> Releasing mutex... 
+08:42:48.065 <18100> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:42:48.065 <18100> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+08:42:48.065 <18100> Resource DLL Loaded. File .\Res\FnF50009.dll 
+08:42:48.065 <18100> START: Check registries 
+08:42:48.065 <18100> END: Check registries 
+08:42:48.065 <18100> ////////// TpFnF5 start. 751234311 
+08:42:48.065 <18100> IsRadioLockedByBIOS: Fail to open driver - 2 
+08:42:48.065 <18100> Model  ID 0 
+08:42:48.065 <18100> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:42:48.065 <18100> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+08:42:48.065 <18100> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:42:48.065 <18100> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+08:42:48.065 <18100> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+08:42:48.065 <18100> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+08:42:48.065 <18100> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+08:42:48.065 <18100> ////////// TpFnF5 Exit.... 
+08:42:48.190 <18100> Releasing mutex... 
+09:04:16.162 <08100> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:04:16.177 <08100> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+09:04:16.224 <08100> Resource DLL Loaded. File .\Res\FnF50009.dll 
+09:04:16.224 <08100> START: Check registries 
+09:04:16.224 <08100> END: Check registries 
+09:04:16.224 <08100> ////////// TpFnF5 start. 100558 
+09:04:16.224 <08100> IsRadioLockedByBIOS: Fail to open driver - 2 
+09:04:16.224 <08100> Model  ID 0 
+09:04:16.224 <08100> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:04:16.224 <08100> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+09:04:16.224 <08100> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:04:16.224 <08100> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+09:04:16.224 <08100> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+09:04:16.224 <08100> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+09:04:16.224 <08100> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+09:04:16.224 <08100> ////////// TpFnF5 Exit.... 
+09:04:16.224 <08100> Releasing mutex... 
+16:55:17.251 <10528> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:55:17.253 <10528> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+16:55:17.286 <10528> Resource DLL Loaded. File .\Res\FnF50009.dll 
+16:55:17.289 <10528> START: Check registries 
+16:55:17.292 <10528> END: Check registries 
+16:55:17.295 <10528> ////////// TpFnF5 start. 28361636 
+16:55:17.296 <10528> IsRadioLockedByBIOS: Fail to open driver - 2 
+16:55:17.297 <10528> Model  ID 0 
+16:55:17.297 <10528> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:55:17.297 <10528> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+16:55:17.298 <10528> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:55:17.298 <10528> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+16:55:17.298 <10528> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+16:55:17.298 <10528> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+16:55:17.299 <10528> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+16:55:17.299 <10528> Showing QcRadCtlDlg. 
+16:55:19.090 <10528> CQcMkCtlDlg::OnMasterRadioTurnOff 
+16:55:20.613 <10528> CQcMkCtlDlg::OnCancel: Exit 
+16:55:20.626 <10528> ////////// Exit TpFnF5. bye... 
+16:55:20.684 <10528> Releasing mutex... 
+17:26:04.542 <12128> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:26:04.542 <12128> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+17:26:04.545 <12128> Resource DLL Loaded. File .\Res\FnF50009.dll 
+17:26:04.547 <12128> START: Check registries 
+17:26:04.549 <12128> END: Check registries 
+17:26:04.550 <12128> ////////// TpFnF5 start. 30208891 
+17:26:04.551 <12128> IsRadioLockedByBIOS: Fail to open driver - 2 
+17:26:04.551 <12128> Model  ID 0 
+17:26:04.551 <12128> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:26:04.552 <12128> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+17:26:04.552 <12128> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:26:04.552 <12128> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+17:26:04.552 <12128> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+17:26:04.553 <12128> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+17:26:04.553 <12128> TpFnF5 : cmdline = "C:\Program Files\Lenovo\HOTKEY\TpFnF5.exe" /GETALLSTAT 
+17:26:04.554 <12128> ////////// TpFnF5 Exit.... 
+17:26:04.561 <12128> Releasing mutex... 
+10:45:30.652 <14120> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:45:30.653 <14120> IOCTL_GETWLHWSW : pbExist :[1638092] and pbState: [1638088] and dwRc :[-1073741822] 
+10:45:30.654 <14120> Resource DLL Loaded. File .\Res\FnF50009.dll 
+10:45:30.655 <14120> START: Check registries 
+10:45:30.655 <14120> END: Check registries 
+10:45:30.656 <14120> ////////// TpFnF5 start. 351774984 
+10:45:30.656 <14120> IsRadioLockedByBIOS: Fail to open driver - 2 
+10:45:30.656 <14120> Model  ID 0 
+10:45:30.657 <14120> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:45:30.657 <14120> IOCTL_GETWLHWSW : pbExist :[1633760] and pbState: [1633764] and dwRc :[-1073741822] 
+10:45:30.658 <14120> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:45:30.658 <14120> IOCTL_GETWLHWSW : pbExist :[1633744] and pbState: [1633740] and dwRc :[-1073741822] 
+10:45:30.658 <14120> HKDRVGetHWSWState: Fail to open tphkdrv - 2 
+10:45:30.659 <14120> IOCTL_GETWLHWSW : pbExist :[1633752] and pbState: [1633748] and dwRc :[-1073741822] 
+10:45:30.659 <14120> TpFnF5 : cmdline = C:\PROGRA~1\LENOVO\HOTKEY\tpfnf5.exe 
+10:45:30.660 <14120> Showing QcRadCtlDlg. 
+10:45:32.350 <14120> CQcMkCtlDlg::OnMasterRadioTurnOff 
+10:45:33.402 <14120> CQcMkCtlDlg::OnCancel: Exit 
+10:45:33.410 <14120> ////////// Exit TpFnF5. bye... 
+10:45:33.414 <14120> Releasing mutex... 

@@ -1,0 +1,462 @@
+<div class="action-bar" ng-cloak>
+    <h2><a ui-sref="project({ projectId: projectDetail._id })">{{projectDetail.project_title}} </a></h2>
+    <div ng-include src="'app/templates/search.html'"></div>
+    <div class="advance_search"><a href="#" class="slide_down">Advance Search</a></div>
+    
+    <div class="create_sr"><a href="" ui-sref="createsr({projectId: projectId})" title="Create SR"><i class="material-icons nav-font">assignment</i></a></div>
+</div>
+
+<div style="display: none;" class="search_slide">
+    <div>
+        <p class="input-group">
+            <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dateObj.filterStartDate" is-open="startDate.opened" ng-disabled="true" max-date="dateObj.filterFinishDate" datepicker-options="dateOptions" close-text="Close" name="startDate" placeholder="SR created from this day">
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="openfilterStartDatePicker($event)" tabindex="9"><i class="glyphicon glyphicon-calendar"></i></button>
+            </span>
+        </p>
+    </div>
+    <div>
+        <p class="input-group">
+            <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dateObj.filterFinishDate" is-open="finishDate.opened" ng-disabled="true" min-date="dateObj.filterStartDate" datepicker-options="dateOptions" close-text="Close" name="finishDate" placeholder="SR created before this day">
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="openfilterFinishDatePicker($event)" tabindex="9"><i class="glyphicon glyphicon-calendar"></i></button>
+            </span>
+        </p>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" ng-model="allIncomplete" ng-click="checkAllIncomplete()"> All Incomplete SR
+        </label>
+    </div>
+
+    <div class="checkbox" ng-repeat="s in sr_statuses">
+        <label>
+            <input type="checkbox" ng-model="s.Selected" checkbox-group> {{s.name}}
+        </label>
+    </div>
+
+    <div ng-dropdown-multiselect options="projectMembersList" selected-model="selectedAssignees" checkboxes="true" extra-settings="assigneeSelectSettings" translation-texts="assigneeSelectTexts"></div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" ng-model="recentlyCreatedSrOnly"> Recently Created SR Only
+        </label>
+    </div>
+    <div>
+        <span >
+            <rating titles="priority" ng-model="priorityValue" max="max" readonly='false' on-hover="" ng-click="" ></rating> 
+        </span>
+        <span><a href="" style="color:black" ng-click="priorityValue=null" ng-show="priorityValue>0">Clear Priority Filter</a></span>
+    </div>
+</div>
+<div ng-show="showSR" ng-cloak ng-init="getAllSRList()">
+    <div class="task-header">
+        <ul>
+            <li class="id-style" ng-click="order('sr_id')">{{"TASK_ID" | translate}}
+            <span class="sortorder" ng-show="predicate === 'sr_id'" ng-class="{reverse:reverse}"></span>
+                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('TASK_ID', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                    <i class="material-icons edit_label_size">mode_edit</i>
+                </a>
+            </li>
+            <li class="title-style" ng-click="order('sr_title')">{{"TITLE" | translate}}
+            <span class="sortorder" ng-show="predicate === 'sr_title'" ng-class="{reverse:reverse}"></span>
+                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('TITLE', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                    <i class="material-icons edit_label_size">mode_edit</i>
+                </a>
+            </li>
+            <li class="priority-style" ng-click="order('priority')">{{"PRIORITY" | translate}}
+             <span class="sortorder" ng-show="predicate === 'priority'" ng-class="{reverse:reverse}"></span>
+
+                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('PRIORITY', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                    <i class="material-icons edit_label_size">mode_edit</i>
+                </a>
+            </li>
+            <li class="assinee-style" ng-click="order('assignee')">{{"ASSIGN_TO" | translate}}
+             <span class="sortorder" ng-show="predicate === 'assignee'" ng-class="{reverse:reverse}"></span>
+                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('ASSIGN_TO', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                    <i class="material-icons edit_label_size">mode_edit</i>
+                </a>
+            </li>
+            <li class="status-style" ng-click="order('sr_status')">{{"STATUS" | translate}}
+             <span class="sortorder" ng-show="predicate === 'sr_status'" ng-class="{reverse:reverse}"></span>
+                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('STATUS', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                    <i class="material-icons edit_label_size">mode_edit</i>
+                </a>
+            </li>
+            <li class="action-style">{{"ACTION" | translate}}
+                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('ACTION', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                    <i class="material-icons edit_label_size">mode_edit</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="main-nano-wrapper" class="nano" ng-init="showDetails=true">
+        <div class="nano-content">
+            <ul class="message-list">
+                <li ng-repeat="data in projectSrData | assigneeFilter: selectedAssignees | statusFilter: checkedStatus | recentFilter: recentlyCreatedSrOnly | priorityFilter: priorityValue | dateFilter: dateObj | orderBy:predicate:reverse "  ui-sref-active="active">
+                    <div ui-sref = "projectdetail.srdetail({ srId: data._id})"  ng-click="showSRDetails(data._id)">
+                        <div class="col col-1">
+                            <span class="dot">{{projectDetail.project_id}}-{{data.sr_id}} </span>
+                            <p class="title">{{data.sr_title}}
+                                <br>
+                            </p>
+                            </span>
+                        </div>
+                        <div class="col col-2">
+                            <rating ng-model="data.priority" max="max" readonly="isReadonly=true" titles="priorityTitle"></rating>
+                           
+                            <div class="assign_to">{{getAssignee(data.assignee)}} </div>
+
+                            <div class="status_st">{{getStatusNameByOrder(data.sr_status)}} </div>
+
+                        </div>
+                        <button class="btn btn-default btn-xs edit_click" type="button">{{"EDIT" | translate}}</button>
+                    </div>
+                    <div class="button_wrap">
+                        <span class="assign-pop">
+                        <button class="btn btn-default btn-xs m-left" type="button"  data-template-url="assign.html"  ng-click="getAssigneeBySrId(data._id)" placement="bottom" data-auto-close="1" bs-popover >{{"ASSIGN" | translate}}</button>
+                        </span>
+                        <span class="resolve-pop">
+                        <button class="btn btn-default btn-xs m-left" type="button" data-template-url="resolve.html"  placement="bottom" data-auto-close="1" bs-popover>{{"RESOLVE" | translate}}</button>
+                    </span></div>
+                </li>
+            </ul>           
+        </div>
+    </div>
+</div>
+
+<div ng-hide="showSR" ng-cloak>
+   
+    <div class="proect_detail_wrap">
+        <div id="main-nano-wrapper" class="nano">
+            <div class="nano-content">
+                <div class="no-project">
+                    <p><img src="images/project-icon.png" /> </p>
+                    <h2>No Service Request </h2>
+                    <h4>You don't have any Task yet so just create one! Click the button below to get started</h4>
+                    <p>
+                        <button type="button" ui-sref="createsr({projectId: projectId})" class="btn btn-primary btn-lg m-top">Create the first Service Request</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div ui-view> </div> -->
+<div id="message" ng-hide="showDetails" class="msgSlideUp" ng-cloak>
+    <div class="header">
+        <h3>
+            <a class="icon circle-icon trigger-message-close" ng-click="showDetails = true">
+                <i class="material-icons">keyboard_arrow_right</i> 
+            </a>
+            {{"CUSTOMER_REF" | translate}}: 
+            <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('CUSTOMER_REF', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                <i class="material-icons edit_label_size">mode_edit</i>
+            </a>
+            <span> 9960 </span>{{"CREATED_BY" | translate}}: 
+            <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('CREATED_BY', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                <i class="material-icons edit_label_size">mode_edit</i>
+            </a>
+            <span>{{srCreator}}</span>
+        </h3>
+        <h1 class="page-title">({{projectDetail.project_id}}-{{selectedId.sr_id}})
+            <span ng-show="(identity.isAuthenticated() && identity.isAuthorized('admin')) || selectedId.sr_createdBy == identity.currentUser.app_users._id">
+                <a href='#' title="Edit" editable-text="selectedId.sr_title" onaftersave="updateSrElement(selectedId._id, selectedId.sr_title, 'title')">
+                    {{selectedId.sr_title}}
+                </a>
+            </span>
+            <span ng-hide="(identity.isAuthenticated() && identity.isAuthorized('admin')) || selectedId.sr_createdBy == identity.currentUser.app_users._id">
+                {{selectedId.sr_title}}
+            </span>
+        </h1>
+        <span class="edit-span">
+            <a href="#" editable-select="assignee" e-ng-options="s.user_id as s.fullname for s in projectMembers" onaftersave="updateSrElement(selectedId._id, assignee, 'assignee' )">
+                {{ showAssignee() }}
+            </a>
+        </span>
+        <h3 class="ptop_5"> 
+            {{"TYPE" | translate}}: 
+            <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('TYPE', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                <i class="material-icons edit_label_size">mode_edit</i>
+            </a>
+            <span> {{selectedId.sr_type}}</span>
+            <span >
+                <rating titles="priorityTitle2" ng-model="selectedId.priority" max="max" readonly="isReadonly" on-hover="passValue(value)" ng-click="updatePriority(selectedId._id)" ></rating> 
+            </span>
+
+
+            <div class="attach_link">
+            <a href="" title="Edit label" data-template-url="attachment.html"  placement="bottom" data-auto-close="1" bs-popover >
+                <i class="material-icons priority-icon v-align-top">attach_file</i><span class="red">({{attachmentDetails.length}})</span>
+            </a></div>
+        </h3>
+
+        <div class="status_align">
+
+
+            <h3 class="green pull-left">
+                {{"STATUS" | translate}}: 
+                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('STATUS', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                    <i class="material-icons edit_label_size">mode_edit</i>
+                </a>
+                <span>
+                    <a href="#" editable-select="srStatus" e-ng-options="s.order as s.name for s in sr_statuses" onaftersave="updateSrElement(selectedId._id, srStatus, 'status' )">
+                        {{ showStatus() }}
+                    </a>
+                </span>
+            </h3>
+
+            <h3 class="green  pull-left" ng-show="resolutionType && identity.currentUser.resolutionType" ng-init="getResolutionType(identity.currentUser.customerId)">
+                {{"RESOLUTION_TYPE" | translate}}:
+                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('RESOLUTION_TYPE', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                    <i class="material-icons edit_label_size">mode_edit</i>
+                </a>
+                <span>
+                    <a href="#" editable-select="resolutionId" e-ng-options="s._id as s.name for s in resolutionTypes" onaftersave="updateSrElement(selectedId._id, resolutionId, 'resolution_type' )">
+                        {{ showResolutionType() }}
+                    </a>
+                </span>
+            </h3>
+
+
+        </div>
+
+            <span class="percent_stle"><a href="" ng-click="showProgressBar()"> {{selectedId.progress}} %</a> </span>
+            <div class="progress-box cssSlideUp" ng-show="progressbar">
+                <div class="percentage-cur">
+                </div>
+                <div class="progress-bar progress-bar-slider">
+                    <input class="progress-slider" ng-init="selectedRange=0" ng-click="updateProgressBar(selectedId.progress,selectedId._id)" type="range" min="0" max="100" ng-model="selectedId.progress">
+                    <div class="inner" ng-style="{width:selectedId.progress + '%' || '0%'}">
+                    </div>
+                </div>
+            </div>
+        <div id="message-nano-wrapper" class="nano">
+            <div class="nano-content">
+                <div class="nano-align">
+                    <p ng-show="(identity.isAuthenticated() && identity.isAuthorized('admin')) || selectedId.sr_createdBy == identity.currentUser.app_users._id">
+                        <a href='#' title="Edit" editable-textarea="selectedId.sr_description" e-rows="7" e-cols="40" onaftersave="updateSrElement(selectedId._id, selectedId.sr_description, 'description')">
+                            {{selectedId.sr_description}}
+                        </a>
+                    </p>
+                    <p ng-hide="(identity.isAuthenticated() && identity.isAuthorized('admin')) || selectedId.sr_createdBy == identity.currentUser.app_users._id">
+                        {{selectedId.sr_description}}
+                    </p>
+                    <div class="m-top comment clearfix">
+                        <h3> 
+                            {{"COMMENTS" | translate}}
+                            <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('COMMENTS', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                                <i class="material-icons edit_label_size">mode_edit</i>
+                            </a>
+                        </h3>
+                        <div class="pull-left col-cs-sm">
+                            <span>
+                                <img id="profile-img" class="comment-img-card" ng-if="identity.currentUser.app_users.proPic" ng-src="{{identity.currentUser.app_users.proPic}}" />
+                                <img id="profile-img" class="comment-img-card" ng-if="identity.currentUser.app_users.proPic==null" ng-src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+                            </span>
+                        </div>
+                        <div class="pull-left col-cs-lg m-bottom">
+                            <div class="form-group">
+                                <textarea class="form-control" rows="2" id="comment" ng-model="comment"></textarea>
+                                <button ng-click="addComment(comment,selectedId._id)" type="button" class="btn btn-primary btn-xs m-top"> {{"ADD_COMMENT" | translate}}</button>
+                                <a href="" class="m-top" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('ADD_COMMENT', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                                <i class="material-icons edit_label_size">mode_edit</i>
+                            </a>
+                                <span style="color:red">{{error}}</span>
+                            </div>
+                        </div>                        
+                        <div class="line-divider clear" ng-repeat="comment in commentList|orderBy:'sr_create_date':true">
+                            <div class="pull-left col-cs-sm">
+                                <span>
+                                    <img id="profile-img" class="comment-img-card" ng-if="comment.commentorPic!=null" ng-src="{{comment.commentorPic}}" /> 
+                                    <img id="profile-img" class="comment-img-card" ng-if="comment.commentorPic==null" ng-src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" /> 
+                                </span>
+                            </div>
+                            <div class="pull-left col-cs-lg">
+                                <h4>{{comment.commentBy}}
+                                    <span class="time-st">
+                                        {{comment.sr_create_date| date: 'yyyy-MM-dd HH:mm' : 'UTC'}}
+                                    </span>
+                                </h4>
+                                <p class="cmnt-txt" ng-show="(identity.isAuthenticated() && identity.isAuthorized('admin')) || comment.user_id == identity.currentUser.app_users._id">
+                                    <a href='#' title="Edit" editable-textarea="comment.comment" e-rows="7" e-cols="40" onaftersave="updateSrComment(comment.comment, comment._id, selectSR)">
+                                        {{ comment.comment }}
+                                    </a>
+                                </p>
+                                <p class="cmnt-txt" ng-hide="(identity.isAuthenticated() && identity.isAuthorized('admin')) || comment.user_id == identity.currentUser.app_users._id">
+                                    {{comment.comment}}
+                                </p>
+                            </div>                           
+                        </div>
+                    </div>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a role="button" target="_blank" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Work Log<span class="caret"></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                <a class="collapsed" target="_blank" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Planning Information<span class="caret"></span>
+                            </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" target="_blank" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                       Change List<span class="caret"></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/ng-template" id="resolve.html">
+    <div class="popover">
+        <div class="arrow"></div>
+        <div class="popover-content min_width">
+
+            <div class="pull-left">
+                <label class="pull-left width_50">Assign:</label>
+                <select class="form-control input-sm pull-left width_120">
+                    <option value="string:New" label="New">New</option><option value="string:Open" label="Open">Open</option>
+                    <option value="string:Waiting for Info" label="Waiting for Info">Waiting for Info</option>
+                    <option value="string:On Hold" label="On Hold">On Hold</option>
+                    <option value="string:In Progress" label="In Progress" selected="selected">In Progress</option>
+                    <option value="string:Resolved" label="Resolved">Resolved</option></select>
+
+            </div>
+            <div class="pull-left m-top p_btm">
+                <label class="pull-left width_50">Status:</label>
+                <select class="form-control input-sm pull-left width_120">
+                    <option value="string:New" label="New">New</option><option value="string:Open" label="Open">Open</option>
+                    <option value="string:Waiting for Info" label="Waiting for Info">Waiting for Info</option>
+                    <option value="string:On Hold" label="On Hold">On Hold</option>
+                    <option value="string:In Progress" label="In Progress" selected="selected">In Progress</option>
+                    <option value="string:Resolved" label="Resolved">Resolved</option></select>
+                <button type="submit" class="btn btn-primary btn-sm pull-right m-top"><span>save</span></button>
+            </div>
+
+
+        </div>
+    </div>
+</script>
+
+
+<script type="text/ng-template" id="assign.html">
+    <div class="popover">
+        <div class="arrow"></div>
+        <div class="popover-content width_220">
+            <div class="pull-left p_btm">
+                <a href="#" editable-select="assignee" e-ng-options="s.user_id as s.fullname for s in projectMembers" onaftersave="updateSrElement(selectedId._id, assignee, 'assignee' )">
+                    {{ showAssignee() }}
+                </a>
+            </div>
+
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="attachment.html">
+    <div class="popover">
+        <div class="arrow"></div>
+        <div class="popover-content attach_wrap">
+
+            <div class="drop-attachment top_alink clearfix">
+                <a href="" class="pull-left" ng-show="attachmentDetails.length">download all</a>
+                <a href="" class="pull-right" onclick="click_model()" title="upload" data-toggle="modal" data-backdrop="static" data-target="#upload-file" ng-show="attachmentDetails.length<maxAttachment">
+                    add more
+                </a>
+                <span class="pull-right" ng-show="attachmentDetails.length >= maxAttachment">File limit reached</span>
+            </div>
+                <div ng-repeat="attachment in attachmentDetails" class="drop-attachment clearfix">
+
+                    <a target = "_blank" href="{{attachment.path}}"> <i class="material-icons pull-right">file_download</i></a>
+                    <h2>{{attachment.filename}}</h2>
+                    <span>{{attachment.uploader}}<span>
+                    <p>{{attachment.description}}</p>
+                </div>
+        </div>
+    </div>
+</script>
+
+<form name='form'>
+    <div class="modal fade" id="upload-file" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Add Attachment</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">Attachment:</label>
+                        <input type='file' ngf-select ng-model="attach.file" name="file" ngf-max-size="5MB" validfile ng-click="invalidFile=false">
+                        <i ng-show="form.file.$error.maxSize" style="color:red">File too large {{newTask.attachments.file.size / 1000000|number:1}}MB: max 5MB</i> <br />
+                        <span style="color:red" ng-show="invalidFile"> File type error</span>
+                        <span class="progress" ng-show="attach.file.progress >= 0">
+                            <div style="width:{{attach.file.progress}}%" 
+                                ng-bind="attach.file.progress + '%'">
+                            </div>
+                        </span>
+                        <span ng-show="attach.file.result">Upload Successful</span>
+                        <span class="err" ng-show="errorMsg">{{errorMsg}}</span>                    
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">Description:</label>
+                        <textarea ng-disabled="!attach.file" class="form-control" id="message-text" ng-model= "attach.description"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" ng-click="uploadSingleFile(attach)" ng-disabled="form.file.$error.maxSize || invalidFile || !attach.file">Ok</button>
+                    <button type="button" class="btn btn-default" ng-click="cancel()">Cancel</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script src="/vendor/js/index.js"></script>
+
+<script>
+
+    $("#upload-file").on("hidden.bs.modal", function() {
+        $("#main").css("position", "fixed");
+    });
+
+    function click_model(){
+        $('#upload-file').modal({
+            show: true
+        });
+        $("#main").css("position", "absolute");
+    }
+
+</script>
+
+

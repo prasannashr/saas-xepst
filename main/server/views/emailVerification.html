@@ -1,0 +1,49 @@
+<!------------------------------------------------------------------------------------------------------
+  Copyright Javra Software - www.javra.com
+------------------------------------------------------------------------------------------------------
+  File        : main/server/views/emailVerification.html
+  Description : html template for the verification email sent to new customers
+  Input param : inserts full user name, domain, and password for the user
+  Output param: provides a formatted email for verification of the customer's email
+  Designer    : Nischal Raj Budhathoki
+  Author      : Rikesh Bhansari
+  Created     : 11/09/2015
+
+Date        Author Version  Description
+---------------------------------------------------------------------------------------------
+10/09/2015 Rikesh    v1     html template for the verification email sent to new customers
+--------------------------------------------------------------------------------------------- !-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<table width="600" cellspacing="0" cellpadding="0" border="0" style="border-radius:6px;background-color:#F5F7F2; margin: 0 auto">
+    <tbody><tr>
+
+        <td valign="top" align="left" style="line-height:150%;font-family:Verdana;font-size:14px;color:#333333;padding:20px">
+
+            <h2 style="font-size:22px;line-height:28px;margin:0 0 12px 0">Dear {{user}}, Thank You for signing up with SAAS XEPST.
+            </h2>
+            <p>Your domain is: {{subdomain}}</p>
+            <p>Your password is: {{password}}</p>
+            <a href="{{verifyUrl}}" target="_blank" style="color:#ffffff!important;display:inline-block;font-size:16px;line-height:42px;font-family:'Helvetica',Arial,sans-serif;
+            white-space:nowrap;min-height:42px;margin:12px 5px 12px 0;padding:0 22px;text-decoration:none;text-align:center;border:0;border-radius:3px;background-color:#FF8A00!important;" >
+                <span>Verify</span></a>
+            <br>
+            <div><p style="padding:0 0 10px 0">If you received this email by mistake, simply delete it. You won't be registered if you don't click the confirmation link above.</p>
+
+                <p style="padding:0 0 10px 0">For questions about this list, please contact:<br>
+                    <a target="_blank" style="color:#336699" href=""></a><a target="_blank" style="color:#336699" href="">javra@javra.com</a></p>
+            </div>
+
+
+
+
+        </td>
+
+    </tr>
+    </tbody></table>
+</body>
+</html>

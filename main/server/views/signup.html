@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SaaS XEPST</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="vendor/angular-ui-notification/angular-ui-notification.min.css">
+</head>
+<body class="login-bg" ng-app="app">
+<div class="container">
+    <div class="signup-container">
+        <button type="button" class="btn-signup" data-toggle="modal" data-target="#exampleModal">Get Started Now</button>
+    </div><!-- /card-container -->
+</div><!-- /container -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="mp()"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Sign Up</h4>
+            </div>
+            <div class="modal-body">
+                <form name="signupForm" class="form-horizontal" method="post" ng-controller="mvSignupCtrl">
+                    
+                    <div class="form-group" ng-class="{ 'has-error' : (signupForm.email.$invalid || emailUsed) && (signupForm.email.$dirty || submitted)}">
+                        <label for="email" class="col-md-2 control-label">Email</label>
+                        <div class="col-md-10">
+                            <input name="email" type="email" placeholder="Email" ng-model="email" required="required" class="form-control" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" ng-blur="checkAvailable('email',email)"/>
+                            <p ng-if="signupForm.email.$pending.emailUsed">checking....</p>
+                            <p ng-show="signupForm.email.$error.required && (signupForm.email.$dirty || submitted)" class="invalid">Email is required.</p>
+                            <p ng-show="signupForm.email.$error.pattern && (signupForm.email.$dirty || submitted)" class="invalid">Invalid email.</p>
+                            <p ng-show="emailUsed" class="invalid">Email already in use.</p>
+                        </div>
+                    </div>
+                   
+                    <div class="form-group" ng-class="{ 'has-error' : signupForm.password1.$invalid && (signupForm.password1.$dirty || submitted)}">
+                        <label for="password1" class="col-md-2 control-label">Password</label>
+                        <div class="col-md-10">
+                            <input name="password1" type="password" placeholder="Password" ng-model="password1" required="required" class="form-control" ng-keypress="clear()"/>
+                            <p ng-show="signupForm.password1.$error.required && (signupForm.password1.$dirty || submitted)" class="invalid">Password is required.</p>
+                        </div>
+                    </div>                   
+                   
+                    <div class="form-group" ng-class="{ 'has-error' : signupForm.password2.$invalid && (signupForm.password2.$dirty || submitted)}">
+                        <label class="col-sm-2 control-label">Confirm Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" placeholder="Retype Password" name="password2" ng-model="password2" password-verify="password1" required="required" />
+                            <p ng-show="signupForm.password2.$error.required && (signupForm.password2.$dirty || submitted)" class="invalid">Password confirmation is required.</p>
+                            <p ng-show="signupForm.password2.$error.passwordVerify && (signupForm.password2.$dirty || submitted)" class="invalid">Password mismatch.</p>
+                         </div>
+                     </div>
+
+                    <div class="form-group" ng-class="{ 'has-error' : signupForm.fname.$invalid && (signupForm.fname.$dirty || submitted)}">
+                        <label for="fname" class="col-md-2 control-label">First Name</label>
+                        <div class="col-md-10">
+                            <input name="fname" type="text" placeholder="First Name" ng-model="fname" required="required" class="form-control" />
+                            <p ng-show="signupForm.fname.$error.required && (signupForm.fname.$dirty || submitted)" class="invalid">First name is required.</p>
+                        </div>
+                    </div>
+                   
+                    <div class="form-group" ng-class="{ 'has-error' : signupForm.lname.$invalid && (signupForm.lname.$dirty || submitted)}">
+                        <label for="lname" class="col-md-2 control-label">Last Name</label>
+                        <div class="col-md-10">
+                            <input name="lname" type="text" placeholder="Last Name" ng-model="lname" required="required" class="form-control" />
+                            <p ng-show="signupForm.lname.$error.required && (signupForm.lname.$dirty || submitted)" class="invalid">Last name is required.</p>
+                        </div>
+                    </div>
+                   
+                    <div class="form-group" ng-class="{ 'has-error' : signupForm.cname.$invalid && (signupForm.cname.$dirty || submitted)}">
+                        <label for="cname" class="col-md-2 control-label">Company Name</label>
+                        <div class="col-md-10">
+                            <input name="cname" type="text" placeholder="Company Name" ng-model="cname" required="required" class="form-control" />
+                            <p ng-show="signupForm.cname.$error.required && (signupForm.cname.$dirty || submitted)" class="invalid">Last name is required.</p>
+                        </div>
+                    </div>
+                  
+                    <div class="form-group" ng-class="{ 'has-error' : signupForm.subdomain.$invalid && (signupForm.subdomain.$dirty || submitted)}">
+                        <label for="subdomain" class="col-md-2 control-label">Sub Domain Name</label>
+                        <div class="col-md-10">
+                          <input name="subdomain" type="text" placeholder="Sub Domain Name" ng-model="subdomain" required="required" class="form-control" ng-blur="checkAvailable('subdomain',subdomain)" />
+                          <p ng-show="signupForm.subdomain.$error.required && (signupForm.subdomain.$dirty || submitted)" class="invalid">Sub Domain is required.</p>
+                          <p ng-show="subdomainUsed" class="invalid">Sub domain already in use.</p>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button ng-click="signup(signupForm.$valid && !emailUsed && !subdomainUsed)" type="button" class="btn btn orange">Sign up</button>
+                    </div>
+                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('.modal').on('hidden.bs.modal', function(){
+        $(this).find('form')[0].reset();
+
+    });
+</script>
+    <script type="text/javascript" src="/vendor/toastr/toastr.js"></script>
+    <script type="text/javascript" src="/vendor/angular/angular.js"></script>
+    <script type="text/javascript" src="/vendor/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="/vendor/angular-route/angular-route.js"></script>
+    <script src="/vendor/angular-ui-notification/angular-ui-notification.min.js"></script>
+    <script type="text/javascript" src="/app/main-app.js"></script>
+    <script type="text/javascript" src="/app/account/mvIdentity.js"></script>
+    <script type="text/javascript" src="/app/common/mvNotifier.js"></script>
+    <script type="text/javascript" src="/app/account/mvAuth.js"></script>
+    <script type="text/javascript" src="/app/account/mvUser.js"></script>
+    <script type="text/javascript" src="/app/account/mvSignupCtrl.js"></script>
+</body>
+</html>

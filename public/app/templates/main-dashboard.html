@@ -1,0 +1,54 @@
+<div ng-show="showProject">
+    <div class="action-bar">
+        <h2>{{"PROJECT_STATUS_CHART" | translate}}
+            <a href="" data-template-url="editlang.html" ng-click="getLabelDetails('PROJECT_STATUS_CHART', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption" >
+                <i class="material-icons edit_label_size">mode_edit</i>
+            </a>
+        </h2>
+    </div>
+    <div class="proect_detail_wrap">
+        <div id="main-nano-wrapper" class="nano dashboard_wrap">
+            <div class="nano-content">
+                <ul class="dashboard">
+                    <li class="col-nw-6 dash_chart" ng-repeat="project in projectData" ng-mouseenter="hover = true" ng-mouseleave="hover = false" ui-sref="project({ projectId: project._id })">
+                        <h3 ng-class="{h_bg: hover}">{{project.project_title}}</h3>
+                        
+                            
+                            <div ng-show="getTotal(project.projectStatus.data)==0">
+                                <p class="p_top_80"><img src="images/project-icon.png" /><br>
+                                    No Service Request
+                                </p>
+
+                            </div>
+                            <p ng-show="getTotal(project.projectStatus.data)>0">
+                                <canvas id="doughnut" class="chart chart-doughnut" chart-data="project.projectStatus.data" chart-labels="project.projectStatus.label" legend="true" chart-options="options"></canvas> 
+                            </p>
+                           <!--  <canvas id="base" class="chart-base" chart-type="type" chart-data="data" chart-labels="labels"></canvas>  -->
+                       
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-hide="showProject">
+    <div class="action-bar">
+        <h2>Get Started</h2> 
+    </div>
+    <div class="proect_detail_wrap">
+        <div id="main-nano-wrapper" class="nano">
+            <div class="nano-content">
+                <div class="no-project">
+                    <p><img src="images/project-icon.png" /> </p>
+                    <h2>No Projects</h2>
+                    <h4 ng-show="role=='admin'">You don't have any projects yet so just create one! Click the button below to get started</h4>
+                    <h4 ng-hide="role=='admin'">You haven't been assigned to any projects yet!</h4>
+                    <p>
+                        <button ng-show="role=='admin'" type="button" ui-sref="setting.createproject" class="btn btn-primary btn-lg m-top">Create the first project</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/vendor/js/scroller.js"></script>

@@ -1,0 +1,77 @@
+<div class="action-bar">
+    <h2>{{"SETTINGS" | translate}} 
+        <a href="" data-template-url="editlang.html" ng-click="getLabelDetails('SETTINGS', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+            <i class="material-icons edit_label_size">mode_edit</i>
+        </a> 
+    </h2>
+    <div ng-include src="'app/templates/search.html'"></div>
+</div>
+<div id="main-nano-wrapper" class="nano setting_wrap">
+    <div class="nano-content">
+
+<div id="parentVerticalTab">
+    <div>
+    <ul class="resp-tabs-list hor_1">
+        <li ui-sref="setting.general" ui-sref-active="resp-tab-active">{{"GENERAL" | translate}}
+             <a href="" title="Edit label" data-container="body" data-template-url="editlang.html" ng-click="getLabelDetails('GENERAL', identity.currentUser.customerId)"  data-placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                 <i class="material-icons edit_label_size">mode_edit</i>
+            </a>
+        </li>
+        <li ui-sref="setting.organization" ui-sref-active="resp-tab-active">{{"ORGANIZATION" | translate}}
+             <a href="" title="Edit label" data-container="body" data-template-url="editlang.html" ng-click="getLabelDetails('ORGANIZATION', identity.currentUser.customerId)"  data-placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                 <i class="material-icons edit_label_size">mode_edit</i>
+            </a>
+        </li>
+        <li ui-sref="setting.user" ui-sref-active="resp-tab-active">{{"USER" | translate}}
+             <a href="" title="Edit label" data-container="body" data-template-url="editlang.html" ng-click="getLabelDetails('USER', identity.currentUser.customerId)"  data-placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                 <i class="material-icons edit_label_size">mode_edit</i>
+            </a>
+        </li>
+        <li ui-sref="setting.profile" class="custom-style" ui-sref-active="resp-tab-active">{{"PROFILE" | translate}}
+             <a href="" title="Edit label" data-container="body" data-template-url="editlang.html" ng-click="getLabelDetails('PROFILE', identity.currentUser.customerId)" data-placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                 <i class="material-icons edit_label_size">mode_edit</i>
+            </a>
+        </li>
+        <li ui-sref="setting.changepassword" class="custom-style" ui-sref-active="resp-tab-active">{{"CHANGE_PASSWORD" | translate}}
+             <a href="" title="Edit label" data-container="body" data-template-url="editlang.html" ng-click="getLabelDetails('CHANGE_PASSWORD', identity.currentUser.customerId)" data-placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                 <i class="material-icons edit_label_size">mode_edit</i>
+            </a>
+        </li>
+        <li ui-sref="setting.createuser" class="custom-style" ui-sref-active="resp-tab-active" ng-show="identity.isAuthenticated() && identity.isAuthorized('admin')">{{"CREATE" | translate}}
+             <a href="" title="Edit label" data-container="body" data-template-url="editlang.html" ng-click="getLabelDetails('CREATE', identity.currentUser.customerId)" data-placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                 <i class="material-icons edit_label_size">mode_edit</i>
+            </a>
+        </li>
+        <li ui-sref="setting.usergroup" ui-sref-active="resp-tab-active">{{"USER_GROUP" | translate}}
+            <a href="" title="Edit label" data-container="body" data-template-url="editlang.html" ng-click="getLabelDetails('USER_GROUP', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                 <i class="material-icons edit_label_size">mode_edit</i>
+            </a>
+        </li>
+        <li ui-sref="setting.project" ui-sref-active="resp-tab-active">{{"PROJECTS" | translate}}
+             <a href="" title="Edit label" data-container="body" data-template-url="editlang.html" ng-click="getLabelDetails('PROJECTS', identity.currentUser.customerId)" data-placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                 <i class="material-icons edit_label_size">mode_edit</i>
+            </a>
+        </li>
+        <li ui-sref="setting.createproject" class="custom-style" ui-sref-active="resp-tab-active" ng-show="identity.isAuthenticated() && identity.isAuthorized('admin')">{{"CREATE" | translate}}
+             <a href="" title="Edit label" data-container="body" data-template-url="editlang.html" ng-click="getLabelDetails('CREATE', identity.currentUser.customerId)" data-placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                 <i class="material-icons edit_label_size">mode_edit</i>
+            </a>
+        </li>
+
+        <li ui-sref="setting.language" ui-sref-active="resp-tab-active" ng-show="identity.isAuthenticated() && identity.isAuthorized('admin')">{{"LANGUAGE" | translate}}
+             <a href="" title="Edit label" data-container="body" data-template-url="editlang.html" ng-click="getLabelDetails('LANGUAGE', identity.currentUser.customerId)" data-placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                 <i class="material-icons edit_label_size">mode_edit</i>
+              </a>
+        </li>
+        <li ui-sref="setting.addlanguage" class="custom-style" ui-sref-active="resp-tab-active" ng-show="identity.isAuthenticated() && identity.isAuthorized('admin')">{{"ADD" | translate}}
+             <a href="" title="Edit label" data-container="body" data-template-url="editlang.html" ng-click="getLabelDetails('ADD', identity.currentUser.customerId)" data-placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                 <i class="material-icons edit_label_size">mode_edit</i>
+            </a>
+        </li>
+    </ul>
+
+    <div class="resp-tabs-container hor_1">
+        <div ui-view></div>
+    </div>
+</div></div></div></div>
+

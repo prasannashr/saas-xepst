@@ -1,0 +1,104 @@
+<div>
+    <h3 class="head_z">{{"EDIT_PROJECT" | translate}}
+    <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('EDIT_PROJECT', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+        <i class="material-icons edit_label_size">mode_edit</i>
+    </a>
+    </h3>
+    <div class="wrap-padding form-bg clearfix">
+        <form name="form">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="exampleInputName2">{{"PROJECT_ID" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('PROJECT_ID', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </label>
+                    <br>
+                    <input type="text" class="form-control" name="projectId" id="exampleInputName2" placeholder="" ng-model="editproject.project_id" required tabindex="1">
+                    <span style="color:red" ng-show="submitted && form.projectId.$error.required">Required field!</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="exampleInputName2">{{"PROJECT_NAME" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('PROJECT_NAME', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </label>
+                    <br>
+                    <input type="text" class="form-control" name="projectName" id="exampleInputName2" placeholder="" ng-model="editproject.project_title" required tabindex="2">
+                    <span style="color:red" ng-show="submitted && form.projectId.$error.required">Required field!</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="exampleInputName2">{{"START_DATE" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('START_DATE', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </label>
+                    <br>
+                    <p class="input-group">
+                        <input type="text" class="form-control" name="startDate" datepicker-popup="{{format}}" ng-model="editproject.project_startDate" ng-disabled="true" is-open="startDate.opened" close-text="Close" required>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="openStartDate($event)" tabindex="3"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                    <span style="color:red" ng-show="submitted && form.startDate.$error.required">Required field!</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="exampleInputName2">{{"END_DATE" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('END_DATE', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </label>
+                    <br>
+                    <p class="input-group">
+                        <input type="text" class="form-control" name="endDate" datepicker-popup="{{format}}" ng-model="editproject.project_endDate" ng-disabled="true" is-open="endDate.opened" min-date="editproject.project_startDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" close-text="Close" required>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="openEndDate($event)" tabindex="4"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                    <span style="color:red" ng-show="submitted && form.endDate.$error.required">Required field!</span>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="exampleInputName2">{{"ADD_MEMBERS" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('ADD_MEMBERS', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </label>
+                    <br>
+                    <ui-select theme="bootstrap" multiple ng-model="editproject.members" tabindex="5">
+                        <ui-select-match placeholder="Select person...">{{$item.fullname}} </ui-select-match>
+                        <ui-select-choices repeat="user in userNameList | propsFilter: {fullname: $select.search, user_id: $select.search}">
+                            <div ng-bind-html="user.fullname | highlight: $select.search"></div>
+                            <div ng-bind-html="user.email | highlight: $select.search"></div>
+                        </ui-select-choices>
+                    </ui-select>                  
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="exampleInputName2">{{"DESCRIPTION" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('DESCRIPTION', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </label>
+                    <br>
+                    <textarea class="form-control" id="message-text" rows="5" name="description" ng-model="editproject.project_description" required tabindex="6"></textarea>
+                    <span style="color:red" ng-show="submitted && form.description.$error.required">Required field!</span>
+            </div>
+            <div class="pull-right ptop_5">
+                <button type="button" class="btn btn-primary btn-sm" ng-click="updateProject(editproject)" tabindex="7">{{"UPDATE_PROJECT" | translate}}</button>
+                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('UPDATE_PROJECT', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                    <i class="material-icons edit_label_size">mode_edit</i>
+                </a>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+{
+	"PROFILE": "Profil",
+	"LOGOUT": "Abmelden",
+	"CREATED_PROJECT": "Erstellt Projekt",
+	"DASHBOARD": "Armaturenbrett",
+	"USERS": "Benutzer",
+	"PROJECTS": "Projekte",
+	"SETTINGS": "Einstellungen",
+	"SEARCH": "Geben Sie Ihren Suchbegriff ein...",
+	"SELECT_EN":"Englisch",
+	"SELECT_NL":"Holländisch",
+	"SELECT_DE":"Deutsche",
+	"SELECT_ES":"Spanisch"
+}

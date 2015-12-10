@@ -1,0 +1,179 @@
+<div class="col-lg-12 wrap-bg">
+    <div class="row">
+        <div class="project-list-header clearfix">
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+        <button class="btn btn-default" type="button"> <span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <button type="button" class="btn orange btn-align" data-toggle="modal" data-target="#exampleModal1">Add User</button>
+                <button type="button" class="btn orange btn-align m-left" data-toggle="modal" data-target="#exampleModal">Create Roles</button>
+                <button type="button" class="btn orange btn-align m-left" >View Roles</button>
+            </div>
+        </div>
+        <div>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Group Name</th>
+                            <th>Description</th>
+                            <th>Create project</th>
+                            <th>Edit Project</th>
+                            <th>Create SR</th>
+                            <th>Edit SR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="data in roleList">
+                            <td>{{$index+1}}</td>
+                            <td>{{ data.group_name}}</td>
+                            <td>{{ data.description}}</td>
+                            <td>{{ data.create_project }}</td>
+                            <td>{{ data.edit_project }}</td>
+                            <td>{{ data.create_SR}}</td>
+                            <td>{{ data.edit_SR}}</td>
+                            <td>
+                                <a href="" title="Edit" data-toggle="modal" data-target="#exampleModal" ng-click="editRoleGroup(data._id)">
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+                                <a href="" title="delete" class="m-left" ng-click="deleteRoleGroup(data._id)">
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" ng-hide="clickEdit" id="exampleModalLabel">Add User</h4>
+                    <h4 class="modal-title" ng-show="clickEdit" id="exampleModalLabel">Edit User</h4>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#p-detail" aria-controls="p-detail" role="tab" data-toggle="tab">Personal Info</a></li>
+                            <li role="presentation"><a href="#l-detail" aria-controls="l-detail" role="tab" data-toggle="tab">Login Info</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <form>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="p-detail">
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="control-label">Name:</label>
+                                        <input type="text" class="form-control" id="recipient-name" ng-model="newuser.firstName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="control-label">Last Name:</label>
+                                        <input type="text" class="form-control" id="recipient-name" ng-model="newuser.lastName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="control-label">Designation:</label>
+                                        <input type="text" class="form-control" id="recipient-name" ng-model="newuser.designation">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="control-label">Address:</label>
+                                        <input type="text" class="form-control" id="recipient-name" ng-model="newuser.address">
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="l-detail">
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="control-label">Email:</label>
+                                        <input type="text" class="form-control" id="recipient-name" ng-model="newuser.email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="control-label">Password:</label>
+                                        <input type="text" class="form-control" id="recipient-name" ng-model="newuser.password">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                    <button type="button" ng-hide="clickEdit" class="btn btn orange" ng-click="addUser(newuser)" data-dismiss="modal">Add</button>
+                    <button type="button" ng-show="clickEdit" class="btn btn orange" ng-click="updateUser(newuser)" data-dismiss="modal">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel">Create Roles</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">Group Name:</label>
+                            <input type="text" class="form-control" id="recipient-name" ng-model="newrole.group_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">Description:</label>
+                            <textarea class="form-control" id="message-text" ng-model="newrole.description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label width-150">Can create project?</label>
+                            <label class="radio-inline">
+                                <input type="radio" name="createProject" ng-model="newrole.create_project" value="true" ng-required="true" ng-checked="newrole.create_project == true">Yes
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="createProject" ng-model="newrole.create_project" value="false" ng-required="true" ng-checked="newrole.create_project == false">No
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label width-150">Can Edit project?</label>
+                            <label class="radio-inline">
+                                <input type="radio" name="editProject" ng-model="newrole.edit_project" value="true" ng-required="true" ng-checked="newrole.edit_project == true">Yes
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="editProject" ng-model="newrole.edit_project" value="false" ng-required="true" ng-checked="newrole.edit_project == false">No
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label width-150">Can create SR?</label>
+                            <label class="radio-inline">
+                                <input type="radio" name="createSr" ng-model="newrole.create_SR" value="true" ng-required="true" ng-checked="newrole.create_SR == true">Yes
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="createSr" ng-model="newrole.create_SR" value="false" ng-required="true" ng-checked="newrole.create_SR == false">No
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label width-150">Can Edit SR?</label>
+                            <label class="radio-inline">
+                                <input type="radio" name="editSr" ng-model="newrole.edit_SR" value="true" ng-required="true" ng-checked="newrole.edit_SR == true">Yes
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="editSr" ng-model="newrole.edit_SR" value="false" ng-required="true" ng-checked="newrole.edit_SR == false">No
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                    <button type="button" class="btn btn orange" ng-hide="clickRole" ng-click="addNewRole(newrole)" data-dismiss="modal">Create</button>
+                    <button type="button" class="btn btn orange" ng-show="clickRole" ng-click="updateRole(newrole._id, newrole)" data-dismiss="modal">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $('a').click(function(event) {
+        event.preventDefault();
+
+    });
+    </script>

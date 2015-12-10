@@ -1,0 +1,69 @@
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="p-left">Group Name</th>
+                <th>Description </th>
+                <th>Priviledge</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="userGroup in userGroups">
+                <td class="p-left">{{userGroup.group_name}}</td>
+                <td>{{userGroup.description}}</td>
+                <td>{{userGroup.permission.full_control}}/
+                    {{userGroup.permission.read}}/
+                    {{userGroup.permission.edit}}/
+                    {{userGroup.permission.limited_access}}
+                </td>
+                <td>
+                    <a href="" title="Edit"><i class="material-icons priority-icon">mode_edit</i></a>
+                    <a href="" title="delete" class="m-left "><i class="material-icons priority-icon">delete</i></a>
+                </td>
+            </tr>            
+        </tbody>
+    </table>
+    <h3 class="head_z">
+        <a role="button" data-toggle="collapse" href="#createnew" aria-expanded="false" aria-controls="createnew">
+                    Create New<span class="caret"></span>
+        </a>
+    </h3>
+    <div class="collapse form-bg " id="createnew">
+        <form name="form">
+            <div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="exampleInputName2">Group Name:</label>
+                        <br>
+                        <input type="text" class="form-control" name="groupname" id="groupname" placeholder="User Group Name" ng-model="userGroup.group_name">
+                        <span style="color:red" ng-show="submitted && form.groupname.$error.required">Required  Group Name</span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="exampleInputName2">Description:</label>
+                        <br>
+                        <textarea class="form-control" id="message-text" name="description" ng-model="userGroup.description"></textarea>
+                        <span style="color:red" ng-show="submitted && form.description.$error.required">Required field!</span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="checkbox" ng-model="userGroup.permission.full_control" aria-label="...">
+                        <label for="exampleInputName2" class="m-right_20">Full Control</label>
+                        <input type="checkbox" ng-model="userGroup.permission.read" aria-label="...">
+                        <label for="exampleInputName2" class="m-right_20">Read</label>
+                        <input type="checkbox" ng-model="userGroup.permission.edit" aria-label="...">
+                        <label for="exampleInputName2">Edit</label>
+                        <input type="checkbox" ng-model="userGroup.permission.limited_access" aria-label="...">
+                        <label for="exampleInputName2">Limited Access</label>
+                    </div>
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-primary btn-sm" ng-click="addUserGroup(userGroup)">Create</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

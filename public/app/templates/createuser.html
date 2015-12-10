@@ -1,0 +1,84 @@
+<div>
+    <h3 class="head_z" ng-hide="clickEdit">{{"USER_CREATE" | translate}}
+        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('USER_CREATE', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+            <i class="material-icons edit_label_size">mode_edit</i>
+        </a>
+    </h3>
+    <h3 class="head_z" ng-show="clickEdit">{{"EDIT_USER" | translate}}
+        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('EDIT_USER', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+            <i class="material-icons edit_label_size">mode_edit</i>
+        </a>
+    </h3>
+    <div class="wrap-padding form-bg clearfix">
+        <form name="form">
+            <div class="col-md-6" >
+                <div class="form-group">
+                    <label for="firstname"> {{"FIRST_NAME" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('FIRST_NAME', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </label>
+                    <br>
+                    <input type="text" class="form-control" name="firstName" placeholder="First Name" ng-model="newuser.firstName" required tabindex="1">
+                    <span style="color:red" ng-show="submitted && form.firstName.$error.required">Required firstname</span>
+                </div>
+            </div>
+            <div class="col-md-6" >
+                <div class="form-group">
+                    <label for="lastname"> {{"LAST_NAME" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('LAST_NAME', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </label>
+                    <br>
+                    <input type="text" class="form-control" name="lastName" placeholder="Last Name"  ng-model="newuser.lastName" required tabindex="2">
+                    <span style="color:red" ng-show="submitted && form.lastName.$error.required">Required lastname</span>
+                </div>
+            </div>
+            <div class="col-md-6" >
+                <div class="form-group">
+                    <label for="email"> {{"EMAIL" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('EMAIL', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </label>
+                    <br>
+                    <input type="email" class="form-control" name="email" ng-blur ="checkEmailOfUser(identity.customerId,newuser.email)" ng-pattern="/^\S+@\S+\.\S+$/" placeholder="Email" ng-model="newuser.email" required tabindex="3">
+                    <span style="color:red" ng-show="submitted && form.email.$error.required">Required email</span>
+                    <span style="color:red" ng-show="submitted && form.email.$error.pattern">Invalid email</span>
+                    <span style="color:red">{{response}}</span>
+                </div>
+            </div>
+            <div class="col-md-6" >
+                <div class="form-group">
+                    <label for="designation"> {{"DESIGNATION" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('DESIGNATION', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </label>
+                    <br>
+                    <input type="text" class="form-control" name="designation" placeholder="Designation" ng-model="newuser.designation" required tabindex="4">
+                    <span style="color:red" ng-show="submitted && form.designation.$error.required">Required designation</span>
+                </div>
+            </div>
+  <!--      <div class="col-md-6">
+            <div class="form-group">
+                <label for="exampleInputName2"> {{"USER_TYPE" | translate}}<a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('USER_TYPE', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover>
+                       <i class="material-icons edit_label_size">mode_edit</i>
+                    </a></label>
+                <br>
+                <select ng-model="newuser.role" class="form-control" id="exampleInputName2">
+                    <option ng-repeat="data in roleList" value="{{data.name}}">{{data.name}}</option>
+                </select>
+            </div>
+
+        </div>-->
+            <div class="col-md-12">
+                <div class="pull-right ptop_5">
+                    <button type="button" ng-hide="clickEdit" class="btn btn-primary btn-sm" ng-click="addUser(newuser)" ng-disabled="response" tabindex="5">Create</button>
+                    <button type="button" ng-show="clickEdit" class="btn btn-primary btn-sm" ng-click="updateUser(newuser._id,newuser)" tabindex="6">Update</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

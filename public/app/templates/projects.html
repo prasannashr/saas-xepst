@@ -1,0 +1,47 @@
+<div class="wrap-padding">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>{{"PROJECT_ID" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('PROJECT_ID', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                          <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </th>
+                    <th>{{"PROJECT_NAME" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('PROJECT_NAME', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                          <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </th>
+                    <th style="width: 32%">{{"DESCRIPTION" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('DESCRIPTION', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                          <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </th>
+                    <th>{{"START_DATE" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('START_DATE', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                          <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </th>
+                    <th ng-show="identity.isAuthenticated() && identity.isAuthorized('admin')">{{"ACTION" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('ACTION', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                          <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="project in projectData">
+                    <td>{{project.project_id}}</td>
+                    <td><a href="#" ui-sref="project({ projectId: project._id })">{{project.project_title | strLimit: 35}} </a></td>
+                    <td>{{project.project_description | strLimit: 45}}</td>
+                    <td>{{project.project_startDate| date: 'MMM dd yyyy'}}</td>
+                    <td ng-show="identity.isAuthenticated() && identity.isAuthorized('admin')"> 
+                    <a ui-sref="setting.editProject({ projectId: project._id })" title="Edit" ng-click="editProject(project)"><i class="material-icons priority-icon">mode_edit</i></a>
+                        
+                    </td>
+                </tr>                
+            </tbody>
+        </table>
+    </div>
+</div>

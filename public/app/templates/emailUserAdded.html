@@ -1,0 +1,45 @@
+<!------------------------------------------------------------------------------------------------------
+  Copyright Javra Software - www.javra.com
+------------------------------------------------------------------------------------------------------
+  File        : public/app/templates/emailUserAdded.html
+  Description : html template for the email sent to new users
+  Input param : inserts full user name, domain, and password for the user
+  Output param: provides a formatted email for newly added users
+  Author      : Rikesh Bhansari
+  Created     : 17/09/2015
+
+Date        Author Version  Description
+---------------------------------------------------------------------------------------------
+17/09/2015 Rikesh    v1     html template for the email sent to new users
+--------------------------------------------------------------------------------------------- !-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<table width="600" cellspacing="0" cellpadding="0" border="0" style="border-radius:6px;background-color:#F5F7F2; margin: 0 auto">
+    <tbody><tr>
+
+        <td valign="top" align="left" style="line-height:150%;font-family:Verdana;font-size:14px;color:#333333;padding:20px">
+
+            <h2 style="font-size:22px;line-height:28px;margin:0 0 12px 0">Dear {{user}}, Your SAAS XEPST account has been created.
+            </h2>
+            <p>Your domain is: <a target="_blank" href="{{subdomain}}">{{subdomain}}</a></p>
+            <p>Your password is: {{password}}</p>
+            <br>
+            <div><p style="padding:0 0 10px 0">If you received this email by mistake, simply delete it.</p>
+
+                <p style="padding:0 0 10px 0">For questions about this email, please contact:<br>
+                    <a target="_blank" style="color:#336699" href=""></a><a target="_blank" style="color:#336699" href="">javra@javra.com</a></p>
+            </div>
+
+
+
+
+        </td>
+
+    </tr>
+    </tbody></table>
+</body>
+</html>
