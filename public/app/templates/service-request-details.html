@@ -1,52 +1,57 @@
 <div class="action-bar" ng-cloak>
     <h2><a ui-sref="project({ projectId: projectDetail._id })">{{projectDetail.project_title}} </a></h2>
     <div ng-include src="'app/templates/search.html'"></div>
-    <div class="advance_search"><a href="#" class="slide_down">Advance Search</a></div>
+    <div class="advance_search"><a href="#" class="slide_down">Filter SRs</a></div>
     
     <div class="create_sr"><a href="" ui-sref="createsr({projectId: projectId})" title="Create SR"><i class="material-icons nav-font">assignment</i></a></div>
 </div>
 
 <div style="display: none;" class="search_slide">
+    <label id="filter">Filter SRs by date they were created on:</label>
     <div>
         <p class="input-group">
-            <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dateObj.filterStartDate" is-open="startDate.opened" ng-disabled="true" max-date="dateObj.filterFinishDate" datepicker-options="dateOptions" close-text="Close" name="startDate" placeholder="SR created from this day">
+            <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dateObjForFilter.filterStartDate" is-open="planningStart.opened" ng-disabled="true" max-date="dateObjForFilter.filterFinishDate" datepicker-options="dateOptions" close-text="Close" name="planningStart" placeholder="SR created from this day">
             <span class="input-group-btn">
-                <button type="button" class="btn btn-default" ng-click="openfilterStartDatePicker($event)" tabindex="9"><i class="glyphicon glyphicon-calendar"></i></button>
+                <button type="button" class="btn btn-default" ng-click="openPlanningStart($event)" tabindex="9"><i class="glyphicon glyphicon-calendar"></i></button>
             </span>
         </p>
     </div>
     <div>
         <p class="input-group">
-            <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dateObj.filterFinishDate" is-open="finishDate.opened" ng-disabled="true" min-date="dateObj.filterStartDate" datepicker-options="dateOptions" close-text="Close" name="finishDate" placeholder="SR created before this day">
+            <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dateObjForFilter.filterFinishDate" is-open="due.opened" ng-disabled="true" min-date="dateObjForFilter.filterStartDate" datepicker-options="dateOptions" close-text="Close" name="due" placeholder="SR created upto this day">
             <span class="input-group-btn">
-                <button type="button" class="btn btn-default" ng-click="openfilterFinishDatePicker($event)" tabindex="9"><i class="glyphicon glyphicon-calendar"></i></button>
+                <button type="button" class="btn btn-default" ng-click="openDueDatePicker($event)" tabindex="9"><i class="glyphicon glyphicon-calendar"></i></button>
             </span>
         </p>
     </div>
+    <br />
+    <label id="filter">Filter SRs by their status:</label>
     <div class="checkbox">
         <label>
-            <input type="checkbox" ng-model="allIncomplete" ng-click="checkAllIncomplete()"> All Incomplete SR
+            <input id= "incompleteSrs" type="checkbox" ng-model="allIncomplete" ng-click="checkAllIncomplete()" ng-checked="true">All Pending SRs
         </label>
     </div>
 
     <div class="checkbox" ng-repeat="s in sr_statuses">
         <label>
-            <input type="checkbox" ng-model="s.Selected" checkbox-group> {{s.name}}
+            <input type="checkbox" ng-model="s.Selected" checkbox-group checked="checked"> {{s.name}}
         </label>
     </div>
-
+    <label id="filter">Filter SRs by their assignees:</label>
     <div ng-dropdown-multiselect options="projectMembersList" selected-model="selectedAssignees" checkboxes="true" extra-settings="assigneeSelectSettings" translation-texts="assigneeSelectTexts"></div>
     <div class="checkbox">
         <label>
-            <input type="checkbox" ng-model="recentlyCreatedSrOnly"> Recently Created SR Only
+            <input id="recentlyCreated" type="checkbox" ng-model="recentlyCreatedSrOnly"> Recently Created SRs
         </label>
     </div>
+    <label id="filter">Filter SRs by their priority:</label>
     <div>
         <span >
-            <rating titles="priority" ng-model="priorityValue" max="max" readonly='false' on-hover="" ng-click="" ></rating> 
+            <rating titles="priority" ng-model="priorityValue" max="max" readonly='false'></rating> 
         </span>
-        <span><a href="" style="color:black" ng-click="priorityValue=null" ng-show="priorityValue>0">Clear Priority Filter</a></span>
+        <span><a href="" style="color:black;" ng-click="priorityValue=null" ng-show="priorityValue>0">Clear Priority Filter</a></span>
     </div>
+    <button type="button" id="filter_reset_btn" ng-click="resetFilter()">Reset Filter</button>
 </div>
 <div ng-show="showSR" ng-cloak ng-init="getAllSRList()">
     <div class="task-header">
@@ -82,6 +87,12 @@
                     <i class="material-icons edit_label_size">mode_edit</i>
                 </a>
             </li>
+            <li class="createdate-style" ng-click="order('sr_createdate')">{{"CREATED_ON" | translate}}
+             <span class="sortorder" ng-show="predicate === 'sr_createdate'" ng-class="{reverse:reverse}"></span>
+                <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('CREATED_ON', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                    <i class="material-icons edit_label_size">mode_edit</i>
+                </a>
+            </li>
             <li class="action-style">{{"ACTION" | translate}}
                 <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('ACTION', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
                     <i class="material-icons edit_label_size">mode_edit</i>
@@ -89,10 +100,11 @@
             </li>
         </ul>
     </div>
+
     <div id="main-nano-wrapper" class="nano" ng-init="showDetails=true">
         <div class="nano-content">
             <ul class="message-list">
-                <li ng-repeat="data in projectSrData | assigneeFilter: selectedAssignees | statusFilter: checkedStatus | recentFilter: recentlyCreatedSrOnly | priorityFilter: priorityValue | dateFilter: dateObj | orderBy:predicate:reverse "  ui-sref-active="active">
+                <li ng-repeat="data in projectSrData | assigneeFilter: selectedAssignees | statusFilter: checkedStatus | recentFilter: recentlyCreatedSrOnly | priorityFilter: priorityValue | dateFilter: dateObjForFilter | orderBy:predicate:reverse "  ui-sref-active="active">
                     <div ui-sref = "projectdetail.srdetail({ srId: data._id})"  ng-click="showSRDetails(data._id)">
                         <div class="col col-1">
                             <span class="dot">{{projectDetail.project_id}}-{{data.sr_id}} </span>
@@ -107,6 +119,8 @@
                             <div class="assign_to">{{getAssignee(data.assignee)}} </div>
 
                             <div class="status_st">{{getStatusNameByOrder(data.sr_status)}} </div>
+                            
+                            <div class="createdate_sr">{{data.sr_createdate | date:'medium'}} </div>
 
                         </div>
                         <button class="btn btn-default btn-xs edit_click" type="button">{{"EDIT" | translate}}</button>
@@ -191,7 +205,6 @@
         </h3>
 
         <div class="status_align">
-
 
             <h3 class="green pull-left">
                 {{"STATUS" | translate}}: 

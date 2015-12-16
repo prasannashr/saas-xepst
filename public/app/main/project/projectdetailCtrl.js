@@ -43,13 +43,6 @@ angular.module('app').controller('projectdetailCtrl', function($scope, $http, $r
         opened: false
     };
 
-    $scope.startDate = {
-        opened: false
-    };
-    $scope.finishDate = {
-        opened: false
-    };
-
     $scope.type = 'Pie';
     // Chart.js Options
     $scope.options = {
@@ -109,7 +102,9 @@ angular.module('app').controller('projectdetailCtrl', function($scope, $http, $r
                 "_id": value.setting.sr_status._id
             };
             $scope.sr_statuses.push(status);
-
+            //$scope.checkedStatus is the array needed for filtering SRs
+            $scope.checkedStatus.push(status.order);
+            $scope.checkedStatus_.push(status.order);
         });
     });
     $scope.getStatusNameByOrder = function(statusOrder) {
@@ -216,7 +211,11 @@ angular.module('app').controller('projectdetailCtrl', function($scope, $http, $r
                 newMemberObj = {};
                 newMemberObj.id = $scope.projectMembers[i].user_id;
                 newMemberObj.label = $scope.projectMembers[i].fullname;
+                //$scope.projectMembersList is an array that consists of all the project members
                 $scope.projectMembersList.push(newMemberObj);
+                //for checking all the assignees by default
+                $scope.selectedAssignees.push(newMemberObj);
+                selectedAssignees_.push(newMemberObj);
             }
 
             angular.forEach($scope.projectMembers, function(value) {
@@ -811,7 +810,7 @@ angular.module('app').controller('projectdetailCtrl', function($scope, $http, $r
 
     /*----------------------------------------------------------------------------------------------------
       Name: openPlanningStart
-      Description:  function to open datepicker in planned_start 
+      Description:  function to open datepicker in planned_start  and of 'from this day' in SR filter 
       Author: RuchiDhami        
     ------------------------------------------------------------------------------------------------------*/
     $scope.openPlanningStart = function($event) {
@@ -828,32 +827,12 @@ angular.module('app').controller('projectdetailCtrl', function($scope, $http, $r
 
     /*----------------------------------------------------------------------------------------------------
       Name: openDueDatePicker
-      Description:  function to open datepicker of due after clicking button
+      Description:  function to open datepicker of 'due' and of 'before this day' in SR filter after clicking button
       Author: RuchiDhami        
     ------------------------------------------------------------------------------------------------------*/
     $scope.openDueDatePicker = function($event) {
         $scope.due.opened = true;
     }
-
-    /*----------------------------------------------------------------------------------------------------
-      Name: openfilterStartDatePicker
-      Description:  function to open datepicker of 'from this day' after clicking button
-      Author: Rikesh Bhansari
-      Date: 2015/12/09       
-    ------------------------------------------------------------------------------------------------------*/
-    $scope.openfilterStartDatePicker = function($event) {
-        $scope.startDate.opened = true;
-    };
-
-    /*----------------------------------------------------------------------------------------------------
-      Name: openfilterFinishDatePicker
-      Description:  function to open datepicker of 'before this day' after clicking button
-      Author: Rikesh Bhansari
-      Date: 2015/12/09      
-    ------------------------------------------------------------------------------------------------------*/
-    $scope.openfilterFinishDatePicker = function($event) {
-        $scope.finishDate.opened = true;
-    };
 
     /*----------------------------------------------------------------------------------------------------
       Name: disabled
@@ -940,7 +919,7 @@ angular.module('app').controller('projectdetailCtrl', function($scope, $http, $r
 
     //for storing sr_statuses that need to be filtered
     $scope.checkedStatus = [];
-    $scope.checkedStatus_ = angular.copy($scope.checkedStatus); //this statement may not be needed
+    $scope.checkedStatus_ = [];
 
     /*---------------------------------------------------------------------------------------------------------
         Name : checkAllIncomplete
@@ -971,160 +950,33 @@ angular.module('app').controller('projectdetailCtrl', function($scope, $http, $r
     //for storing assignees that should be filtered
     $scope.projectMembersList = [];
     $scope.selectedAssignees = [];
+    var selectedAssignees_ = [];
 
-    //for modifying display of assignee selection for filter
-    $scope.assigneeSelectSettings = {};
+    //for modifying display of assignee selection for filtering
+    $scope.assigneeSelectSettings = {
+        scrollableHeight: '200px',
+        //for scrollable list of assignees for filtering SRs
+        scrollable: true
+    };
     //for changing the text on button to select assignees for filter
     $scope.assigneeSelectTexts = {buttonDefaultText: 'Select Assignees'};
 
     //object to hold dates for filtering SRs
-    $scope.dateObj = {
+    $scope.dateObjForFilter = {
     };
-})
 
-//filter SR based on sr_statuses --Rikesh Bhansari --2015/12/07
-.filter('statusFilter', function() {
-  return function(input, checkedStatus) {
-    input = input || '';
-    var out = [];
-    if(checkedStatus.length < 1) {
-        out = input;
-    }
-    else {
-        for (var i = 0; i < input.length; i++) {
-            checkedStatus = checkedStatus.toString();
-            if(checkedStatus.indexOf(input[i].sr_status) != -1) {
-                out.push(input[i]);
-            }
-        }
-    }
-    return out;
-  };
-})
-
-//filter SR based on assignees --Rikesh Bhansari --2015/12/08
-.filter('assigneeFilter', function() {
-  return function(input, selectedAssignees) {
-    input = input || '';
-    var out = [];
-    if(selectedAssignees.length < 1) {
-        out = input;
-    }
-    else {
-        for (var i = 0; i < input.length; i++) {
-            for(var j=0; j<selectedAssignees.length; j++) {
-                if(selectedAssignees[j].id == input[i].assignee) {
-                    out.push(input[i]);
-                    continue;
-                }
-            }
-        }
-    }
-    return out;
-  };
-})
-
-//filter for SRs created two days before --Rikesh Bhansari --2015/12/09
-.filter('recentFilter', function() {
-  return function(input, recentlyCreatedSrOnly) {
-    var out = [];
-    if(!recentlyCreatedSrOnly) {
-        out = input;
-    } else {
-        for (var i = 0; i < input.length; i++) {
-            var createDate = new Date(input[i].sr_createdate);
-            var currentDate = new Date();
-            if((currentDate - createDate)<2*24*60*60*1000) {
-                out.push(input[i]);
-            }
-        }
-    }
-    return out;
-  };
-})
-
-//filter SR based on priority --Rikesh Bhansari --2015/12/09
-.filter('priorityFilter', function() {
-    return function(input, priorityValue) {
-        var out = [];
-        if(!priorityValue) {
-            out = input;
-        } else {
-            for (var i = 0; i < input.length; i++) {
-                if(input[i].priority == priorityValue.toString()) {
-                    out.push(input[i]);
-                }
-            }
-        }
-        return out;
-    }
-})
-
-//filter for date range --Rikesh Bhansari --2015/12/09
-.filter('dateFilter', function() {
-    return function(input, dateObj) {
-        var inputLength = input.length;
-        var out = [];
-        if(!dateObj.filterStartDate && !dateObj.filterFinishDate) {
-            out = input;
-        }else if(!!dateObj.filterStartDate && !!dateObj.filterFinishDate) {
-            filter_start_date = new Date(dateObj.filterStartDate);
-            filter_finish_date = new Date(dateObj.filterFinishDate);
-            for(var i=0; i<inputLength; i++) {
-                start_date = new Date(input[i].sr_createdate);
-                if(filter_start_date < start_date) {
-                    if(filter_finish_date > start_date) {
-                        out.push(input[i]);
-                    }
-                }
-            }
-        }else if(!!dateObj.filterStartDate) {
-            filter_start_date = new Date(dateObj.filterStartDate);
-            for(var i=0; i<inputLength; i++) {
-                start_date = new Date(input[i].sr_createdate);
-                if(filter_start_date < start_date) {
-                    out.push(input[i]);
-                }
-            }
-        }else if(!!dateObj.filterFinishDate) {
-            filter_finish_date = new Date(dateObj.filterFinishDate);
-            for(var i=0; i<inputLength; i++) {
-                start_date = new Date(input[i].sr_createdate);
-                if(filter_finish_date > start_date) {
-                    out.push(input[i]);
-                }
-            }
-        }
-        return out;
-    }
-})
-
-//directive for populating the array for filtering sr_statuses --Rikesh Bhansari --2015/12/07
-.directive("checkboxGroup", function() {
-    return {
-        restrict: "A",
-        link: function(scope, elem, attrs) {
-            // Determine initial checked boxes
-            if (scope.checkedStatus.indexOf(scope.s.order) !== -1) {
-                elem[0].checked = true;
-            }
-
-            // Update checkedStatus on click
-            elem.bind('click', function() {
-                var index = scope.checkedStatus.indexOf(scope.s.order);
-                // Add if checked
-                if (elem[0].checked) {
-                    if (index === -1) scope.checkedStatus.push(scope.s.order);
-                }
-                // Remove if unchecked
-                else {
-                    if (index !== -1) scope.checkedStatus.splice(index, 1);
-                }
-                // Sort and update DOM display
-                scope.$apply(scope.checkedStatus.sort(function(a, b) {
-                    return a - b
-                }));
-            });
-        }
+    //function to reset filter options
+    $scope.resetFilter = function() {
+        $scope.checkedStatus = angular.copy($scope.checkedStatus_);
+        angular.forEach($scope.sr_statuses, function (s) {
+            s.Selected = true;
+        });
+        $("#incompleteSrs").prop("checked", true);
+        $scope.selectedAssignees = angular.copy(selectedAssignees_);
+        $scope.priorityValue = null;
+        $("#recentlyCreated").prop("checked", false);
+        $scope.recentlyCreatedSrOnly = false;
+        $scope.dateObjForFilter.filterStartDate = null;
+        $scope.dateObjForFilter.filterFinishDate = null;
     }
 });

@@ -259,7 +259,8 @@ angular.module('app').directive('validfile', function validFile() {
   Author: Rikesh Bhansari
   Date: 2015/11/24
 -----------------------------------------------------------------------------------------------------*/
-angular.module('app').directive('validimage', function validImage() {
+angular.module('app')
+.directive('validimage', function validImage() {
 
     var validTypes = ["image/jpg", "image/jpeg"];
     return {
@@ -275,4 +276,156 @@ angular.module('app').directive('validimage', function validImage() {
            });
         }
     };
+})
+
+//filter SR based on sr_statuses --Rikesh Bhansari --2015/12/07
+.filter('statusFilter', function() {
+  return function(input, checkedStatus) {
+    input = input || '';
+    var out = [];
+    if(checkedStatus.length < 1) {
+        out = [];
+    }
+    else {
+        for (var i = 0; i < input.length; i++) {
+            checkedStatus = checkedStatus.toString();
+            if(checkedStatus.indexOf(input[i].sr_status) != -1) {
+                out.push(input[i]);
+            }
+        }
+    }
+    return out;
+  };
+})
+
+//filter SR based on assignees --Rikesh Bhansari --2015/12/08
+.filter('assigneeFilter', function() {
+  return function(input, selectedAssignees) {
+    input = input || '';
+    var out = [];
+    if(selectedAssignees.length < 1) {
+        out = [];
+    }
+    else {
+        for (var i = 0; i < input.length; i++) {
+            for(var j=0; j<selectedAssignees.length; j++) {
+                if(selectedAssignees[j].id == input[i].assignee) {
+                    out.push(input[i]);
+                    continue;
+                }
+            }
+        }
+    }
+    return out;
+  };
+})
+
+//filter for SRs created two days before --Rikesh Bhansari --2015/12/09
+.filter('recentFilter', function() {
+  return function(input, recentlyCreatedSrOnly) {
+    var out = [];
+    if(!recentlyCreatedSrOnly) {
+        out = input;
+    } else {
+        for (var i = 0; i < input.length; i++) {
+            var createDate = new Date(input[i].sr_createdate);
+            var currentDate = new Date();
+            if((currentDate - createDate)<2*24*60*60*1000) {
+                out.push(input[i]);
+            }
+        }
+    }
+    return out;
+  };
+})
+
+//filter SR based on priority --Rikesh Bhansari --2015/12/09
+.filter('priorityFilter', function() {
+    return function(input, priorityValue) {
+        var out = [];
+        if(!priorityValue) {
+            out = input;
+        } else {
+            for (var i = 0; i < input.length; i++) {
+                if(input[i].priority == priorityValue.toString()) {
+                    out.push(input[i]);
+                }
+            }
+        }
+        return out;
+    }
+})
+
+//filter for date range --Rikesh Bhansari --2015/12/09
+.filter('dateFilter', function() {
+    return function(input, dateObjForFilter) {
+        var inputLength = input.length;
+        var out = [];
+        if(!dateObjForFilter.filterStartDate && !dateObjForFilter.filterFinishDate) {
+            out = input;
+        }else if(!!dateObjForFilter.filterStartDate && !!dateObjForFilter.filterFinishDate) {
+            filter_start_date = new Date(dateObjForFilter.filterStartDate);
+            filter_finish_date = new Date(dateObjForFilter.filterFinishDate);
+            for(var i=0; i<inputLength; i++) {
+                start_date = new Date(input[i].sr_createdate);
+                if(filter_start_date < start_date) {
+                    if(filter_finish_date > (start_date-24*60*60*1000)) {
+                        out.push(input[i]);
+                    }
+                }
+            }
+        }else if(!!dateObjForFilter.filterStartDate) {
+            filter_start_date = new Date(dateObjForFilter.filterStartDate);
+            for(var i=0; i<inputLength; i++) {
+                start_date = new Date(input[i].sr_createdate);
+                if(filter_start_date < start_date) {
+                    out.push(input[i]);
+                }
+            }
+        }else if(!!dateObjForFilter.filterFinishDate) {
+            filter_finish_date = new Date(dateObjForFilter.filterFinishDate);
+            for(var i=0; i<inputLength; i++) {
+                start_date = new Date(input[i].sr_createdate);
+                if(filter_finish_date > (start_date-24*60*60*1000)) {
+                    out.push(input[i]);
+                }
+            }
+        }
+        return out;
+    }
+})
+
+//directive for populating the array for filtering sr_statuses --Rikesh Bhansari --2015/12/07
+.directive("checkboxGroup", function() {
+    return {
+        restrict: "A",
+        link: function(scope, elem, attrs) {
+            // Determine initial checked boxes
+            if (scope.checkedStatus.indexOf(scope.s.order) !== -1) {
+                elem[0].checked = true;
+                scope.s.Selected = true;
+            }
+
+            // Update checkedStatus on click
+            elem.bind('click', function() {
+                var index = scope.checkedStatus.indexOf(scope.s.order);
+                // Add if checked
+                if (elem[0].checked) {
+                    if (index === -1) scope.checkedStatus.push(scope.s.order);
+                }
+                // Remove if unchecked
+                else {
+                    if(scope.s.order<6000) {
+                        //unchecks the "All Pending SRs" checkbox when any of the incomplete statuses is unchecked
+                        $("#incompleteSrs").prop("checked", false);
+                    }
+                    if (index !== -1) scope.checkedStatus.splice(index, 1);
+                }
+                // Sort and update DOM display
+                scope.$apply(scope.checkedStatus.sort(function(a, b) {
+                    return a - b
+                }));
+            });
+        }
+    }
 });

@@ -1060,6 +1060,7 @@ a.active_cls,a.active_cls:focus{ color: #428bca;}
 
 .assign_to{ position: absolute; top: -1px; left: 125px;}
 .status_st{ position: absolute; top: -1px; left: 335px;}
+.createdate_sr{ position: absolute; top: -1px; left: 500px;}
 .priority{ top: 0px; position: absolute;}
 .priority-icon{ font-size: 17px;}
 .star-color{ color:#ed9f07 }
@@ -1076,6 +1077,7 @@ a.active_cls,a.active_cls:focus{ color: #428bca;}
 .priority-style{ left: 402px;}
 .assinee-style{ left: 525px;}
 .status-style{ left: 735px;}
+.createdate-style{ left: 900px;}
 .action-style{ right:15px;width:168px;}
 .v-align{ vertical-align: bottom;}
 .v-align-top{ vertical-align: top;}
@@ -1375,18 +1377,22 @@ for progress bar after creating Sr
 /* hide show SR Title depending on the resolution*/
 
 @media only screen and (min-width: 1018px) {
-    .assign_to,.assinee-style,.status-style,.status_st{ display: block!important;}
+    .assign_to,.assinee-style,.status-style,.status_st,.createdate-style,.createdate_sr{ display: block!important;}
 
 }
 @media (min-width: 769px) and (max-width: 1017px) {
-    .status-style,.status_st{ display: none;}
+    .status-style,.status_st,.createdate-style,.createdate_sr{ display: none;}
 
 
 }
 
 @media only screen and (max-width: 817px) {
-    .assign_to,.assinee-style,.status-style,.status_st{ display: none;}
+    .assign_to,.assinee-style,.status-style,.status_st,.createdate-style,.createdate_sr{ display: none;}
 
+}
+
+@media only screen and (max-width: 1024px) {
+    .createdate-style,.createdate_sr{ display: none;}
 }
 
 @media only screen and (max-width:991px) {
@@ -1434,3 +1440,6 @@ for progress bar after creating Sr
 
 
 .advance_search{position: absolute;top:12px;left:712px;}
+
+#filter{color: #000000}
+#filter_reset_btn{float: right;}
