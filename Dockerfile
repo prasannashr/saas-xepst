@@ -11,19 +11,22 @@ RUN apt-get update
 # install nodejs and npm
 RUN apt-get install -y nodejs npm git git-core
 
+# RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+# RUN echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | tee /etc/apt/sources.list.d/10gen.list
+
+# Import MongoDB public GPG key AND create a MongoDB list file
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-RUN echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | tee /etc/apt/sources.list.d/10gen.list
+RUN echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-3.0.list
 
-RUN dpkg-divert --local --rename --add /sbin/initctl
-RUN ln -s /bin/true /sbin/initctl
-
-# RUN apt-get update
-RUN apt-get install mongodb-10gen
+# Update apt-get sources AND install MongoDB
+RUN apt-get update && apt-get install -y mongodb-org
 
 RUN mkdir -p /data/db
 
 EXPOSE 27017
-CMD ["usr/bin/mongod", "--smallfiles"]
+# Set usr/bin/mongod as the dockerized entry-point application
+ENTRYPOINT ["/usr/bin/mongod"]
+# CMD ["usr/bin/mongod", "--smallfiles"]
 
 # Copy app to /src
 COPY . /src
