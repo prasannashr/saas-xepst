@@ -9,7 +9,7 @@ MAINTAINER prasanna.shrestha@javra.com
 RUN apt-get update
 
 # install nodejs and npm
-RUN apt-get install -y nodejs npm git git-core
+RUN apt-get install -y nodejs 
 
 # RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 # RUN echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | tee /etc/apt/sources.list.d/10gen.list
@@ -25,8 +25,8 @@ RUN mkdir -p /data/db
 
 EXPOSE 27017
 # Set usr/bin/mongod as the dockerized entry-point application
-ENTRYPOINT ["/usr/bin/mongod"]
-# CMD ["usr/bin/mongod", "--smallfiles"]
+# ENTRYPOINT ["/usr/bin/mongod"]
+CMD ["usr/bin/mongod", "--smallfiles"]
 
 # Copy app to /src
 COPY . /src
