@@ -32,8 +32,8 @@ var config = require('./config/config')[env];
 require('./subdomain/server/config/mongoose')(config);
 //require('./subdomain/server/config/passport')();
 
-app.use(vhost('localhost', main))
-app.use(vhost('*.localhost', subdomain));
+app.use(vhost('54.194.173.196', main))
+app.use(vhost('*.54.194.173.196', subdomain));
 
 var automatelanguagelabel = require('./subdomain/server/utilities/automatelanguagelabel.js');
 // call function checkAndCreateLabelInDatabase to check multilanguage labels in html files
