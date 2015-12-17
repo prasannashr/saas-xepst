@@ -5,7 +5,7 @@ module.exports = {
     development: {
         db: 'mongodb://localhost/xepst',
         rootPath: rootPath,
-        port: process.env.PORT || 3030,
+        port: process.env.PORT || 8080,
         email_secret: "something secret",
         app_url: "localhost:3030",
         sender_add: "softwarejavra@gmail.com",
