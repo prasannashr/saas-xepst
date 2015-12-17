@@ -36,4 +36,4 @@ RUN cd /src; npm install
 
 EXPOSE 3030
 
-CMD cd /src && node ./server.jscdcat server
+CMD cd /src && node ./server.js
