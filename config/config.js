@@ -3,7 +3,7 @@ var rootPath = path.normalize(__dirname + '/../');
 
 module.exports = {
     development: {
-        db: 'mongodb://localhost/xepst',
+        db: 'mongodb://172.17.0.9/xepst',
         rootPath: rootPath,
         port: process.env.PORT || 8080,
         email_secret: "something secret",
@@ -78,9 +78,9 @@ module.exports = {
         ]
     },
     production: {
-        db: 'mongodb://localhost/xepst',
+        db: 'mongodb://172.17.0.9/xepst',
         rootPath: rootPath,
-        port: process.env.PORT || 3030,
+        port: process.env.PORT || 8080,
         email_secret: "something secret",
         app_url: "www.saasxepst.com:3030",
         sender_add: "softwarejavra@gmail.com",
