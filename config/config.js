@@ -7,7 +7,7 @@ module.exports = {
         rootPath: rootPath,
         port: process.env.PORT || 3030,
         email_secret: "something secret",
-        app_url: "localxepst.com:3030",
+        app_url: "localhost:3030",
         sender_add: "softwarejavra@gmail.com",
         sender_pass: "javra123",
         sr_status: [
