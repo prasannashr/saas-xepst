@@ -3,7 +3,7 @@ web:
   ports:
     - "80:3030"
   environment:
-    NODE_ENV: production
+    NODE_ENV: development
   links:
     - mongo
 mongo:
