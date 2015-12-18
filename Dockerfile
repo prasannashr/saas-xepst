@@ -6,7 +6,7 @@ MAINTAINER prasanna.shrestha@javra.com
 # RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 
 # make sure apt is up to date
-#RUN apt-get update
+RUN apt-get update
 
 # install nodejs and npm
 RUN apt-get install -y nodejs nodejs-legacy npm 
