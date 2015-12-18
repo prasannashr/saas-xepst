@@ -42,4 +42,4 @@ automatelanguagelabel.checkAndCreateLabelInDatabase();
 
 
 app.listen(config.port);
-console.log('SAAS XEPST LISTENING ON PORT :' + config.port + ' ..... ENV: '+env);
+console.log('SAAS XEPST LISTENING ON PORT :' + config.port + '..... ENV: '+env+' ...'+process.env.MONGODB_PORT_27017_TCP_ADDR);
