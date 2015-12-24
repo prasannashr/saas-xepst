@@ -201,6 +201,8 @@ module.exports = function(app) {
     app.get('/api/getLanguageOptions/', auth.requiresApiLogin, languages.getLanguageOptions);
     app.post('/api/checkCountry', languages.checkCountry); /**route to check the country from the database @RuchiDhami**/
 
+    app.post('/api/setAdmin', projects.setAdmin); //route to set a project member as admin
+
 
     /*----------------------------------------------------------------------------------------------------
      Description:  routes used for search

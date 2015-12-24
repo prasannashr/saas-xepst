@@ -37,7 +37,7 @@
                     </label>
                     <br>
                     <p class="input-group">
-                        <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="newproject.project_startDate" ng-disabled="true"  name="startDate" is-open="startDate.opened"  ng-required="true" close-text="Close" >
+                        <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="newproject.project_startDate" ng-disabled="true" max-date="newproject.project_endDate" name="startDate" is-open="startDate.opened"  ng-required="true" close-text="Close" >
                         <span class="input-group-btn">
                         <button type="button" class="btn btn-default" ng-click="openStartDate($event)"><i class="glyphicon glyphicon-calendar" tabindex="3"></i></button>
                       </span>

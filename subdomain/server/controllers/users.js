@@ -610,7 +610,8 @@ exports.getCustomerUsersName = function(req, res) {
     }, {
         'app_users._id': true,
         'app_users.firstName': true,
-        'app_users.lastName': true
+        'app_users.lastName': true,
+        'app_users.proPic': true
 
     }).exec(function(err, user) {
         var user = user[0].app_users
@@ -937,6 +938,25 @@ exports.updateSrStatus = function(req, res) {
         return res.json(result)
     });
 }
+
+/*----------------------------------------------------------------------------------------------------
+ Name: getUserPermissionInProject
+ Description: gets all permission of loggedIn users for that selected project
+ Author: Prasanna Shrestha
+ created: 12/23/2015
+------------------------------------------------------------------------------------------------------*/
+
+exports.getUserPermissionInProject = function(req, res) {
+    Customer.find({
+        '_id': mongoose.Types.ObjectId(req.params.customerId)
+    }, {
+        'email': true,
+        'organization_detail': true
+    }, function(err, result) {
+        res.send(result[0]);
+    });
+}
+
 
 function handleError(res, err) {
     return res.send(500, err);

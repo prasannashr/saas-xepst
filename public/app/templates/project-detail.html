@@ -35,39 +35,46 @@
                     </a> 
                     </span>{{projectDetail.project_endDate| date: 'MMM dd yyyy'}}
                 </p>             
-                <p class="proj_title_txt">  
+                <p class="proj_title_txt" >  
                     <span>{{"PROJECT_MEMBER" | translate}}
                         <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('PROJECT_MEMBER', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
                             <i class="material-icons edit_label_size">mode_edit</i>
                         </a> 
-                        <a class="add_more" href="" ng-click="" title="Add New Members"><i class="material-icons v-align">add_box</i></a>
+                        <a class="add_more" href="" data-template-url="addNewMember.html" ng-click="" title="Add New Members" placement="bottom" data-auto-close="1" bs-popover >
+                            <i class="material-icons v-align">add_box</i>
+                        </a>
                     </span>
-                    <!-- <ui-select theme="bootstrap" multiple ng-model="members" tabindex="5">
-                        <ui-select-match placeholder="Select person...">{{$item.fullname}} </ui-select-match>
-                        <ui-select-choices repeat="user in userNameList | propsFilter: {fullname: $select.search, user_id: $select.search}">
-                            <div ng-bind-html="user.fullname | highlight: $select.search"></div>
-                            <div ng-bind-html="user.email | highlight: $select.search"></div>
-                        </ui-select-choices>
-                    </ui-select>  -->
+
+                    <div>                                          
+                        <div class="dropdown pull-right">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="chooseAdmin" data-toggle="dropdown"> Choose Admin
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="chooseAdmin">
+                                <li ng-repeat="member in projectMembers | orderBy: 'fullname'">
+                                    <a href="#" ng-click="setAdmin(member.user_id)">{{getAssignee(member.user_id)}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <br>
                     <ul class="member_list">
-                        <li ng-repeat="member in projectMembers">
+                        <li ng-repeat="member in projectMembers | orderBy:'fullname'">
                             
                             <img id="profile-img" class="comment-img-card" ng-if="member.memberPic!=null" ng-src="{{member.memberPic}}" /> 
                             <img id="profile-img" class="comment-img-card" ng-if="member.memberPic==null" ng-src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" /> 
                             
                             {{getAssignee(member.user_id)}} 
-                            (<a href="#" editable-select="userRole" e-ng-options="s.group_name as s.group_name for s in roleLists" onaftersave="assignRole(member._id, userRole)">
-                                {{ showUserRoles(member.group_name) }}
-                            </a>)
-                            <span ng-if="member.isAdmin"> - (Admin)</span>                           
+                            <a href="#" editable-select="userRole" e-ng-options="s._id as s.group_name for s in roleLists" onaftersave="assignRole(member._id, userRole)"  permission access="admin" project="{{projectDetail._id}}">
+                                ({{ showUserRoles(member.group_name) }}
+                                <span ng-if="member.isAdmin"> - Admin</span>)    
+                            </a>
+                                                   
                             <!-- <pre>{{member | json}}</pre> -->
                         </li>
                     </ul>
-
-
                 </p>
-
                 <p ng-show="identity.isAuthenticated() && identity.isAuthorized('admin')">
                     <span>
                         <button type="button" class="btn btn-primary btn-sm" ui-sref="setting.editProject({ projectId: projectDetail._id })" >{{"EDIT" | translate}}</button> 
@@ -84,7 +91,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="modalAssignRole" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2">
+<!-- <div class="modal fade" id="modalAssignRole" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -95,14 +102,14 @@
                 <form>
                     <div class="form-group">
                         <label for="recipient-name" class="control-label"><b>{{getUserName(newRole.user_id)}} </b></label>
-                        <!-- <input type="text" class="form-control" id="recipient-name" ng-model="newRole.fullname"> -->
+                       <input type="text" class="form-control" id="recipient-name" ng-model="newRole.fullname">
                     </div>
                     <div class="form-group">
-                        <!--  <label for="recipient-name" class="control-label">Member Id:</label> -->
+                         <label for="recipient-name" class="control-label">Member Id:</label>
                         <input type="hidden" class="form-control" id="recipient-id" ng-model="newRole.user_id">
                     </div>
                     <div class="form-group">
-                        <!--  <label for="recipient-name" class="control-label">Member Id:</label> -->
+                        
                         <input type="hidden" class="form-control" id="recipient-id" ng-model="editedProjectId">
                     </div>
                     <div class="form-group">
@@ -112,7 +119,7 @@
                             </a>
                         </label>
                         <br>
-                        <!--  <textarea class="form-control" id="message-text" ng-model="newproject.members"></textarea> -->
+                        
                         <select ng-model="newRole.group_name" class="form-control">
                             <option ng-repeat="name in roleLists" value="{{name.group_name}}">{{name.group_name}}</option>
                         </select>
@@ -120,12 +127,12 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+              
                 <button type="button" class="btn btn-primary btn-sm" ng-click="assignRole(editedProjectId, newRole)" data-dismiss="modal">Assign</button>
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <script>
 
 $(document).ready(function() {
@@ -136,4 +143,20 @@ $(document).ready(function() {
    
 });
 
+</script>
+
+<script type="text/ng-template" id="addNewMember.html">
+
+    <div class="popover">
+        <div class="arrow"></div>
+        <div class="popover-content">
+            <input type="text" placeholder="Search" ng-model="userSearch" />
+            <ul style="max-height:100px; overflow-y: scroll;">
+            <li ng-repeat="user in userNameList | filter:userSearch | orderBy: 'fullname'"><input type="checkbox" ng-model="user.checked" ng-checked="isExist(user.user_id)!=-1" ng-click="toggleSelection(user)">{{user.fullname}}</li>
+            </ul>
+            <div>
+                <input type="button" value="Save" ng-click="updateProjectMembers(newMembers);$hide()"/>
+            </div>
+        </div>
+    </div>
 </script>

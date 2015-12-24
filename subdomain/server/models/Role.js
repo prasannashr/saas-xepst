@@ -29,6 +29,10 @@ var roleSchema = mongoose.Schema({
         limited_access: {
             type: Boolean,
             default: false
+        },
+        only_to_this_user_group: {
+            type: Boolean,
+            default: false
         }
     }   
 });

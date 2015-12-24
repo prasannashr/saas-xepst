@@ -37,7 +37,7 @@ exports.checkSubdomain = function() {
         }, function(err, client) {
             if (!err) {
                 if (!client) {
-                    res.send(403, 'Sorry! This Domain is not exist.');
+                    res.send(403, 'Sorry! This <b>'+ subDomain[0]+'</b> domain is not exist.');
                 } else {
                     return next();
 

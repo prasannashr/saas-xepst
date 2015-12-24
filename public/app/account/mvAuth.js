@@ -221,6 +221,21 @@ angular.module('app').factory('mvAuth', function($http, mvIdentity, $q, mvUser, 
               }
           });
           return dfd.promise;
-      }
+      },
+
+        /*----------------------------------------------------------------------------------------------------
+         Name           : getUserPermissionInProject
+         Description    : gets all permission of loggedIn users for that selected project
+         Input param    : projectId, userId
+         Output param   : returns all the permission for a user of selected project
+         Author         : Prasanna Shrestha
+         created        : 12/23/2015
+        ------------------------------------------------------------------------------------------------------*/
+        getUserPermissionInProject: function(projectId, userId) {
+            return $http.post('/api/findLanguageCode/'+customerId, {code:label}).then(function(response) {
+                console.log(response.data);
+                return response.data;   
+            });
+        }
     }
 });

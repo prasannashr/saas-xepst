@@ -13,7 +13,7 @@
   ------------------------------------------------------------------------
   10/09/2015   subin       v1        Creating all required logic                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 ------------------------------------------------------------------------*/
-angular.module('app').controller('projectdetailCtrl', function($scope, $http, $routeParams, $stateParams, mvIdentity, $location, $log, $timeout, $filter, $translate, mvAuth, Notification, $rootScope, generalServices, Upload) {
+angular.module('app').controller('projectdetailCtrl', function($scope, $http, $routeParams, $stateParams, mvIdentity, $location, $log, $timeout, $filter, $translate, mvAuth, Notification, $rootScope, generalServices, Upload, $state) {
 
     var customerId = mvIdentity.currentUser.customerId;
     $scope.identity = mvIdentity;
@@ -187,10 +187,10 @@ angular.module('app').controller('projectdetailCtrl', function($scope, $http, $r
     $scope.showUserRoles = function(groupName) {
         $scope.groupName = groupName;
         var selectedRole = $filter('filter')($scope.roleLists, {
-            group_name: groupName
+            _id: groupName
         });
-        console.log(selectedRole[0].group_name);
-        console.log(groupName);
+        // console.log(selectedRole[0].group_name);
+        // console.log(groupName);
         return ($scope.groupName && selectedRole.length) ? selectedRole[0].group_name : 'Role Not Set';
     };
 
@@ -204,9 +204,11 @@ angular.module('app').controller('projectdetailCtrl', function($scope, $http, $r
             $scope.projectDetail.project_startDate = new Date(data.project_startDate);
             $scope.projectDetail.project_endDate = new Date(data.project_endDate)
             $scope.projectMembers = $scope.projectDetail.members;
+            //$scope.newMembers is modified when selecting projectMembers from the project-detail page
+            $scope.newMembers = angular.copy(data.members);
             $scope.projectStatus = $scope.projectDetail.projectstatus;
 
-            //data management for SR filter based on projectMembers
+            //data management for SR filter based on projectMembers --Rikesh Bhansari 2015/12/07
             for(var i=0; i<$scope.projectMembers.length; i++) {
                 newMemberObj = {};
                 newMemberObj.id = $scope.projectMembers[i].user_id;
@@ -226,13 +228,8 @@ angular.module('app').controller('projectdetailCtrl', function($scope, $http, $r
                     mvNotifier.error(reason);
                 });
             });
-        })
+        });
     }
-    mvAuth.getUserList().then(function(userNameData) {
-        //$scope.editproject = data;
-        $scope.userNameList = userNameData.data;
-        // console.log("UserData : " + $scope.userNameList);
-    });
     /*----------------------------------------------------------------------------------------------------
       Description:  get all getPriorityList to get priorityTitles
       Author: SubinJoshi        
@@ -520,7 +517,7 @@ angular.module('app').controller('projectdetailCtrl', function($scope, $http, $r
       Author: Prasanna Shrestha        
     ------------------------------------------------------------------------------------------------------*/
     $scope.getUserName = function(userId) {
-        console.log(userId);
+        // console.log(userId);
         var username;
         if(userId){
             mvAuth.getUserName(userId).then(function(user) {
@@ -544,6 +541,7 @@ angular.module('app').controller('projectdetailCtrl', function($scope, $http, $r
         $http.put("/api/updateMemberRole/" + projectId, {group_name:roleData}).success(function(data) {
             //console.log(data,' successfully assign role');
             $scope.userRole = roleData;
+            $state.go($state.current, {}, {reload: true});
             Notification.info('Role has been assigned successfully');
         })
     }
@@ -923,7 +921,7 @@ angular.module('app').controller('projectdetailCtrl', function($scope, $http, $r
 
     /*---------------------------------------------------------------------------------------------------------
         Name : checkAllIncomplete
-        Description: function to select all incomplete sr_statuses
+        Description: function to select/deselect all incomplete sr_statuses
         Author: Rikesh Bhansari
         Date: 2015/12/08
     ----------------------------------------------------------------------------------------------------------*/    
@@ -965,7 +963,12 @@ angular.module('app').controller('projectdetailCtrl', function($scope, $http, $r
     $scope.dateObjForFilter = {
     };
 
-    //function to reset filter options
+    /*---------------------------------------------------------------------------------------------------------
+        Name : resetFilter
+        Description: function to reset filter options
+        Author: Rikesh Bhansari
+        Date: 2015/12/09
+    ----------------------------------------------------------------------------------------------------------*/
     $scope.resetFilter = function() {
         $scope.checkedStatus = angular.copy($scope.checkedStatus_);
         angular.forEach($scope.sr_statuses, function (s) {
@@ -978,5 +981,111 @@ angular.module('app').controller('projectdetailCtrl', function($scope, $http, $r
         $scope.recentlyCreatedSrOnly = false;
         $scope.dateObjForFilter.filterStartDate = null;
         $scope.dateObjForFilter.filterFinishDate = null;
+    }
+
+    /*---------------------------------------------------------------------------------------------------------
+        Name : $scope.subdomainUsers
+        Description: variable to hold all the users of a subdomain used for selecting project members from project-detail page
+        Author: Rikesh Bhansari
+        Date: 2015/12/15
+    ----------------------------------------------------------------------------------------------------------*/    
+    $scope.subdomainUsers = [];
+    if(customerId) {
+        mvAuth.getUserList().then(function(users) {
+            $scope.userNameList = users.data;
+            angular.forEach(users.data, function(user){
+                userListObj = {};
+                userListObj.id = user.user_id;
+                userListObj.label = user.fullname;
+                $scope.subdomainUsers.push(userListObj);
+            });
+        });
+    }
+
+    /*---------------------------------------------------------------------------------------------------------
+        Name : $scope.isExist
+        Description: function to check if a user is already a member of selected project
+        Output: Boolean
+        Author: Rikesh Bhansari
+        Date: 2015/12/15
+    ----------------------------------------------------------------------------------------------------------*/    
+    $scope.isExist = function(id){
+        return $scope.newMembers.map(function(member) {
+            return member.user_id;
+        }).indexOf(id);
+    }
+
+    /*---------------------------------------------------------------------------------------------------------
+        Name : $scope.toggleSelection
+        Description: function to update $scope.projectMembers array based on chekbox selection
+        Author: Rikesh Bhansari
+        Date: 2015/12/15
+    ----------------------------------------------------------------------------------------------------------*/    
+    $scope.toggleSelection = function(user) {
+        if(user.checked) {
+            var foundInOriginalList = $scope.projectMembers.some(function (el) {
+                return el.user_id === user.user_id;
+            });
+            if(!foundInOriginalList) {
+                $scope.newMembers.push(user);
+            } else {
+                var result = $filter('filter')($scope.projectMembers,{user_id:user.user_id});
+                var index = $scope.projectMembers.indexOf(result[0]);
+                $scope.newMembers.push($scope.projectMembers[index]);
+            }
+        }
+        else {
+            var deselectedMember = $filter('filter')($scope.newMembers, {user_id:user.user_id})[0];
+            var index = $scope.newMembers.indexOf(deselectedMember);
+            $scope.newMembers.splice(index, 1);
+        }
+    };
+
+    /*---------------------------------------------------------------------------------------------------------
+        Name : $scope.updateProjectMembers
+        Description: performs an http put request to update project members in the database
+        Author: Rikesh Bhansari
+        Date: 2015/12/16
+    ----------------------------------------------------------------------------------------------------------*/ 
+    $scope.updateProjectMembers = function(members) {
+        var list = {};
+        list.members=members;
+        $scope.projectMembers = angular.copy(list.members);
+        $http.put("/api/updateProject/" + projectId, list).success(function(data) {
+            angular.forEach($scope.projectMembers, function(value) {
+                mvAuth.getUserName(value.user_id).then(function(user) {
+                    
+                    value.memberPic = user.proPic;
+                }, function(reason) {
+                    mvNotifier.error(reason);
+                });
+            });
+            Notification.info('Project members have been updated successfully');
+        });
+    }
+
+    /*---------------------------------------------------------------------------------------------------------
+        Name : $scope.setAdmin
+        Description: sets one of the group members as admin
+        Author: Rikesh Bhansari
+        Date: 2015/12/23
+    ----------------------------------------------------------------------------------------------------------*/ 
+    $scope.setAdmin = function(user_id) {
+        var dataObj = {
+            projectId: projectId,
+            user_id: user_id
+        };
+        $http.post("/api/setAdmin/", dataObj).success(function(data) {
+            $scope.projectMembers = data.members;
+            angular.forEach($scope.projectMembers, function(value) {
+                mvAuth.getUserName(value.user_id).then(function(user) {
+                    value.memberPic = user.proPic;
+                }, function(reason) {
+                    mvNotifier.error(reason);
+                });
+            });
+            Notification.info('Admin has been changed');
+            $state.go($state.current, {}, {reload: true});
+        });
     }
 });

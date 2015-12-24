@@ -7,9 +7,10 @@
 </div>
 
 <div style="display: none;" class="search_slide">
-    <label id="filter">Filter SRs by date they were created on:</label>
+    <h3>Filter SRs by:</h3>
+    <label id="filter" class="margin_top15">Date created:</label>
     <div>
-        <p class="input-group">
+        <p class="input-group m-top_5">
             <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dateObjForFilter.filterStartDate" is-open="planningStart.opened" ng-disabled="true" max-date="dateObjForFilter.filterFinishDate" datepicker-options="dateOptions" close-text="Close" name="planningStart" placeholder="SR created from this day">
             <span class="input-group-btn">
                 <button type="button" class="btn btn-default" ng-click="openPlanningStart($event)" tabindex="9"><i class="glyphicon glyphicon-calendar"></i></button>
@@ -17,7 +18,7 @@
         </p>
     </div>
     <div>
-        <p class="input-group">
+        <p class="input-group margin_top15">
             <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dateObjForFilter.filterFinishDate" is-open="due.opened" ng-disabled="true" min-date="dateObjForFilter.filterStartDate" datepicker-options="dateOptions" close-text="Close" name="due" placeholder="SR created upto this day">
             <span class="input-group-btn">
                 <button type="button" class="btn btn-default" ng-click="openDueDatePicker($event)" tabindex="9"><i class="glyphicon glyphicon-calendar"></i></button>
@@ -25,10 +26,15 @@
         </p>
     </div>
     <br />
-    <label id="filter">Filter SRs by their status:</label>
-    <div class="checkbox">
+    <label id="filter">Status:</label>
+    <div class="checkbox mTop_0">
         <label>
             <input id= "incompleteSrs" type="checkbox" ng-model="allIncomplete" ng-click="checkAllIncomplete()" ng-checked="true">All Pending SRs
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input id="recentlyCreated" type="checkbox" ng-model="recentlyCreatedSrOnly"> Recently Created SRs
         </label>
     </div>
 
@@ -37,21 +43,17 @@
             <input type="checkbox" ng-model="s.Selected" checkbox-group checked="checked"> {{s.name}}
         </label>
     </div>
-    <label id="filter">Filter SRs by their assignees:</label>
+    <label id="filter">Assignees:</label>
     <div ng-dropdown-multiselect options="projectMembersList" selected-model="selectedAssignees" checkboxes="true" extra-settings="assigneeSelectSettings" translation-texts="assigneeSelectTexts"></div>
-    <div class="checkbox">
-        <label>
-            <input id="recentlyCreated" type="checkbox" ng-model="recentlyCreatedSrOnly"> Recently Created SRs
-        </label>
-    </div>
-    <label id="filter">Filter SRs by their priority:</label>
+
+    <label id="filter" class="margin_top15">Priority:</label>
     <div>
         <span >
             <rating titles="priority" ng-model="priorityValue" max="max" readonly='false'></rating> 
         </span>
-        <span><a href="" style="color:black;" ng-click="priorityValue=null" ng-show="priorityValue>0">Clear Priority Filter</a></span>
+        <span><a href="" style="color:red;" class="pull-right" ng-click="priorityValue=null" ng-show="priorityValue>0">Clear Priority Filter</a></span>
     </div>
-    <button type="button" id="filter_reset_btn" ng-click="resetFilter()">Reset Filter</button>
+    <button type="button" id="filter_reset_btn" class="btn btn-primary margin_top15" ng-click="resetFilter()">Reset Filter</button>
 </div>
 <div ng-show="showSR" ng-cloak ng-init="getAllSRList()">
     <div class="task-header">

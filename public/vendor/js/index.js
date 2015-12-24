@@ -31,54 +31,8 @@ jQuery(document).ready(function($) {
     };
 
 
-    // Show sidebar when trigger is clicked
-
-    $('.trigger-toggle-sidebar').on('click', function() {
-        cols.showSidebar();
-        cols.showOverlay();
-    });
-
-
-
-    // This will prevent click from triggering twice when clicking checkbox/label
-
-
-
-
-    // When you click the overlay, close everything
-
-    $('#main > .overlay').on('click', function() {
-        cols.hideOverlay();
-        cols.hideSidebar();
-    });
-    var s_ht = $(window).height();
-    $('.search_slide').css('height', s_ht);
-
-    $('.advance_search').on('click', 'a.slide_down', function() {
-        var s_ht = $('#main-nano-wrapper').height();
-        console.log(s_ht)
-        $('.search_slide').slideDown();
-
-        $(this).removeClass('slide_down').addClass('slide_up');
-        $('#main-nano-wrapper').animate({
-            'margin-left': '260'
-        }, 350);
-        $('.task-header').animate({
-            'margin-left': '260'
-        }, 350);
-        $('.edit_click').animate({
-            right: '406'
-        }, 350);
-        $('.button_wrap').animate({
-            right: '280'
-        }, 350);
-        cols.showSidebar();
-    });
-
-    $('.advance_search').on('click', 'a.slide_up', function() {
-
+    function slide_up() {
         $('.search_slide').slideUp();
-        $(this).removeClass('slide_up').addClass('slide_down');
         $('#main-nano-wrapper').animate({
             'margin-left': '0'
         }, 350);
@@ -91,7 +45,65 @@ jQuery(document).ready(function($) {
         $('.button_wrap').animate({
             right: '20'
         }, 350);
+
+    }
+
+
+    function slide_dn() {
+        $('.search_slide').slideDown();
+        $('#main-nano-wrapper').animate({
+            'margin-left': '260'
+        }, 350);
+        $('.task-header').animate({
+            'margin-left': '260'
+        }, 350);
+        $('.edit_click').animate({
+            right: '406'
+        }, 350);
+        $('.button_wrap').animate({
+            right: '280'
+        }, 350);
+
+    }
+
+    // Show sidebar when trigger is clicked
+
+    $('.trigger-toggle-sidebar').on('click', function() {
+        cols.showSidebar();
+        cols.showOverlay();
+        $('.advance_search a').removeClass('slide_up').addClass('slide_down');
+        slide_up();
+
+    });
+
+ // When you click the overlay, close everything
+
+    $('#main > .overlay').on('click', function() {
+        cols.hideOverlay();
         cols.hideSidebar();
+        $('.advance_search a').removeClass('slide_up').addClass('slide_down');
+        slide_up();
+    });
+    var s_ht = $(window).height() - 100;
+    $('.search_slide').css({
+        'height': s_ht,
+        'overflow': 'auto'
+
+    });
+
+    $('.advance_search').on('click', 'a.slide_down', function() {
+         $(this).removeClass('slide_down').addClass('slide_up');
+        slide_dn();
+        cols.showSidebar();
+        cols.showOverlay();
+    });
+
+    $('.advance_search').on('click', 'a.slide_up', function() {
+        $('.search_slide').slideUp();
+        $(this).removeClass('slide_up').addClass('slide_down');
+        slide_up();
+        cols.hideSidebar();
+        cols.hideOverlay();
     });
 
 });

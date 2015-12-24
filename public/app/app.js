@@ -155,6 +155,26 @@ angular.module('app').run(function($rootScope, $location, editableOptions) {
         }
     })
 })
+angular.module('app').directive('permission', function(mvIdentity, mvAuth) {
+  return {
+    restrict: 'A',
+    prioriry: 100000,
+    scope: false,    
+    link: function(scope, elem, attrs, linker) {
+        console.log("Access: " + attrs.access);
+        console.log("ProjectId : " + attrs.project);
+        var loginUserId = mvIdentity.currentUser.app_users._id;
+        console.log("loginUserId : " + loginUserId);
+        var accessDenied = true;
+        //var permissions = authService.getUserPermissionInProject(attrs.project,loginUserId);
+        
+        if(accessDenied){
+                elem.children().remove();
+                elem.remove();           
+        }
+    }
+  };
+});
 
 /*---------------------------------------------------------------------------------------------------------
     Name: strLimit

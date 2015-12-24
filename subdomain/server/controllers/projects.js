@@ -285,7 +285,6 @@ function handleError(res, err) {
  Name: getNextNumber
  Description: Controller to update the SrId_counter in project collections
  Author: RikeshBhansari
-
 ------------------------------------------------------------------------------------------------------*/
 exports.getNextNumber = function(projectId,callback) {
     Project.findOneAndUpdate({
@@ -305,4 +304,57 @@ exports.getNextNumber = function(projectId,callback) {
             return callback(project.srId_counter);
         }
     );
+}
+
+/*----------------------------------------------------------------------------------------------------
+ Name: setAdmin
+ Description: Controller to set one of the group members as admin.
+ Author: RikeshBhansari
+------------------------------------------------------------------------------------------------------*/
+exports.setAdmin = function(req, res) {
+    console.log(req.body);
+    var projectId = req.body.projectId;
+    var user_id = req.body.user_id;
+    Project.findById(
+        projectId, function(err, doc) {
+        if(err) {
+            console.log(err);
+            return res.send(500);
+        }
+        console.log(doc);
+        if(doc) {
+            if(doc.members.length>0) {
+                async.each(doc.members,
+                    function(member, callback) {
+                        if(member.user_id == user_id) {
+                            member.isAdmin = true;
+                        } else {
+                            member.isAdmin = false;
+                        }
+                        callback();
+                    },
+                    function() {
+                        Project.findOneAndUpdate({
+                            _id: projectId
+                        }, {
+                            members: doc.members
+                        },
+                        function(err, project) {
+                            if (err) {
+                                console.log("Something went wrong!!!");
+                                return res.send(500);
+                            }
+                            if(!project) {
+                                return res.send(400);
+                            }
+                            return res.send(project);
+                        });
+                    }
+                );
+            }
+        }
+        if(!doc) {
+            return res.send(400);
+        }
+    });
 }

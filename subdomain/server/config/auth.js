@@ -20,6 +20,7 @@ var passport = require('passport'),
     User = require('../models/User.js');
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development',
     config = require('../../../config/config.js')[env];
+    
 exports.authenticate = function(req, res, next) {
     
     req.body.username = req.body.email.toLowerCase();
