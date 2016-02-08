@@ -1204,7 +1204,9 @@ h3.head_z a{ color:#565656!important; font-size: 14px; font-weight: bold }
 .p_btm{ padding-bottom: 10px;}
 .p_top_80{ padding-top: 80px!important;}
 .input-seperate{border:1px solid #efefef; padding: 10px 20px 10px 0; margin: 10px 10px; }
-.search_slide{ background: #353535; padding: 20px; margin-top: 1px;width: 260px;position: absolute; z-index: 9999;}
+.search_slide{ background: #353535; padding: 20px; margin-top: 1px;width: 270px;position: absolute; z-index: 9999;}
+.search_slide .btn-sm, .btn-group-sm > .btn{padding: 4px 7px!important;}
+.search_slide .dropdown-menu{padding: 5px!important; left: -18px!important;}
 .search_slide h3{ background: #4c4c4c; padding: 10px; color: #fff; font-size: 15px;}
 .search_slide label,.search_slide span i{ color: #979797; font-size: 13px;}
 .Code_z{ font-weight: bold; padding: 10px 15px 5px; font-size: 15px;}
@@ -1451,3 +1453,15 @@ for progress bar after creating Sr
 
 #filter{color: #fff; font-size: 14px;}
 #filter_reset_btn{float: right;}
+
+
+/**
+ * 20160201
+ */
+.userImg {
+    /*outline: 1px red solid;*/
+}
+.userImg img{
+    max-height: 45px;
+    /*height: inherit;*/
+}

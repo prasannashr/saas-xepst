@@ -25,22 +25,22 @@ var passport = require('passport');
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 var app = express();
-var main = require('./main');
-var subdomain = require('./subdomain');
+var main = require('./server/domain');
+var subdomain = require('./server/domainsub');
 
-var config = require('./config/config')[env];
-require('./subdomain/server/config/mongoose')(config);
+var config = require('./server/config/config')[env];
+require('./server/domainsub/config/mongoose')(config);
 //require('./subdomain/server/config/passport')();
 
-app.use(vhost('xepstsaas.com', main))
-app.use(vhost('*.xepstsaas.com', subdomain));
+app.use(vhost('localxepst.com', main))
+app.use(vhost('*.localxepst.com', subdomain));
 
-var automatelanguagelabel = require('./subdomain/server/utilities/automatelanguagelabel.js');
+var automatelanguagelabel = require('./server/domainsub/utilities/automatelanguagelabel.js');
 // call function checkAndCreateLabelInDatabase to check multilanguage labels in html files
 // and add in DB if its new label
 automatelanguagelabel.checkAndCreateLabelInDatabase();
 
 
 app.listen(config.port);
-console.log('MongoDB IP : ...'+process.env.MONGODB_PORT_27017_TCP_ADDR);
+
 console.log('SAAS XEPST LISTENING ON PORT :' + config.port + '..... ENV: '+env);

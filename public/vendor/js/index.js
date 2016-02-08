@@ -84,7 +84,7 @@ jQuery(document).ready(function($) {
         $('.advance_search a').removeClass('slide_up').addClass('slide_down');
         slide_up();
     });
-    var s_ht = $(window).height() - 100;
+    var s_ht = $(window).height() - 95;
     $('.search_slide').css({
         'height': s_ht,
         'overflow': 'auto'
