@@ -1,0 +1,55 @@
+<div>
+    <h3 class="head_z">{{"ADD_LANGUAGE" | translate}}<a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('ADD_LANGUAGE', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && currentUser.currentUser.languageOption">
+                       <i class="material-icons edit_label_size">mode_edit</i>
+                    </a></h3>
+    <div class="wrap-padding form-bg clearfix form-horizontal">
+        <div class="input-seperate">
+            <div class="form-group m-top m-left_0">
+                <label for="exampleInputName2" class="width_150 col-sm-4"> {{"LANGUAGE" | translate}}
+                    <a href="">
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('LANGUAGE', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && currentUser.currentUser.languageOption">
+                           <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                </label>
+                <div class="col-sm-8">
+                    <select class="form-control" ng-model="labelList.country" ng-blur="checkCountry(labelList.country.code)" tabindex="1" ng-options="c.name for c in countryList">
+                        <!-- <option ng-repeat="(key, value) in countryList" value="{{value.code}}">
+                            {{value.name}}
+                        </option> -->
+                    </select>
+                     <span style="color:red">{{checkCountryresponse}}</span>                     
+                </div>
+            </div>
+            <div class="form-group m-top m-left_0">
+                <label for="inputEmail3" class="col-sm-4 width_150">{{"DESCRIPTION" | translate}}
+                    <a href="">
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('DESCRIPTION', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && currentUser.currentUser.languageOption">
+                           <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                </label>
+                <div class="col-sm-8">
+                    <textarea class="form-control" id="message-text" ng-model="labelList.description" tabindex="2"></textarea>
+                    <span style="color:red">{{error}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="input-seperate">
+            <h3 class="Code_z">{{"CODE" | translate}}<a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('CODE', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && currentUser.currentUser.languageOption">
+                       <i class="material-icons edit_label_size">mode_edit</i>
+                    </a></span></a></h3>
+            <div style="overflow-y: auto; overflow-x:hidden; height: 300px;">
+            <div class="form-group m-top m-left_0" ng-repeat="data in labelList | orderBy:'code'">
+                <label for="inputEmail3" class="col-sm-4 width_150">{{ data.code}}:</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputEmail3" ng-model="data.value" tabindex="3">
+                </div>
+            </div></div>
+        </div>
+        <div class="pull-right  p-right">
+            <button type="button" class="btn btn-primary btn-sm" ng-disabled="checkCountryresponse" ng-click="addLanguage(labelList)" tabindex="4">{{"ADD" | translate}}</button>
+            <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('ADD', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && currentUser.currentUser.languageOption">
+               <i class="material-icons edit_label_size">mode_edit</i>
+            </a>
+        </div>
+    </div>
+</div>

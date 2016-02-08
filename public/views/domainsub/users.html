@@ -1,0 +1,104 @@
+<div class="wrap-padding" ng-init="totalItems(identity.customerId)">
+    <div class="table-responsive" ng-init="changedefaultitem(defaultItem,currentPage)">
+        <table class="table" ng-init="pageChanged(1)">
+            <thead>
+                <tr>
+                    <th class="p-left">
+                        <a href="" ng-click="order('firstName')">{{"FIRST_NAME" | translate}}</a>
+                        <span class="sortorder" ng-show="predicate === 'firstName'" ng-class="{reverse:reverse}"></span>
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('FIRST_NAME', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="" title="Edit label" ng-click="order('lastName')">{{"LAST_NAME" | translate}}</a>
+                        <span class="sortorder" ng-show="predicate === 'lastName'" ng-class="{reverse:reverse}"></span>
+                        <a href="" data-template-url="editlang.html" ng-click="getLabelDetails('LAST_NAME', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="" title="Edit label" ng-click="order('email')">{{"EMAIL" | translate}}</a>
+                        <span class="sortorder" ng-show="predicate === 'email'" ng-class="{reverse:reverse}"></span>
+                        <a href="" data-template-url="editlang.html" ng-click="getLabelDetails('EMAIL', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="" title="Edit label" ng-click="order('role')">{{"USER_TYPE" | translate}}</a>
+                        <span class="sortorder" ng-show="predicate === 'role'" ng-class="{reverse:reverse}"></span>
+                        <a href="" data-template-url="editlang.html" ng-click="getLabelDetails('USER_TYPE', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </th>
+                    <th ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin')">{{"ACTION" | translate}}
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('ACTION', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                            <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="data in user | orderBy:predicate:reverse">
+                    <td class="p-left">{{ data.firstName}}</td>
+                    <td>{{ data.lastName}}</td>
+                    <td>{{ data.email }}</td>
+                    <td>{{ data.role }}</td>
+                    <td ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin')">
+                        <a ui-sref="setting.edituser({ userId: data._id })" title="Edit" ><i class="material-icons priority-icon">mode_edit</i></a>
+                        <a href="" title="delete" class="m-left btn-ok"  data-toggle="modal" data-backdrop="static" data-target="#confirm-delete" onclick="fixedMainClass()" ng-click="deleteUser(data._id)"> <i class="material-icons priority-icon">delete</i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="text-right m-right_20 pagination_user">
+    <div class="page-bg">
+        <div ng-show="totalItem>defaultItem" class="pagin_no">
+            <pagination boundary-links="true" total-items="totalItem" items-per-page="defaultItem" ng-model="currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" ng-change="pageChanged(currentPage)">
+            </pagination>
+        </div>
+        <div class="pagin_sel" ng-show="totalItem>item">
+            <label>
+            {{"SHOW_PER_PAGE" | translate}}
+            <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('SHOW_PER_PAGE', identity.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="currentUser.isAuthenticated() && currentUser.isAuthorized('admin') && identity.languageOption">
+                <i class="material-icons edit_label_size">mode_edit</i>
+            </a>
+            </label>
+            <select ng-model="changeItem" ng-change="changedefaultitem(changeItem,currentPage,totalItem)">
+                <option ng-repeat="number in obj">{{number}}</option>
+            </select>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+         $("#confirm-delete").on("hidden.bs.modal", function() {
+            $("#main").css("position", "fixed");
+         });
+    });
+
+    $('a').click(function(event) {
+         event.preventDefault();
+    });
+
+</script>
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Confirm Delete</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure, you want to delete the user?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" data-dismiss="modal" ng-click="delete(deleteuser)" class="btn btn-danger">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>

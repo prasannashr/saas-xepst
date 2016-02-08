@@ -1,0 +1,68 @@
+<div>
+	<h3 class="head_z" ng-init="editRole()">        
+        {{"EDIT_USER_GROUP" | translate}} 
+        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('EDIT_USER_GROUP', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+          <i class="material-icons edit_label_size">mode_edit</i>
+        </a>
+    </h3>
+    <div class="form-bg " id="createnew">
+        <form name="form">
+            <div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="exampleInputName2">{{"GROUP_NAME" | translate}} :
+                            <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('GROUP_NAME', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                              <i class="material-icons edit_label_size">mode_edit</i>
+                            </a>
+                        </label>
+                        <br>
+                        <input type="text" class="form-control" name="groupname" id="groupname" placeholder="User Group Name" ng-model="userGroup.group_name">
+                        <span style="color:red" ng-show="submitted && form.groupname.$error.required">Required  Group Name</span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="exampleInputName2">{{"DESCRIPTION" | translate}} :</label>
+                        <br>
+                        <textarea class="form-control" id="message-text" name="description" ng-model="userGroup.description"></textarea>
+                        <span style="color:red" ng-show="submitted && form.description.$error.required">{{"REQUIRED_MESSAGE" | translate}}</span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="checkbox" ng-model="userGroup.permission.full_control" aria-label="...">
+                        <label for="exampleInputName2" class="m-right_20">{{"FULL_CONTROL" | translate}}
+                            <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('FULL_CONTROL', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                              <i class="material-icons edit_label_size">mode_edit</i>
+                            </a>
+                        </label>
+                        <input type="checkbox" ng-model="userGroup.permission.read" aria-label="...">
+                        <label for="exampleInputName2" class="m-right_20">{{"READ" | translate}}
+                            <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('READ', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                              <i class="material-icons edit_label_size">mode_edit</i>
+                            </a>
+                        </label>
+                        <input type="checkbox" ng-model="userGroup.permission.edit" aria-label="...">
+                        <label for="exampleInputName2">{{"EDIT" | translate}}
+                            <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('EDIT', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                              <i class="material-icons edit_label_size">mode_edit</i>
+                            </a>
+                        </label>
+                        <input type="checkbox" ng-model="userGroup.permission.limited_access" aria-label="...">
+                        <label for="exampleInputName2">{{"LIMITED_ACCESS" | translate}}
+                            <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('LIMITED_ACCESS', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                              <i class="material-icons edit_label_size">mode_edit</i>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-primary btn-sm" ng-click="updateRole(userGroup._id,userGroup)">{{"UPDATE" | translate}}</button>
+                        <a href="" title="Edit label" data-template-url="editlang.html" ng-click="getLabelDetails('UPDATE', identity.currentUser.customerId)" placement="bottom" data-auto-close="1" bs-popover ng-show="identity.isAuthenticated() && identity.isAuthorized('admin') && identity.currentUser.languageOption">
+                          <i class="material-icons edit_label_size">mode_edit</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

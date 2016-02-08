@@ -1,0 +1,22 @@
+
+<div class="input-group align-search" ng-controller="projectdetailCtrl">
+    <input type="text" ng-model="queryterm" typeahead="data as data.title for data in search($viewValue) |  limitTo:8" class="form-control" typeahead-on-select="onSelect($item, $model, $label)" placeholder="Search for..." typeahead-template-url="searchListTpl.html">
+    <span class="input-group-btn">
+        <button class="btn btn-default" type="button" ng-click="searchOnClickButton(queryterm)"> 
+        	<i class="material-icons icon sub-search">search</i>
+        </button>
+    </span>
+</div>
+
+<script type="text/ng-template" id="searchListTpl.html">
+    <a tabindex="-1">
+    <div  ng-switch on="match.model.type" class="pull-left p_rt">
+        <i ng-switch-when="SR" class="material-icons">assignment</i> 
+        <i ng-switch-when="Project" class="material-icons">description</i> 
+        <i ng-switch-when="User" class="material-icons">supervisor_account</i> 
+    </div>     
+        <b><span ng-bind-html="match.model.title | strLimit: 35"></span></b><br>
+        <span ng-bind-html="match.model.type | typeaheadHighlight:query"></span>
+    </a>
+</script>
+

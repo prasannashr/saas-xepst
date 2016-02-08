@@ -1,0 +1,8 @@
+INTRODUCTION TO VIRTUALIZATION AND CLOUD:
+	Virtualization :
+		Type 1 :
+			Hardware Assist
+			production
+			High performance 
+		
+		Type 2 :
